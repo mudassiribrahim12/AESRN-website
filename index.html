@@ -1,825 +1,1103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>African Emerging Scholars Research Network (AESRN) | Member Portal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>African Emerging Scholars Research Network (AESRN)</title>
+    
+    <!-- Primary meta – network first, founder in context -->
+    <meta name="title" content="African Emerging Scholars Research Network (AESRN) – Ghanaian Nursing Research Collaboration">
+    <meta name="description" content="AESRN is a peer network for Ghanaian nurses with research skills. We collaborate on publications, not mentorship. Based in Tamale, Ghana, for Ghana.">
+    <meta name="theme-color" content="#2A5C82">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- Favicons – consistent with network identity – FAVICON INFORNT OF TITLE -->
     <link rel="icon" href="https://raw.githubusercontent.com/aesrn30/aesrn/main/favicon-32x32.png" type="image/png">
     <link itemprop="image" href="https://raw.githubusercontent.com/aesrn30/aesrn/main/favicon-32x32.png">
     <meta property="og:logo" content="https://raw.githubusercontent.com/aesrn30/aesrn/main/favicon-32x32.png">
     <meta name="twitter:logo" content="https://raw.githubusercontent.com/aesrn30/aesrn/main/favicon-32x32.png">
-
+    
     <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/aesrn30/aesrn/main/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/aesrn30/aesrn/main/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/aesrn30/aesrn/main/favicon-16x16.png">
     <link rel="manifest" href="https://raw.githubusercontent.com/aesrn30/aesrn/main/site.webmanifest">
-    <script async src="https://tally.so/widgets/embed.js"></script>
-    <style type="text/css">
-      /* ---------- RESET & BASE ---------- */
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      
-      html, body { 
-        height: 100%; 
-        width: 100%;
-        overflow-x: hidden;
-      }
-      
-      body { 
-        display: flex; 
-        flex-direction: column; 
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        color: #1e1e1e;
-        -webkit-font-smoothing: antialiased;
-      }
-      
-      /* ---------- LOGIN CONTAINER - BLUE GRADIENT ---------- */
-      .login-container {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 24px;
-        background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
-        width: 100%;
-        min-height: 100vh;
-      }
-      
-      .login-box {
-        background: white;
-        border-radius: 8px;
-        padding: 40px 32px;
-        width: 100%;
-        max-width: 400px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      }
-      .login-header { text-align: center; margin-bottom: 32px; }
-      .login-logo-circle { width: 100px; height: 100px; margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center; }
-      .logo-circle-image { width: 100%; height: 100%; object-fit: contain; }
-      .login-title { font-size: 24px; font-weight: 600; color: #000; margin-bottom: 8px; }
-      .login-subtitle { color: #5e5e5e; font-size: 14px; }
-      .form-group { margin-bottom: 20px; }
-      .form-label { display: block; margin-bottom: 6px; font-weight: 500; font-size: 14px; }
-      .form-input { width: 100%; padding: 12px 14px; border: 1px solid #d1d1d1; border-radius: 4px; font-size: 15px; }
-      .form-input:focus { outline: none; border-color: #1a237e; }
-      .login-button { width: 100%; padding: 14px 18px; background: #1a237e; color: white; border: none; border-radius: 4px; font-size: 15px; font-weight: 600; cursor: pointer; margin-top: 12px; }
-      .login-button:hover { background: #0f1555; }
-      .copyright-full { text-align: center; margin-top: 32px; font-size: 12px; color: #666; border-top: 1px solid #eee; padding-top: 20px; }
-      .error-message, .attempts-warning { color: #d32f2f; font-size: 13px; margin-top: 16px; text-align: center; display: none; padding: 12px; background: #ffebee; border-radius: 4px; }
-      .attempts-warning { color: #b85a00; background: #fff1e0; }
-      
-      /* ---------- DASHBOARD – TWO OPTIONS + WHITE SESSION CARD ---------- */
-      .dashboard-container {
-        flex: 1;
-        display: none;
-        flex-direction: column;
-        background: #f5f7fc;
-        width: 100%;
-        min-height: 100vh;
-        padding: 30px 20px;
-      }
-      
-      .dashboard-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: white;
-        padding: 16px 30px;
-        border-radius: 16px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-        margin-bottom: 40px;
-        flex-wrap: wrap;
-        gap: 15px;
-      }
-      .dashboard-welcome { display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 500; color: #1a237e; }
-      .dashboard-welcome span { background: #1a237e; color: white; padding: 6px 14px; border-radius: 30px; font-size: 15px; font-weight: 600; }
-      .dashboard-logout { background: #e74c3c; color: white; border: none; border-radius: 30px; padding: 10px 24px; font-weight: 600; cursor: pointer; font-size: 14px; }
-      .dashboard-logout:hover { background: #c0392b; }
-      
-      .action-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-        align-items: center;
-        max-width: 1000px;
-        margin: 20px auto;
-        width: 100%;
-      }
-      .action-card {
-        background: white;
-        border-radius: 24px;
-        padding: 40px 30px;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-        flex: 1 1 280px;
-        max-width: 360px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        transition: all 0.25s ease;
-        border: 1px solid rgba(26,35,126,0.08);
-        cursor: pointer;
-      }
-      .action-card:hover { transform: translateY(-6px); box-shadow: 0 25px 45px rgba(26,35,126,0.12); border-color: rgba(26,35,126,0.2); }
-      .action-icon { font-size: 52px; margin-bottom: 20px; background: #edf0fa; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #1a237e; }
-      .action-title { font-size: 26px; font-weight: 700; color: #1a237e; margin-bottom: 12px; letter-spacing: -0.5px; }
-      .action-desc { color: #5a5a6e; font-size: 16px; line-height: 1.5; margin-bottom: 10px; }
-      .action-badge { margin-top: 15px; background: #e8eaf6; color: #1a237e; padding: 8px 18px; border-radius: 40px; font-size: 14px; font-weight: 600; }
-      
-      /* Session info card – white, centered */
-      .session-info-card {
-        background: white;
-        border-radius: 60px;
-        padding: 18px 30px;
-        margin: 50px auto 20px auto;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 25px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.02);
-        border: 1px solid rgba(0,0,0,0.04);
-        max-width: 750px;
-        width: 100%;
-        color: #1e1e1e;
-        font-size: 15px;
-      }
-      .session-info-item {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        background: #fafcff;
-        padding: 5px 16px;
-        border-radius: 40px;
-        color: #2c3e50;
-      }
-      .session-info-strong { color: #1a237e; font-weight: 700; margin-left: 4px; }
-      .ghana-time-dash {
-        font-family: monospace;
-        font-weight: 700;
-        color: #1a237e;
-        background: #edf0fa;
-        padding: 5px 12px;
-        border-radius: 40px;
-      }
-      .copyright-white {
-        color: #5e5e5e;
-        font-size: 13px;
-        font-weight: 400;
-        letter-spacing: 0.2px;
-      }
-      
-      /* ---------- FORM CONTAINER – ALWAYS ACTIVE, NEVER UNLOADED ---------- */
-      .form-container {
-        flex: 1;
-        position: relative;
-        display: none;
-        width: 100%;
-        min-height: 100vh;
-        background: white;
-      }
-      iframe { 
-        position: absolute; 
-        top: 0; 
-        right: 0; 
-        bottom: 0; 
-        left: 0; 
-        border: 0; 
-        background: white;  
-      }
-      
-      /* Back button – form view */
-      .back-to-dashboard {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        z-index: 2000;
-        background: white;
-        color: #1a237e;
-        border: 1px solid #1a237e;
-        padding: 12px 26px;
-        border-radius: 40px;
-        font-weight: 600;
-        font-size: 16px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        cursor: pointer;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-        transition: all 0.2s;
-      }
-      .back-to-dashboard:hover { background: #1a237e; color: white; }
-      
-      /* ---------- LOADING OVERLAY – FAST CONFIG ---------- */
-      .loading-overlay {
-        position: absolute; 
-        top: 0; 
-        left: 0; 
-        right: 0; 
-        bottom: 0;
-        background: rgba(255,255,255,0.95); 
-        display: flex; 
-        flex-direction: column;
-        justify-content: center; 
-        align-items: center; 
-        z-index: 100;
-      }
-      .loading-spinner {
-        width: 50px; 
-        height: 50px; 
-        border: 4px solid #f3f3f3; 
-        border-top: 4px solid #1a237e;
-        border-radius: 50%; 
-        animation: spin 1s linear infinite; 
-        margin-bottom: 20px;
-      }
-      .loading-text {
-        font-size: 16px;
-        color: #1a237e;
-        font-weight: 500;
-      }
-      @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-      
-      /* ---------- GLOBAL LOADER (ensures everything loads before dashboard) ---------- */
-      .app-loader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 10000;
-        transition: opacity 0.5s ease;
-      }
-      .app-loader-logo {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 30px;
-        animation: pulse 1.5s infinite;
-      }
-      .app-loader-text {
-        color: white;
-        font-size: 20px;
-        font-weight: 500;
-        letter-spacing: 2px;
-      }
-      @keyframes pulse { 0% { opacity: 0.8; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } 100% { opacity: 0.8; transform: scale(1); } }
-      
-      /* ---------- NOTIFICATIONS & MODALS ---------- */
-      .login-greeting-notification { 
-        position: fixed; top: 20px; right: 20px; background: #1a237e; color: white; 
-        padding: 20px 30px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
-        z-index: 2000; display: none; align-items: center; gap: 15px; 
-        animation: slideInRight 0.5s ease; max-width: 350px; 
-      }
-      .logout-notification { 
-        position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-        background: #2c3e50; color: white; padding: 30px 40px; border-radius: 12px; 
-        box-shadow: 0 20px 60px rgba(0,0,0,0.3); z-index: 3000; display: none; 
-        flex-direction: column; align-items: center; gap: 20px; min-width: 300px; 
-        text-align: center; 
-      }
-      .inactivity-warning { 
-        display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-        background: #2c3e50; color: white; border-radius: 12px; padding: 30px; 
-        width: 90%; max-width: 400px; z-index: 4000; text-align: center; 
-      }
-      .confirmation-overlay { 
-        display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; 
-        background: rgba(0,0,0,0.5); z-index: 2000; justify-content: center; align-items: center; 
-      }
-      .confirmation-dialog { 
-        background: white; border-radius: 12px; padding: 40px; width: 90%; max-width: 400px; 
-        text-align: center; 
-      }
-      
-      @media (max-width: 768px) {
-        .dashboard-header { flex-direction: column; align-items: flex-start; }
-        .session-info-card { flex-direction: column; align-items: center; border-radius: 30px; padding: 20px; gap: 15px; }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- GLOBAL APP LOADER – ensures everything loads before dashboard appears -->
-    <div class="app-loader" id="appLoader">
-      <img src="https://raw.githubusercontent.com/aesrn30/aesrn/main/Lablogo.png" alt="AESRN Logo" class="app-loader-logo">
-      <div class="app-loader-text">Loading Portal...</div>
-    </div>
-
-    <!-- LOGIN CONTAINER -->
-    <div class="login-container" id="loginContainer" style="display: none;">
-      <div class="login-box">
-        <div class="login-header">
-          <div class="login-logo-circle">
-            <img src="https://raw.githubusercontent.com/aesrn30/aesrn/main/Lablogo.png" alt="AESRN Logo" class="logo-circle-image">
-          </div>
-          <div class="login-title">Member Access Portal</div>
-          <div class="login-subtitle">Enter your credentials to access member services.</div>
-        </div>
-        <form id="loginForm">
-          <div class="form-group">
-            <label class="form-label" for="email">Email</label>
-            <input type="email" id="email" class="form-input" placeholder="Enter registered email address" required autocomplete="off">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="password">Password</label>
-            <input type="password" id="password" class="form-input" placeholder="Enter access password" required autocomplete="off">
-          </div>
-          <button type="submit" class="login-button" id="loginButton">Log In</button>
-          <div class="copyright-full" id="copyrightFull">Copyright © <span id="dynamicYear"></span> AESRN. All rights reserved.</div>
-          <div class="error-message" id="errorMessage">Invalid email or password.</div>
-          <div class="attempts-warning" id="attemptsWarning">Multiple failed attempts may temporarily restrict access.</div>
-        </form>
-      </div>
-    </div>
     
-    <!-- DASHBOARD – two options + white session card -->
-    <div class="dashboard-container" id="dashboardContainer">
-      <div class="dashboard-header">
-        <div class="dashboard-welcome">
-          <span id="dashboardUserName"></span> · Member Dashboard
-        </div>
-        <button class="dashboard-logout" id="dashboardLogoutBtn">Log out</button>
-      </div>
-      
-      <div class="action-grid">
-        <div class="action-card" id="makeSubmissionCard">
-          <div class="action-icon">📄</div>
-          <div class="action-title">Make a Submission</div>
-          <div class="action-desc">Submit your research abstract, paper, or proposal.</div>
-          <div class="action-badge">Tally form · secure</div>
-        </div>
-        <div class="action-card" id="reviewMaterialsCard">
-          <div class="action-icon">📚</div>
-          <div class="action-title">Review Materials</div>
-          <div class="action-desc">Access guidelines, templates, and reviewer resources.</div>
-          <div class="action-badge">SharePoint ↗</div>
-        </div>
-      </div>
-      
-      <!-- SESSION INFO CARD – white, centered -->
-      <div class="session-info-card" id="sessionInfoCard">
-        <div class="session-info-item">
-          👤 Logged in as: <span class="session-info-strong" id="infoCardUserName">Mudasir</span>
-        </div>
-        <div class="session-info-item" id="infoCardLogoutTrigger" style="cursor: pointer; background: #ffeceb;">
-          🚪 Logout
-        </div>
-        <div class="session-info-item">
-          📧 <a href="mailto:research.aesrn@yahoo.com" style="color: #1a237e; text-decoration: none; font-weight: 500;">research.aesrn@yahoo.com</a>
-        </div>
-        <div class="session-info-item">
-          🇬🇭 <span class="ghana-time-dash" id="ghanaTimeDashboard">11:30:57</span> GMT
-        </div>
-        <div class="session-info-item copyright-white">
-          © <span id="infoCardYear">2026</span> AESRN. All rights reserved.
-        </div>
-      </div>
-    </div>
+    <!-- Open Graph / Facebook – network centered -->
+    <meta property="og:site_name" content="African Emerging Scholars Research Network (AESRN)">
+    <meta property="og:title" content="African Emerging Scholars Research Network – Peer Collaboration for Ghanaian Nurses">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aesrn.mudasiribrahim.com/">
+    <meta property="og:description" content="AESRN connects Ghanaian nurses who already have research skills. We form teams, co-author, and publish — no mentorship, just collaboration among equals.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/mudassiribrahim12/me/main/mysecondprofile.jpg">
     
-    <!-- FORM CONTAINER – PRELOADED, KEPT ALIVE, NEVER UNLOADED -->
-    <div class="form-container" id="formContainer">
-      <!-- LOADING OVERLAY – shown only briefly on first open, then hidden forever -->
-      <div class="loading-overlay" id="loadingOverlay" style="display: none;">
-        <div class="loading-spinner"></div>
-        <div class="loading-text">Opening submission form...</div>
-      </div>
-      
-      <button class="back-to-dashboard" id="backToDashboardBtn">
-        ←  Dashboard
-      </button>
-      
-      <!-- iframe PRELOADED and PERSISTENT: src is set ONCE and never cleared -->
-      <iframe 
-        src="https://tally.so/r/dWd6gA?transparentBackground=1&formEventsForwarding=1" 
-        width="100%" 
-        height="100%" 
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0" 
-        title="AESRN Submission Form (persistent)"
-        id="formIframe"
-        style="visibility: hidden; background: white;"
-        onload="handleIframeLoad()"
-      ></iframe>
-    </div>
+    <!-- Twitter – network first -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aesrn.mudasiribrahim.com/">
+    <meta property="twitter:title" content="AESRN – Ghanaian Nursing Research Network">
+    <meta property="twitter:description" content="Peer network for Ghanaian nurse researchers. Collaborate on publications, build careers.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/mudassiribrahim12/me/main/mysecondprofile.jpg">
     
-    <!-- NOTIFICATIONS / MODALS -->
-    <div class="login-greeting-notification" id="loginGreeting">
-      <div class="greeting-icon" id="greetingIcon">👋</div>
-      <div class="greeting-content"><h4 id="greetingText">Welcome</h4><p id="userGreeting"></p></div>
-    </div>
-    <div class="logout-notification" id="logoutNotification">
-      <div class="logout-spinner"></div>
-      <div class="logout-message">Logged out successfully!</div>
-      <div class="logout-countdown">Redirecting in <span id="logoutCountdown">5</span> seconds...</div>
-    </div>
-    <div class="inactivity-warning" id="inactivityWarning">
-      <h3>Session Timeout</h3>
-      <div class="inactivity-timer" id="inactivityTimer">2:00</div>
-      <p class="inactivity-message">You've been inactive. Click to stay logged in.</p>
-      <button class="keep-active-button" id="keepActiveButton">Keep Me Logged In</button>
-    </div>
-    <div class="confirmation-overlay" id="confirmationDialog">
-      <div class="confirmation-dialog">
-        <div class="confirmation-icon">⚠️</div>
-        <div class="confirmation-title">Confirm Logout</div>
-        <div class="confirmation-message">Are you sure you want to log out?</div>
-        <div class="confirmation-buttons">
-          <button class="confirm-button confirm-yes" id="confirmLogout">Yes, Logout</button>
-          <button class="confirm-button confirm-no" id="cancelLogout">Cancel</button>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      // ---------- AUTO COPYRIGHT ----------
-      function updateAllCopyrightYears() {
-        const currentYear = new Date().getFullYear();
-        document.getElementById('dynamicYear') && (document.getElementById('dynamicYear').textContent = currentYear);
-        document.getElementById('infoCardYear') && (document.getElementById('infoCardYear').textContent = currentYear);
-      }
-
-      // ---------- USER CREDENTIALS ----------
-      const userMap = {
-        "malikseidu4@gmail.com": "Abdul-Malik", "Malikseidu4@gmail.com": "Abdul-Malik",
-        "abdul0247080685@gmail.com": "Abdul Latif", "Abdul0247080685@gmail.com": "Abdul Latif",
-        "ednadie93@gmail.com": "Edna", "Ednadie93@gmail.com": "Edna",
-        "issahaqalhassan26@gmail.com": "Alhassan", "Issahaqalhassan26@gmail.com": "Alhassan",
-        "mudassiribrahim30@gmail.com": "Mudasir", "Mudassiribrahim30@gmail.com": "Mudasir"
-      };
-      const correctPassword = "Scholar123";
-      
-      // ---------- GLOBALS ----------
-      let failedAttempts = 0;
-      const maxAttempts = 5;
-      let currentUserName = "", currentUserEmail = "";
-      let ghanaTimeInterval;
-      
-      const SESSION_TIMEOUT = 2 * 60 * 1000;
-      const WARNING_TIME = 1 * 60 * 1000;
-      let inactivityTimer, warningTimer;
-      
-      const ACTIVE_SESSIONS_KEY = 'aesrn_active_sessions';
-      const CURRENT_SESSION_KEY = 'aesrn_current_session';
-      const USER_SESSION_KEY = 'aesrn_user_session';
-      const SHOWN_GREETING_KEY = 'aesrn_shown_greeting';
-      
-      // Flag to track if iframe has ever been fully loaded – we keep it alive
-      let iframeEverLoaded = false;
-      
-      // ---------- SESSION FUNCTIONS ----------
-      function generateSessionId() { return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9); }
-      function getCurrentSessionId() { return sessionStorage.getItem(CURRENT_SESSION_KEY); }
-      function setCurrentSessionId(sessionId) { sessionStorage.setItem(CURRENT_SESSION_KEY, sessionId); }
-      function getActiveSessions() { const s = localStorage.getItem(ACTIVE_SESSIONS_KEY); return s ? JSON.parse(s) : {}; }
-      function saveActiveSessions(sessions) { localStorage.setItem(ACTIVE_SESSIONS_KEY, JSON.stringify(sessions)); }
-      function hasGreetingBeenShown(sessionId) { const g = JSON.parse(localStorage.getItem(SHOWN_GREETING_KEY) || '{}'); return g[sessionId] || false; }
-      function markGreetingAsShown(sessionId) { const g = JSON.parse(localStorage.getItem(SHOWN_GREETING_KEY) || '{}'); g[sessionId] = true; localStorage.setItem(SHOWN_GREETING_KEY, JSON.stringify(g)); }
-      function clearGreetingStatus(sessionId) { const g = JSON.parse(localStorage.getItem(SHOWN_GREETING_KEY) || '{}'); delete g[sessionId]; localStorage.setItem(SHOWN_GREETING_KEY, JSON.stringify(g)); }
-      
-      function isUserAlreadyLoggedIn(email) {
-        const sessions = getActiveSessions();
-        const userSession = sessions[email];
-        if (!userSession) return false;
-        if (Date.now() > userSession.expiry) { delete sessions[email]; saveActiveSessions(sessions); return false; }
-        const currentSessionId = getCurrentSessionId();
-        return !(userSession.sessionId === currentSessionId);
-      }
-      
-      function registerUserSession(email, name) {
-        const sessionId = generateSessionId();
-        const sessions = getActiveSessions();
-        if (sessions[email]) { clearGreetingStatus(sessions[email].sessionId); delete sessions[email]; }
-        sessions[email] = { sessionId, expiry: Date.now() + SESSION_TIMEOUT, name, loginTime: Date.now(), isFirstLogin: true };
-        saveActiveSessions(sessions);
-        setCurrentSessionId(sessionId);
-        const userSession = { email, name, sessionId, loginTime: Date.now(), expiry: Date.now() + SESSION_TIMEOUT, isFirstLogin: true };
-        localStorage.setItem(USER_SESSION_KEY, JSON.stringify(userSession));
-        return sessionId;
-      }
-      
-      function removeUserSession(email) {
-        const sessions = getActiveSessions();
-        if (sessions[email]) { clearGreetingStatus(sessions[email].sessionId); delete sessions[email]; saveActiveSessions(sessions); }
-        localStorage.removeItem(USER_SESSION_KEY);
-        sessionStorage.removeItem(CURRENT_SESSION_KEY);
-      }
-      
-      // ---------- TIME ----------
-      function getGhanaTime() { 
-        const g = new Date(new Date().toLocaleString('en-US', { timeZone: 'Africa/Accra' }));
-        return `${g.getHours().toString().padStart(2,'0')}:${g.getMinutes().toString().padStart(2,'0')}:${g.getSeconds().toString().padStart(2,'0')}`;
-      }
-      function updateGhanaTimeDisplay() { 
-        const t = getGhanaTime();
-        const dash = document.getElementById('ghanaTimeDashboard');
-        if (dash) dash.textContent = t;
-      }
-      function startGhanaTimeUpdates() { updateGhanaTimeDisplay(); ghanaTimeInterval = setInterval(updateGhanaTimeDisplay, 1000); }
-      function stopGhanaTimeUpdates() { clearInterval(ghanaTimeInterval); }
-      
-      // ---------- LOGIN VALIDATION ----------
-      function validateLogin(email, password) {
-        const normEmail = email.trim(), normPass = password.trim();
-        const key = Object.keys(userMap).find(k => k.toLowerCase() === normEmail.toLowerCase());
-        if (key) { currentUserName = userMap[key]; currentUserEmail = key; return normPass === correctPassword; }
-        return false;
-      }
-      
-      function handleFailedLogin() {
-        failedAttempts++;
-        const err = document.getElementById('errorMessage'), warn = document.getElementById('attemptsWarning');
-        const email = document.getElementById('email'), pwd = document.getElementById('password'), btn = document.getElementById('loginButton');
-        err.style.display = 'block'; email.classList.add('error'); pwd.classList.add('error'); pwd.value = ''; email.focus();
-        if (failedAttempts >= 3) warn.style.display = 'block';
-        if (failedAttempts >= maxAttempts) {
-          btn.disabled = true; btn.textContent = 'Access Temporarily Restricted';
-          setTimeout(() => { btn.disabled = false; btn.textContent = 'Log In'; warn.style.display = 'none'; failedAttempts = 0; }, 30000);
-        }
-        setTimeout(() => { email.classList.remove('error'); pwd.classList.remove('error'); }, 2000);
-      }
-      
-      // ---------- DASHBOARD – ONLY SHOW AFTER EVERYTHING IS READY ----------
-      function showDashboard() {
-        // Update all UI elements
-        document.getElementById('dashboardUserName').textContent = currentUserName;
-        document.getElementById('infoCardUserName').textContent = currentUserName;
-        
-        // Hide login, show dashboard
-        document.getElementById('loginContainer').style.display = 'none';
-        document.getElementById('dashboardContainer').style.display = 'flex';
-        // Form container stays hidden until user clicks "Make Submission"
-        document.getElementById('formContainer').style.display = 'none';
-        
-        startGhanaTimeUpdates();
-        const sessionId = registerUserSession(currentUserEmail, currentUserName);
-        showLoginGreeting();
-        resetActivityTimers();
-        attachActivityListeners();
-      }
-      
-      // ---------- IFRAME HANDLING – PERSISTENT, NEVER CLEARED ----------
-      function handleIframeLoad() {
-        iframeEverLoaded = true;
-        // If form container is visible, hide loading overlay immediately
-        if (document.getElementById('formContainer').style.display === 'flex') {
-          hideLoading();
-        } else {
-          // Background preload: ensure loading overlay stays hidden
-          document.getElementById('loadingOverlay').style.display = 'none';
-        }
-        // Ensure iframe stays visible when form is active, but we control via visibility
-      }
-      
-      function hideLoading() { 
-        const lo = document.getElementById('loadingOverlay');
-        if (lo) { 
-          lo.style.opacity = '0'; 
-          setTimeout(() => { 
-            lo.style.display = 'none'; 
-          }, 300); 
-        }
-        const ifr = document.getElementById('formIframe');
-        if (ifr) ifr.style.visibility = 'visible';
-      }
-      
-      function showLoading() { 
-        const lo = document.getElementById('loadingOverlay');
-        if (lo) { 
-          lo.style.display = 'flex'; 
-          lo.style.opacity = '1'; 
-        }
-      }
-      
-      // Open submission: INSTANTANEOUS on subsequent opens because iframe is always alive
-      function openSubmissionForm() {
-        document.getElementById('dashboardContainer').style.display = 'none';
-        document.getElementById('formContainer').style.display = 'flex';
-        
-        const ifr = document.getElementById('formIframe');
-        if (ifr) {
-          // If iframe already loaded before, show it instantly with no loader
-          if (iframeEverLoaded) {
-            ifr.style.visibility = 'visible';
-            // Ensure loading overlay is hidden
-            document.getElementById('loadingOverlay').style.display = 'none';
-          } else {
-            // First time: show loading overlay
-            ifr.style.visibility = 'hidden';
-            showLoading();
-            // If iframe somehow already complete, hide loading after tiny delay
-            if (ifr.contentDocument && ifr.contentDocument.readyState === 'complete') {
-              setTimeout(hideLoading, 50);
+    <!-- Canonical & Robots -->
+    <link rel="canonical" href="https://aesrn.mudasiribrahim.com/">
+    <meta name="author" content="African Emerging Scholars Research Network">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Google verification (keep if needed) -->
+    <meta name="google-site-verification" content="PGq_oDNzKGPvdcDK-DzNc2VYrCckkJxWLyiqq7OdHq0"/>
+    
+    <!-- Schema.org: Network as Organization, founder as member -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://aesrn.mudasiribrahim.com/#organization",
+        "name": "African Emerging Scholars Research Network",
+        "alternateName": "AESRN",
+        "url": "https://aesrn.mudasiribrahim.com/",
+        "logo": "https://raw.githubusercontent.com/mudassiribrahim12/me/main/favicon-32x32.png",
+        "description": "Peer network for Ghanaian nurses with research skills. Collaborative publication, no mentorship.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Tamale",
+            "addressRegion": "Northern Region",
+            "addressCountry": "GH"
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "Mudasir Mohammed Ibrahim",
+            "jobTitle": "Founder & Member",
+            "worksFor": {
+                "@type": "Hospital",
+                "name": "Tamale Teaching Hospital"
             }
-          }
-        }
-      }
-      
-      // Review materials: open SharePoint link
-      function openReviewMaterials() {
-        window.open('https://swpgh-my.sharepoint.com/:f:/g/personal/mohammed_mudasir_tth_gov_gh/IgDopS4nZaKiS4WhTxSeRb6FAbaOLyIXT4b1TMfT6GT26nM?e=P0tGLk', '_blank');
-      }
-      
-      // Back to dashboard – iframe stays loaded, just hidden from view
-      function backToDashboard() {
-        document.getElementById('formContainer').style.display = 'none';
-        document.getElementById('dashboardContainer').style.display = 'flex';
-        // Do NOT clear iframe src or unload – just hide it visually
-        const ifr = document.getElementById('formIframe');
-        if (ifr) ifr.style.visibility = 'hidden';
-        // Loading overlay stays hidden for next time
-        document.getElementById('loadingOverlay').style.display = 'none';
-      }
-      
-      // ---------- ACTIVITY TIMERS ----------
-      function resetActivityTimers() {
-        clearTimeout(inactivityTimer); clearTimeout(warningTimer); hideInactivityWarning();
-        updateSessionExpiry();
-        warningTimer = setTimeout(showInactivityWarning, WARNING_TIME);
-        inactivityTimer = setTimeout(logoutDueToInactivity, SESSION_TIMEOUT);
-      }
-      function showInactivityWarning() { document.getElementById('inactivityWarning').style.display = 'block'; startInactivityCountdown(120); }
-      function hideInactivityWarning() { document.getElementById('inactivityWarning').style.display = 'none'; }
-      function startInactivityCountdown(sec) {
-        const timer = document.getElementById('inactivityTimer'); let remaining = sec;
-        function update() { const m = Math.floor(remaining/60), s = remaining%60; timer.textContent = `${m}:${s<10?'0':''}${s}`; if (remaining<=0) clearInterval(i); else remaining--; }
-        update(); const i = setInterval(update, 1000);
-      }
-      function logoutDueToInactivity() { showCustomAlert('Session Expired', 'Session expired due to inactivity.', 'info'); logout(); }
-      
-      function showCustomAlert(title, message, type) {
-        const icon = type==='info' ? 'ℹ️' : '⚠️';
-        const overlay = document.getElementById('confirmationDialog');
-        overlay.innerHTML = `<div class="confirmation-dialog"><div class="confirmation-icon">${icon}</div><div class="confirmation-title">${title}</div><div class="confirmation-message">${message}</div><div class="confirmation-buttons"><button class="confirm-button confirm-no" id="closeAlert">OK</button></div></div>`;
-        overlay.style.display = 'flex';
-        document.getElementById('closeAlert').addEventListener('click', function() { overlay.style.display = 'none'; });
-      }
-      
-      function trackUserActivity() { resetActivityTimers(); }
-      function attachActivityListeners() {
-        document.addEventListener('mousemove', trackUserActivity); document.addEventListener('keydown', trackUserActivity);
-        document.addEventListener('click', trackUserActivity); document.addEventListener('scroll', trackUserActivity);
-      }
-      function detachActivityListeners() {
-        document.removeEventListener('mousemove', trackUserActivity); document.removeEventListener('keydown', trackUserActivity);
-        document.removeEventListener('click', trackUserActivity); document.removeEventListener('scroll', trackUserActivity);
-      }
-      
-      // ---------- GREETING ----------
-      function getGreeting() { const h = new Date().getHours(); if (h<12) return "Good Morning"; if (h<17) return "Good Afternoon"; return "Good Evening"; }
-      function getGreetingIcon() { const h = new Date().getHours(); if (h<12) return "🌅"; if (h<17) return "☀️"; return "🌙"; }
-      function showLoginGreeting() {
-        const sessionId = getCurrentSessionId();
-        if (hasGreetingBeenShown(sessionId)) return;
-        document.getElementById('greetingText').textContent = getGreeting();
-        document.getElementById('greetingIcon').textContent = getGreetingIcon();
-        document.getElementById('userGreeting').textContent = `${getGreeting()}, ${currentUserName}!`;
-        document.getElementById('loginGreeting').style.display = 'flex';
-        markGreetingAsShown(sessionId);
-        setTimeout(() => { 
-          document.getElementById('loginGreeting').style.animation = 'fadeOutUp 0.5s ease';
-          setTimeout(() => { 
-            document.getElementById('loginGreeting').style.display = 'none'; 
-            document.getElementById('loginGreeting').style.animation = 'slideInRight 0.5s ease'; 
-          }, 500);
-        }, 5000);
-      }
-      
-      // ---------- LOGOUT – preserve iframe, do not unload ----------
-      function logout() {
-        if (currentUserEmail) removeUserSession(currentUserEmail);
-        clearTimeout(inactivityTimer); clearTimeout(warningTimer); hideInactivityWarning(); stopGhanaTimeUpdates();
-        detachActivityListeners();
-        document.getElementById('confirmationDialog').style.display = 'none'; 
-        document.getElementById('loginGreeting').style.display = 'none';
-        
-        // Hide containers
-        document.getElementById('dashboardContainer').style.display = 'none';
-        document.getElementById('formContainer').style.display = 'none';
-        
-        // Do NOT clear iframe src – keep it preloaded for next login
-        // Just hide it
-        const ifr = document.getElementById('formIframe');
-        if (ifr) ifr.style.visibility = 'hidden';
-        
-        document.getElementById('loadingOverlay').style.display = 'none';
-        document.getElementById('email').value = ''; document.getElementById('password').value = ''; 
-        document.getElementById('email').focus();
-        currentUserName = ''; currentUserEmail = ''; failedAttempts = 0; 
-        
-        showLogoutNotification();
-      }
-      
-      function showLogoutNotification() {
-        const n = document.getElementById('logoutNotification'), c = document.getElementById('logoutCountdown');
-        n.style.display = 'flex'; 
-        let count = 5; 
-        c.textContent = count;
-        const i = setInterval(() => { 
-          count--; 
-          c.textContent = count; 
-          if (count <= 0) { 
-            clearInterval(i); 
-            n.style.display = 'none'; 
-            document.getElementById('loginContainer').style.display = 'flex';
-          } 
-        }, 1000);
-      }
-      
-      // ---------- SESSION CHECK ----------
-      function checkExistingSession() {
-        const userSession = JSON.parse(localStorage.getItem(USER_SESSION_KEY) || '{}');
-        if (userSession.email && userSession.name && userSession.sessionId && Date.now() < userSession.expiry) {
-          const sessions = getActiveSessions();
-          const activeSession = sessions[userSession.email];
-          if (activeSession && activeSession.sessionId === userSession.sessionId) {
-            currentUserEmail = userSession.email; currentUserName = userSession.name; setCurrentSessionId(userSession.sessionId);
-            // Don't show dashboard yet – wait for app loader to finish
-            return true;
-          }
-        }
-        if (userSession.email) removeUserSession(userSession.email);
-        return false;
-      }
-      
-      // ---------- INIT – FULL LOAD THEN DASHBOARD (if session) OR LOGIN ----------
-      document.addEventListener('DOMContentLoaded', function() {
-        updateAllCopyrightYears();
-        
-        // Pre-hide iframe visibility
-        document.getElementById('formIframe').style.visibility = 'hidden';
-        document.getElementById('loadingOverlay').style.display = 'none';
-        
-        // Simulate full app load – wait 1.5 seconds to ensure everything is ready
-        setTimeout(function() {
-          // Fade out app loader
-          const loader = document.getElementById('appLoader');
-          loader.style.opacity = '0';
-          setTimeout(function() {
-            loader.style.display = 'none';
-            
-            // Now decide: existing session or login
-            if (checkExistingSession()) {
-              showDashboard();
-            } else {
-              document.getElementById('loginContainer').style.display = 'flex';
-              document.getElementById('email').focus();
-              if (!getCurrentSessionId()) setCurrentSessionId(generateSessionId());
-            }
-          }, 500);
-        }, 1500); // Ensures full load before dashboard appears
-      });
-      
-      // ---------- EVENT LISTENERS ----------
-      document.getElementById('loginForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const email = document.getElementById('email').value, pass = document.getElementById('password').value;
-        document.getElementById('errorMessage').style.display = 'none'; document.getElementById('attemptsWarning').style.display = 'none';
-        if (validateLogin(email, pass)) {
-          if (isUserAlreadyLoggedIn(email)) showCustomAlert('Multiple Login Detected', 'This account is already logged in on another device.', 'warning');
-          failedAttempts = 0; 
-          showDashboard();
-        } else handleFailedLogin();
-      });
-      
-      // Dashboard actions
-      document.getElementById('makeSubmissionCard').addEventListener('click', openSubmissionForm);
-      document.getElementById('reviewMaterialsCard').addEventListener('click', openReviewMaterials);
-      document.getElementById('backToDashboardBtn').addEventListener('click', backToDashboard);
-      
-      // Logout triggers
-      document.getElementById('dashboardLogoutBtn').addEventListener('click', function() { document.getElementById('confirmationDialog').style.display = 'flex'; });
-      document.getElementById('infoCardLogoutTrigger').addEventListener('click', function() { document.getElementById('confirmationDialog').style.display = 'flex'; });
-      
-      document.getElementById('confirmLogout').addEventListener('click', logout);
-      document.getElementById('cancelLogout').addEventListener('click', function() { document.getElementById('confirmationDialog').style.display = 'none'; });
-      document.getElementById('keepActiveButton').addEventListener('click', resetActivityTimers);
-      document.getElementById('confirmationDialog').addEventListener('click', function(e) { if (e.target === this) this.style.display = 'none'; });
-      
-      // Session cross-check
-      setInterval(function() {
-        if (currentUserEmail) {
-          const userSession = JSON.parse(localStorage.getItem(USER_SESSION_KEY) || '{}');
-          const sessions = getActiveSessions(); const activeSession = sessions[currentUserEmail];
-          if (!activeSession || activeSession.sessionId !== userSession.sessionId) { showCustomAlert('Session Ended', 'You logged in from another device.', 'info'); logout(); }
-        }
-      }, 30000);
-      
-      // Clean old greeting records
-      function cleanOldGreetingRecords() {
-        const g = JSON.parse(localStorage.getItem(SHOWN_GREETING_KEY) || '{}');
-        const oneWeek = Date.now() - 7*24*60*60*1000;
-        Object.keys(g).forEach(sid => { const ts = parseInt(sid.split('_')[1]); if (ts && ts < oneWeek) delete g[sid]; });
-        localStorage.setItem(SHOWN_GREETING_KEY, JSON.stringify(g));
-      }
-      setInterval(cleanOldGreetingRecords, 24*60*60*1000); cleanOldGreetingRecords();
-      
-      setInterval(updateAllCopyrightYears, 24*60*60*1000);
+        },
+        "knowsAbout": ["Nursing research", "Peer collaboration", "Health sciences publication"],
+        "inLanguage": "en"
+    }
     </script>
-  </body>
+    
+    <!-- Schema.org: Person (founder) within network context -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://aesrn.mudasiribrahim.com/#person",
+        "name": "Mudasir Mohammed Ibrahim",
+        "url": "https://aesrn.mudasiribrahim.com/",
+        "image": "https://raw.githubusercontent.com/mudassiribrahim12/me/main/mysecondprofile.jpg",
+        "description": "Founder of AESRN. Registered Nurse and health researcher at Tamale Teaching Hospital.",
+        "jobTitle": "Founder & Nursing Research Coordinator",
+        "affiliation": {
+            "@id": "https://aesrn.mudasiribrahim.com/#organization"
+        },
+        "worksFor": {
+            "@type": "Hospital",
+            "name": "Tamale Teaching Hospital",
+            "url": "https://tth.gov.gh"
+        },
+        "sameAs": [
+            "https://orcid.org/0000-0002-9049-8222",
+            "https://scholar.google.com/citations?user=xEFzAvgAAAAJ&hl=en",
+            "https://github.com/mudassiribrahim30",
+            "https://linkedin.com/in/mudasir-mohammed-ibrahim-16b5141b0",
+            "https://www.youtube.com/@mudasirmohammedibrahim1026"
+        ],
+        "knowsAbout": ["Nursing informatics", "Clinical education", "Patient safety", "Peer research collaboration"]
+    }
+    </script>
+    
+    <!-- Stylesheets – AESRN design system -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ----- SIMPLE, SAME COLORS – RESPONSIVE HAMBURGER, PROFESSIONAL IMAGE NOTE ----- */
+        :root {
+            --primary: #2A5C82;
+            --secondary: #1A9AA0;
+            --accent: #E63946;
+            --accent-light: #FF7B8C;
+            --dark: #0A2342;
+            --light: #F8F9FA;
+            --gray: #6C757D;
+            --text-dark: #333333;
+            --text-light: #FFFFFF;
+            --gradient: linear-gradient(135deg, #2A5C82 0%, #1A9AA0 50%, #E63946 100%);
+            --shadow: 0 10px 40px rgba(10, 35, 66, 0.1);
+            --shadow-heavy: 0 20px 60px rgba(10, 35, 66, 0.2);
+            --transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+        }
+        
+        .dark-theme {
+            --primary: #5D8AA8;
+            --secondary: #2DC7D0;
+            --accent: #FF6B7A;
+            --accent-light: #FF9AA6;
+            --dark: #121212;
+            --light: #1E1E1E;
+            --text-dark: #FFFFFF;
+            --text-light: #FFFFFF;
+            --gradient: linear-gradient(135deg, #2A5C82 0%, #1A9AA0 50%, #E63946 100%);
+            --shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* LOADER */
+        #loader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--gradient); z-index: 9999;
+            display: flex; justify-content: center; align-items: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        .loader-content { text-align: center; color: white; }
+        .atom-loader { width: 80px; height: 80px; margin: 0 auto 20px; position: relative; }
+        .atom-circle { position: absolute; width: 100%; height: 100%; border-radius: 50%; border: 3px solid transparent; border-top-color: var(--accent-light); animation: spin 1.5s linear infinite; }
+        .atom-circle:nth-child(2) { border-top-color: white; animation: spin 2s linear infinite reverse; }
+        .atom-circle:nth-child(3) { width: 70%; height: 70%; top: 15%; left: 15%; border-top-color: var(--accent); animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        /* theme toggle & back to top */
+        .theme-toggle {
+            position: fixed; top: 100px; right: 20px; z-index: 1000;
+            background: var(--primary); color: white; width: 50px; height: 50px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            cursor: pointer; box-shadow: var(--shadow); border: none; transition: var(--transition);
+        }
+        .theme-toggle:hover { transform: rotate(30deg) scale(1.1); background: var(--accent); }
+        #back-to-top {
+            position: fixed; bottom: 30px; right: 20px; z-index: 1000;
+            background: var(--accent); color: white; width: 50px; height: 50px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            cursor: pointer; box-shadow: var(--shadow); border: none;
+            opacity: 0; visibility: hidden; transition: var(--transition);
+        }
+        #back-to-top.visible { opacity: 1; visibility: visible; }
+        #back-to-top:hover { transform: translateY(-5px); background: var(--primary); }
+        
+        /* header - full visibility at top */
+        header {
+            background: var(--gradient); color: white; padding: 30px 0 40px;
+            position: relative; overflow: hidden;
+        }
+        .header-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.1; background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover; background-position: center;
+        }
+        .logo-header { display: flex; align-items: center; margin-bottom: 25px; position: relative; z-index: 2; }
+        .logo-container { position: relative; margin-right: 25px; }
+        
+        /* EXTERNAL LOGO URL – FITS PERFECTLY IN THE BOX, SAME SIZE */
+        /* EXTERNAL LOGO URL – NOW FITS PERFECTLY, ZOOMED IN TO FILL BOX */
+        .logo-placeholder {
+            width: 100px; 
+            height: 100px; 
+            background: white;
+            border-radius: 20px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            border: 2px solid var(--accent);
+            transition: var(--transition);
+            overflow: hidden; 
+            padding: 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .logo-placeholder img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover;     /* ✅ VALID - fills entire box, crops if needed */
+            object-position: center;
+            display: block;
+        }
+        .logo-placeholder i { display: none; }
+        .logo-placeholder:hover { 
+            transform: translateY(-5px); 
+            border-color: var(--accent-light); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+        }
+        
+        /* Dark theme adjustment */
+        .dark-theme .logo-placeholder {
+            background: #1a1a1a;
+            border-color: var(--accent);
+        }
+        
+        .logo-text { flex: 1; }
+        h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2.8rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 10px; line-height: 1.2; }
+        .tagline { font-size: 1.2rem; opacity: 0.9; font-weight: 300; max-width: 800px; }
+        
+                /* ---------- ZOOMED IN SMALLER – FACES FILL FRAME, PROFESSIONAL LOOK ---------- */
+        .member-img {
+            height: 260px;
+            overflow: hidden;        /* crops excess – zoom effect */
+            background: #f0f2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .dark-theme .member-img {
+            background: #2a2a2a;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;       /* 🔥 ZOOMS IN – fills container, crops edges */
+            object-position: center 20%; /* shifts slightly up for face focus */
+            transition: transform 0.5s ease;
+            transform: scale(1.1);   /* 🔥 ZOOMED IN SMALLER – faces are clear */
+        }
+        .team-member:hover .member-img img {
+            transform: scale(1.15);   /* subtle zoom on hover */
+        }
+        
+        /* fine-tune each image for best face visibility */
+        .member-img img[alt="Mudasir Mohammed Ibrahim"] {
+            object-position: center 25%; /* adjust face position */
+            transform: scale(1.15);
+        }
+        .member-img img[alt="Edna Die"] {
+            object-position: center 30%;
+            transform: scale(1.2);
+        }
+        .member-img img[alt="Abdul-Malik Seidu"] {
+            object-position: center 20%;
+            transform: scale(1.12);
+        }
+        .member-img img[alt="Abdul Latif Abdul Rahaman"] {
+            object-position: center 25%;
+            transform: scale(1.15);
+        }
+        .member-img img[alt="Alhassan Issahaq"] {
+            object-position: center 30%;
+            transform: scale(1.18);
+        }
+        
+        /* dark mode adjustments */
+        .dark-theme .member-img img {
+            filter: brightness(0.95) contrast(1.05);
+        }
+        
+        /* ---------- HAMBURGER NAVIGATION – FULLY RESPONSIVE ---------- */
+        nav {
+            background-color: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+            position: sticky; top: 0; z-index: 1000; box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.05); transition: var(--transition);
+        }
+        .dark-theme nav { background-color: rgba(30,30,30,0.95); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        
+        .nav-container {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 20px; max-width: 1200px; margin: 0 auto;
+            position: relative;
+        }
+        
+        .nav-logo {
+            font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700;
+            color: var(--primary); text-decoration: none; display: flex; align-items: center;
+            cursor: pointer;
+        }
+        .dark-theme .nav-logo { color: var(--accent-light); }
+        .nav-logo i { margin-right: 10px; color: var(--accent); }
+        
+        /* desktop navigation */
+        .nav-desktop { display: flex; align-items: center; gap: 30px; }
+        .nav-links { display: flex; list-style: none; gap: 30px; }
+        .nav-links a {
+            text-decoration: none; color: var(--text-dark); font-weight: 500;
+            font-size: 1.05rem; padding: 8px 0; position: relative; transition: var(--transition);
+            cursor: pointer;
+        }
+        .dark-theme .nav-links a { color: var(--text-light); }
+        .nav-links a:after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 0;
+            height: 3px; background: var(--accent); transition: var(--transition);
+        }
+        .nav-links a:hover { color: var(--primary); }
+        .dark-theme .nav-links a:hover { color: var(--accent-light); }
+        .nav-links a:hover:after { width: 100%; }
+        .nav-links a.active { color: var(--primary); font-weight: 600; }
+        .dark-theme .nav-links a.active { color: var(--accent-light); }
+        .nav-links a.active:after { width: 100%; }
+        
+        .portal-btn {
+            background: var(--accent); color: white !important; padding: 10px 20px !important;
+            border-radius: 30px; font-weight: 600; display: flex; align-items: center; gap: 8px;
+            transition: var(--transition); box-shadow: 0 5px 15px rgba(230,57,70,0.3);
+            border: none; text-decoration: none; white-space: nowrap;
+        }
+        .portal-btn i { font-size: 1rem; }
+        .portal-btn:hover { background: var(--primary); transform: translateY(-2px); box-shadow: 0 10px 25px rgba(230,57,70,0.4); color: white !important; }
+        .portal-btn:hover:after { width: 0; }
+        .dark-theme .portal-btn { color: white !important; }
+        
+        /* hamburger icon - hidden on desktop */
+        .hamburger {
+            display: none; flex-direction: column; cursor: pointer; gap: 6px;
+            background: transparent; border: none; padding: 8px; z-index: 1100;
+        }
+        .hamburger span {
+            width: 28px; height: 3px; background: var(--primary);
+            border-radius: 3px; transition: var(--transition);
+        }
+        .dark-theme .hamburger span { background: var(--accent-light); }
+        
+        /* mobile menu overlay */
+        .mobile-menu {
+            position: fixed; top: 0; right: -100%; width: min(85%, 400px); height: 100vh;
+            background: var(--light); box-shadow: var(--shadow-heavy); z-index: 1050;
+            transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            padding: 100px 30px 40px; display: flex; flex-direction: column;
+            border-left: 2px solid var(--accent-light); overflow-y: auto;
+        }
+        .dark-theme .mobile-menu { background: #1e1e1e; border-left-color: var(--accent); }
+        .mobile-menu.active { right: 0; }
+        
+        .mobile-menu .nav-links-mobile {
+            display: flex; flex-direction: column; list-style: none; gap: 25px; margin-bottom: 40px;
+        }
+        .mobile-menu .nav-links-mobile a {
+            font-size: 1.4rem; font-weight: 600; color: var(--text-dark);
+            text-decoration: none; padding: 10px 0; border-bottom: 1px solid rgba(128,128,128,0.2);
+            transition: var(--transition); display: block;
+            cursor: pointer;
+        }
+        .dark-theme .mobile-menu .nav-links-mobile a { color: var(--text-light); }
+        .mobile-menu .nav-links-mobile a.active { color: var(--accent); border-bottom-color: var(--accent); }
+        
+        .mobile-portal-btn {
+            background: var(--accent); color: white !important; padding: 16px 24px !important;
+            border-radius: 40px; font-weight: 700; display: inline-flex; align-items: center;
+            justify-content: center; gap: 12px; text-decoration: none; margin-top: 20px;
+            font-size: 1.2rem; border: none; width: 100%;
+        }
+        .close-btn {
+            position: absolute; top: 30px; right: 30px; font-size: 2rem;
+            color: var(--text-dark); cursor: pointer; background: none; border: none;
+            transition: var(--transition); width: 40px; height: 40px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .dark-theme .close-btn { color: var(--text-light); }
+        .close-btn:hover { transform: rotate(90deg); color: var(--accent); }
+        
+        .overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            background: rgba(0,0,0,0.6); backdrop-filter: blur(3px); z-index: 1040;
+            opacity: 0; visibility: hidden; transition: var(--transition);
+        }
+        .overlay.active { opacity: 1; visibility: visible; }
+        
+        /* main content */
+        main { min-height: 70vh; padding: 60px 0; }
+        .section-title {
+            margin-bottom: 50px; color: var(--primary);
+            font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 700;
+            position: relative; display: inline-block;
+        }
+        .dark-theme .section-title { color: var(--accent-light); }
+        .section-title:after {
+            content: ''; position: absolute; width: 70%; height: 5px;
+            background: var(--accent); bottom: -10px; left: 0; border-radius: 5px;
+        }
+        .center-title { text-align: center; }
+        .center-title:after { left: 15%; }
+        
+        /* tab content */
+        .tab-content { display: none; animation: fadeIn 0.6s ease-out; min-height: 400px; }
+        .tab-content.active { display: block; }
+        
+        /* HOME – Ghana nursing */
+        .hero-section { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px; }
+        .hero-text h2 { font-size: 3rem; color: var(--primary); margin-bottom: 20px; line-height: 1.2; }
+        .dark-theme .hero-text h2 { color: var(--accent-light); }
+        .hero-text p { font-size: 1.2rem; color: var(--text-dark); margin-bottom: 30px; }
+        .dark-theme .hero-text p { color: #fff !important; }
+        .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 40px; }
+        .stat-item { text-align: center; padding: 20px; background: var(--light); border-radius: 15px; box-shadow: var(--shadow); transition: var(--transition); border: 1px solid rgba(0,0,0,0.05); }
+        .dark-theme .stat-item { background: #2a2a2a; border: 1px solid rgba(255,255,255,0.05); }
+        .stat-item:hover { transform: translateY(-10px); box-shadow: var(--shadow-heavy); }
+        .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--primary); margin-bottom: 5px; }
+        .dark-theme .stat-number { color: var(--accent-light); }
+        .stat-label { font-size: 0.9rem; color: var(--text-dark); text-transform: uppercase; letter-spacing: 1px; }
+        .dark-theme .stat-label { color: var(--text-light); }
+        .hero-image { position: relative; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-heavy); height: 400px; }
+        .hero-image img { width: 100%; height: 100%; object-fit: cover; }
+        .image-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--gradient); opacity: 0.3; }
+        
+        .mission-section {
+            background: var(--light); padding: 60px; border-radius: 20px; box-shadow: var(--shadow);
+            margin-bottom: 80px; position: relative; overflow: hidden; border: 1px solid rgba(0,0,0,0.05);
+        }
+        .dark-theme .mission-section { background: #2a2a2a; border: 1px solid rgba(255,255,255,0.05); }
+        .mission-section:before { content: ''; position: absolute; top: 0; left: 0; width: 10px; height: 100%; background: var(--accent); }
+        .mission-section h3 { font-size: 2rem; color: var(--primary); margin-bottom: 20px; }
+        .dark-theme .mission-section h3 { color: var(--accent-light); }
+        
+        .process-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 30px; margin-top: 50px; }
+        .process-step { background: var(--light); padding: 30px; border-radius: 15px; box-shadow: var(--shadow); transition: var(--transition); text-align: center; position: relative; border: 1px solid rgba(0,0,0,0.05); }
+        .dark-theme .process-step { background: #2a2a2a; border: 1px solid rgba(255,255,255,0.05); }
+        .process-step:hover { transform: translateY(-10px); box-shadow: var(--shadow-heavy); }
+        .step-number { width: 50px; height: 50px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.5rem; margin: 0 auto 20px; }
+        .process-step h4 { color: var(--primary); margin-bottom: 15px; font-size: 1.3rem; }
+        .dark-theme .process-step h4 { color: var(--accent-light); }
+        
+        /* RESEARCH AREAS – nursing focus */
+        .research-areas { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 30px; margin-top: 40px; }
+        .research-card { background: var(--light); padding: 30px; border-radius: 15px; box-shadow: var(--shadow); transition: var(--transition); border-left: 5px solid var(--accent); border: 1px solid rgba(0,0,0,0.05); }
+        .dark-theme .research-card { background: #2a2a2a; border: 1px solid rgba(255,255,255,0.05); }
+        .research-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-heavy); }
+        .research-card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; }
+        .research-card h4 { font-size: 1.4rem; color: var(--primary); margin-bottom: 15px; }
+        .dark-theme .research-card h4 { color: var(--accent-light); }
+        .research-card p { color: var(--text-dark); }
+        .dark-theme .research-card p { color: #fff; }
+        
+        /* MEMBERS – UNIFORM STYLE, AUTO-ADJUST CARDS, no extra space */
+        .team-intro { text-align: center; max-width: 800px; margin: 0 auto 60px; font-size: 1.1rem; color: var(--text-dark); line-height: 1.8; }
+        .dark-theme .team-intro { color: var(--text-light); }
+        .team-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+            gap: 40px; 
+            margin-top: 40px; 
+            align-items: stretch;
+        }
+        .team-member { 
+            background-color: var(--light); 
+            border-radius: 20px; 
+            overflow: hidden; 
+            box-shadow: var(--shadow); 
+            transition: var(--transition); 
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .dark-theme .team-member { background-color: #2a2a2a; border: 1px solid rgba(255,255,255,0.05); }
+        .team-member:hover { transform: translateY(-10px); box-shadow: var(--shadow-heavy); }
+        
+
+        .member-info { 
+            padding: 25px; 
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .member-name { 
+            color: var(--primary); 
+            font-size: 1.5rem; 
+            margin-bottom: 6px; 
+            font-weight: 700; 
+            line-height: 1.2;
+        }
+        .dark-theme .member-name { color: var(--accent-light); }
+        .member-title { 
+            color: var(--accent); 
+            font-weight: 600; 
+            margin-bottom: 12px; 
+            font-size: 1rem; 
+            letter-spacing: 0.3px;
+        }
+        .member-workplace { 
+            color: var(--text-dark); 
+            margin-bottom: 16px; 
+            font-size: 0.95rem; 
+            display: flex; 
+            align-items: center; 
+            gap: 6px;
+        }
+        .dark-theme .member-workplace { color: var(--text-light); }
+        .member-workplace i { 
+            color: var(--secondary); 
+            width: 18px;
+            text-align: center;
+        }
+        /* social icons - only the ones shown in founder card */
+        .social-icons { 
+            display: flex; 
+            gap: 12px; 
+            margin-top: 8px; 
+        }
+        .social-icons a { 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            width: 40px; 
+            height: 40px; 
+            background-color: rgba(42,92,130,0.08); 
+            color: var(--primary); 
+            border-radius: 10px; 
+            text-decoration: none; 
+            transition: var(--transition); 
+        }
+        .dark-theme .social-icons a { background-color: rgba(42,92,130,0.3); color: var(--accent-light); }
+        .social-icons a:hover { background-color: var(--primary); color: white; transform: translateY(-3px); }
+        
+        /* hide extra elements not present in Mudasir card */
+        .member-interests, .member-description, .interests-label {
+            display: none;
+        }
+        
+        .btn {
+            display: inline-block; padding: 14px 32px; background: var(--accent); color: white;
+            border: none; border-radius: 10px; font-weight: 600; font-size: 1rem; cursor: pointer;
+            transition: var(--transition); text-decoration: none; box-shadow: 0 5px 15px rgba(230,57,70,0.3);
+        }
+        .btn:hover { background: var(--primary); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(230,57,70,0.4); }
+        .btn-outline { background: transparent; border: 2px solid var(--accent); color: var(--accent); box-shadow: none; }
+        .btn-outline:hover { background: var(--accent); color: white; }
+        
+        /* PUBLICATIONS TAB – coming soon style */
+        .coming-soon-card {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            background: var(--light); border-radius: 30px; padding: 70px 40px; 
+            box-shadow: var(--shadow); text-align: center; margin: 40px auto; max-width: 800px;
+            border: 2px dashed var(--accent);
+        }
+        .dark-theme .coming-soon-card { background: #2a2a2a; }
+        .coming-soon-card i { font-size: 5rem; color: var(--accent); margin-bottom: 30px; opacity: 0.8; }
+        .coming-soon-card h3 { font-size: 2.8rem; color: var(--primary); margin-bottom: 20px; font-weight: 700; }
+        .dark-theme .coming-soon-card h3 { color: var(--accent-light); }
+        .coming-soon-card p { font-size: 1.3rem; color: var(--text-dark); max-width: 500px; }
+        .dark-theme .coming-soon-card p { color: var(--text-light); }
+        
+        /* FOOTER – professional image statement */
+        footer {
+            background: var(--dark); color: white; padding: 60px 0 30px; margin-top: 80px; transition: var(--transition);
+        }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-section h3 { font-size: 1.4rem; margin-bottom: 25px; color: var(--accent); font-family: 'Space Grotesk', sans-serif; }
+        .footer-section p { color: rgba(255,255,255,0.9); margin-bottom: 15px; line-height: 1.7; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: rgba(255,255,255,0.9); text-decoration: none; transition: var(--transition); display: inline-block; cursor: pointer; }
+        .footer-links a:hover { color: var(--accent-light); transform: translateX(5px); }
+        .email-link { color: var(--accent-light) !important; text-decoration: underline !important; }
+        .copyright { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+        
+        .image-rights {
+            text-align: center; margin-top: 20px; padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6); font-size: 0.8rem;
+            font-style: italic;
+        }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* ---------- RESPONSIVE BREAKPOINTS ---------- */
+        @media (max-width: 992px) {
+            .hero-section { grid-template-columns: 1fr; gap: 40px; }
+            .hero-text h2 { font-size: 2.5rem; }
+            .theme-toggle { top: 80px; right: 15px; }
+            .hamburger { display: flex; }
+            .nav-desktop { display: none; }
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .mission-section { padding: 40px 30px; }
+            .stats { grid-template-columns: 1fr; }
+            .logo-header { flex-direction: column; text-align: center; }
+            .logo-container { margin-right: 0; margin-bottom: 20px; }
+            .logo-placeholder { width: 80px; height: 80px; }
+            h1 { font-size: 2rem; }
+            .tagline { font-size: 1rem; }
+            .team-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-text h2 { font-size: 2rem; }
+            .section-title { font-size: 2rem; }
+            .mobile-menu { width: 100%; border-left: none; }
+        }
+        
+        @media (min-width: 993px) {
+            .hamburger { display: none; }
+            .nav-desktop { display: flex; }
+        }
+    </style>
+</head>
+<body>
+    <!-- loading animation -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="atom-loader"><div class="atom-circle"></div><div class="atom-circle"></div><div class="atom-circle"></div></div>
+            <h2>African Emerging Scholars Research Network (AESRN)</h2>
+            <p>Ghanaian nurses advancing research together...</p>
+        </div>
+    </div>
+    
+    <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+    
+    <!-- header - fully visible at top -->
+    <header id="page-header">
+        <div class="header-bg"></div>
+        <div class="container">
+            <div class="logo-header">
+                <div class="logo-container">
+                    <div class="logo-placeholder">
+                        <img src="https://raw.githubusercontent.com/aesrn30/aesrn/main/Lablogo.png" alt="AESRN Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <i class="fas fa-user-nurse" style="display: none;"></i>
+                    </div>
+                </div>
+                <div class="logo-text">
+                    <h1>African Emerging Scholars Research Network (AESRN)</h1>
+                    <p class="tagline">Connecting emerging African (Ghanaian) nurse researchers for collaborative publication success, career development, and advancing health sciences literature</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <!-- AESRN LOGO - click returns home & scroll to very top -->
+            <a class="nav-logo" id="homeLogoBtn"><i class="fas fa-network-wired"></i> AESRN</a>
+            
+            <!-- DESKTOP VIEW -->
+            <div class="nav-desktop">
+                <ul class="nav-links">
+                    <li><a class="active" data-tab="home">Home</a></li>
+                    <li><a data-tab="research">Research Areas</a></li>  <!-- renamed -->
+                    <li><a data-tab="team">Members</a></li>
+                    <li><a data-tab="publications">Publications <span style="background: var(--accent); color: white; padding: 3px 10px; border-radius: 30px; font-size: 0.7rem; margin-left: 6px; font-weight: 600;">soon</span></a></li>
+                </ul>
+                <a href="https://aesrnmemberlogin.mudasiribrahim.com/" class="portal-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-sign-in-alt"></i> Member Portal Login
+                </a>
+            </div>
+            
+            <!-- HAMBURGER ICON -->
+            <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- MOBILE MENU -->
+    <div class="overlay" id="overlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <ul class="nav-links-mobile">
+            <li><a data-tab="home" class="active">Home</a></li>
+            <li><a data-tab="research">Research Areas</a></li> <!-- renamed -->
+            <li><a data-tab="team">Members</a></li>
+            <li><a data-tab="publications">Publications <span style="background: var(--accent); color: white; padding: 4px 12px; border-radius: 40px; font-size: 0.8rem; margin-left: 10px;">coming soon</span></a></li>
+        </ul>
+        <a href="https://aesrnmemberlogin.mudasiribrahim.com/" class="mobile-portal-btn" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-sign-in-alt"></i> Member Portal Login
+        </a>
+    </div>
+    
+    <!-- MAIN – 4 TABS -->
+    <main class="container">
+        <!-- HOME -->
+        <div id="home" class="tab-content active">
+            <div class="hero-section">
+                <div class="hero-text">
+                    <h2>From proposal to publication: together.</h2>
+                    <p><strong>Peer network, not training.</strong> AESRN connects emerging African (Ghanaian) health researchers who already have research skills — we form teams, co-author, and publish. No mentorship track; pure collaboration among equals.</p>
+                    <a class="btn" data-tab="research">Explore Research Areas</a>
+                    <a class="btn btn-outline" data-tab="team">Meet our members</a>
+                    <div class="stats">
+                        <div class="stat-item"><div class="stat-number">5</div><div class="stat-label">Ghanaian nurse researchers</div></div>
+                        <div class="stat-item"><div class="stat-number">0</div><div class="stat-label">Publications</div></div>
+                        <div class="stat-item"><div class="stat-number">6</div><div class="stat-label">Research Areas</div></div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Ghanaian nurses collaborating">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+            
+            <div class="mission-section">
+                <h3>Collaborate. Write. Publish. — Ghanaian way.</h3>
+                <p>AESRN is <strong>not an NGO, not a mentorship program</strong>. We are a skill‑based peer network of Ghanaian nurses. If you already know how to conduct nursing research, we match you with complementary co-authors from other Ghanaian institutions. Together we produce nursing literature — no hierarchy, just shared expertise.</p>
+                <div style="margin: 30px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 20px;">
+                    <div style="background: rgba(42,92,130,0.05); padding: 20px; border-radius: 10px;">
+                        <h4 style="color: var(--primary); margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 10px;"></i>Skill‑based matching</h4>
+                        <p style="color: var(--text-dark);">Clinical nurses, nursing educators, public health nurses, etc — we build balanced writing teams across Ghana.</p>
+                    </div>
+                    <div style="background: rgba(42,92,130,0.05); padding: 20px; border-radius: 10px;">
+                        <h4 style="color: var(--primary); margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 10px;"></i>Co‑authorship, not training</h4>
+                        <p style="color: var(--text-dark);">You already have nursing research skills. We connect you to turn project ideas into published papers in nursing journals.</p>
+                    </div>
+                    <div style="background: rgba(42,92,130,0.05); padding: 20px; border-radius: 10px;">
+                        <h4 style="color: var(--primary); margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 10px;"></i>Career portfolios</h4>
+                        <p style="color: var(--text-dark);">Build a strong publication record through genuine peer collaboration — essential for Ghanaian nursing academia.</p>
+                    </div>
+                </div>
+                <h3 style="margin-top: 40px;">The Publication Process Journey</h3>
+                <div class="process-container">
+                    <div class="process-step"><div class="step-number">1</div><h4>Complementary match</h4><p>We identify nurses with complementary expertise (clinical, education, policy) and form balanced teams.</p></div>
+                    <div class="process-step"><div class="step-number">2</div><h4>Joint proposal</h4><p>Teams co-develop nursing research questions, methodology, and data collection plan.</p></div>
+                    <div class="process-step"><div class="step-number">3</div><h4>Distributed research</h4><p>Multi‑institution collaboration across Ghana — everyone contributes equally.</p></div>
+                    <div class="process-step"><div class="step-number">4</div><h4>Publication together</h4><p>From writing to journal submission: shared work, shared authorship, Ghanaian-led nursing science.</p></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- RESEARCH AREAS (renamed) -->
+        <div id="research" class="tab-content">
+            <h2 class="section-title center-title">Ghanaian nursing research priorities</h2>
+            <p class="team-intro">Our network concentrates on nursing and healthcare research relevant to Ghana. We publish collaboratively on topics where Ghanaian nurses lead. No mentorship, only skilled nurse researchers working together.</p>
+            <div class="research-areas">
+                <div class="research-card"><i class="fas fa-baby"></i><h4>Maternal & Child Health</h4><p>Antenatal care, safe motherhood, neonatal care, childhood immunisation, and nutrition within the Ghanaian context. Focus areas include high-risk pregnancy management, maternal and neonatal mortality reduction, adolescent reproductive health, postpartum care, PMTCT, family planning, maternal and perinatal epidemiology, and implementation research to improve outcomes in resource-limited settings — Ghanaian perspectives.</p></div>
+                <div class="research-card"><i class="fas fa-heart"></i><h4>Chronic Disease Epidemiology</h4><p>Hypertension, diabetes, liver disease, cancer, kidney disease, and other non-communicable diseases in Ghana. Emphasis on prevention, early detection, lifestyle modification, patient self-management, palliative care, chronic disease epidemiology, risk factor surveillance, and data-driven strategies to strengthen NCD control.</p></div>
+                <div class="research-card"><i class="fas fa-hand-holding-heart"></i><h4>Mental Health & Psychiatry</h4><p>Depression, substance use, anxiety, and community mental health in Ghana. Areas of interest include stigma reduction, adolescent and maternal mental health, crisis intervention, integration of mental health into primary care, psychiatric epidemiology, and population-based approaches to improving access and outcomes.</p></div>
+                <div class="research-card"><i class="fas fa-ambulance"></i><h4>Emergency & Critical Care</h4><p>Triage, trauma care, sepsis management, intensive care, and emergency obstetric care in resource-limited hospitals. Focus on survival outcomes, patient safety, health services research, quality improvement, and data-informed emergency care systems strengthening.</p></div>
+                <div class="research-card"><i class="fas fa-hospital-user"></i><h4>Nursing Education & Workforce</h4><p>Nursing curricula, clinical training, nurse retention, leadership — strengthening Ghana's nursing workforce.</p></div>
+                <div class="research-card"><i class="fas fa-leaf"></i><h4>Community & Public Health</h4><p>Health promotion, infectious disease prevention (malaria, TB, HIV), chronic disease screening, and community outreach in Ghana. Focus on disease surveillance, outbreak response, field epidemiology, mobile health initiatives, and reducing health disparities through population-level interventions.</p></div>
+            </div>
+        </div>
+        
+        <!-- MEMBERS – PERFECT IMAGE FIT: NOT ZOOMED IN, NOT TOO ZOOMED OUT -->
+        <div id="team" class="tab-content">
+            <h2 class="section-title center-title">Network Members</h2>
+            <p class="team-intro">
+                We don't have mentors — All members are peers based in Ghana who contribute voluntarily, collaborate based on shared interests and complementary skills, and collectively advance research and professional practice.
+            </p>
+            <div class="team-grid">
+                <!-- member 1 - Mudasir Mohammed Ibrahim -->
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/mudasir.png" alt="Mudasir Mohammed Ibrahim">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Mudasir Mohammed Ibrahim</h3>
+                        <p class="member-title">Founder & Member</p>
+                        <p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital, Tamale, Ghana</p>
+                        <div class="social-icons">
+                            <a href="https://scholar.google.com/citations?user=xEFzAvgAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                            <a href="https://linkedin.com/in/mudasir-mohammed-ibrahim-16b5141b0" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:mudassiribrahim30@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- member 2 - Edna Die -->
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Edna Die">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Edna Die</h3>
+                        <p class="member-title">Member</p>
+                        <p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital, Tamale, Ghana</p>
+                        <div class="social-icons">
+                            <a href="#" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                            <a href="https://www.linkedin.com/in/edna-die-51a0471bb/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:ednadie93@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- member 3 - Abdul-Malik Seidu -->
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/malik.png" alt="Abdul-Malik Seidu">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Abdul-Malik Seidu</h3>
+                        <p class="member-title">Member</p>
+                        <p class="member-workplace"><i class="fas fa-university"></i> Nurses' and Midwives' Training College, Tamale, Ghana</p>
+                        <div class="social-icons">
+                            <a href="https://scholar.google.com/citations?user=trXPqNAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:Malikseidu4@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- member 4 - Abdul Latif Abdul Rahaman -->
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Abdul Latif Abdul Rahaman">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Abdul Latif Abdul Rahaman</h3>
+                        <p class="member-title">Member</p>
+                        <p class="member-workplace"><i class="fas fa-university"></i> Nurses' and Midwives' Training College, Tamale, Ghana</p>
+                        <div class="social-icons">
+                            <a href="https://scholar.google.com/citations?user=zo7lYgwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:abdul0247080685@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- member 5 - Alhassan Issahaq -->
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Alhassan.png" alt="Alhassan Issahaq">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Alhassan Issahaq</h3>
+                        <p class="member-title">Member</p>
+                        <p class="member-workplace"><i class="fas fa-university"></i> Nurses' and Midwives' Training College, Tamale, Ghana</p>
+                        <div class="social-icons">
+                            <a href="#" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:issahaqalhassan26@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PUBLICATIONS TAB – coming soon -->
+        <div id="publications" class="tab-content">
+            <div class="coming-soon-card">
+                <i class="fas fa-file-alt"></i>
+                <h3>Coming Soon</h3>
+                <p>Our collaborative publications will be listed here. The network is currently building joint manuscripts.</p>
+                <div style="margin-top: 40px;">
+                    <span style="background: var(--accent-light); color: var(--dark); padding: 12px 28px; border-radius: 50px; font-weight: 600; font-size: 1.1rem;">First publications expected 2026</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+       <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AESRN · Ghana</h3>
+                    <p>Peer network for Ghanaian nurse researchers. We don't train — we collaborate and publish together. Based in Tamale, Ghana, for Ghana.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Network</h3>
+                    <ul class="footer-links">
+                        <li><a data-tab="home">Home</a></li>
+                        <li><a data-tab="research">Research Areas</a></li>
+                        <li><a data-tab="team">Members</a></li>
+                        <li><a data-tab="publications">Publications (soon)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/place/Tamale,+Ghana" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.9); text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.5);">Tamale, Ghana</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:contact@aesrn.org" class="email-link">research.aesrn@yahoo.com</a></p>
+                    <p><i class="fas fa-user-nurse"></i> From proposal to publication: together.</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>Copyright &copy; <span id="currentYear"></span> African Emerging Scholars Research Network (AESRN). All Rights Reserved.</p>
+                <p style="margin-top:10px; font-size:0.8rem;">Connecting skills — creating nursing publications — building careers in Ghana</p>
+            </div>
+            
+            <!-- Bottom row: founded date left (faded/hidden) + full image rights right (visible) -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.08);">
+                <!-- Founded date - faded, easy to miss -->
+                <span style="font-size: 0.65rem; color: rgba(255,255,255,0.2); letter-spacing: 0.5px;">founded 31/01/2026</span>
+                
+                <!-- Full image rights text - visible, readable, current position -->
+                <span style="font-size: 0.7rem; color: rgba(255,255,255,0.6); text-align: right; max-width: 500px;">
+                    All images are property of their respective owners. No ownership claimed by AESRN.
+                </span>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // ===== FIXES: HEADER VISIBLE, LOGO HOME + TOP, TABS SHOW TOP =====
+        
+        // Ensure scroll starts at the very top - header fully visible
+        if (history.scrollRestoration) history.scrollRestoration = 'manual';
+        window.scrollTo(0, 0);
+        setTimeout(() => window.scrollTo(0, 0), 10);
+        setTimeout(() => window.scrollTo(0, 0), 50);
+        
+        // Update copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Loader
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            setTimeout(() => { loader.style.opacity = '0'; loader.style.visibility = 'hidden'; }, 800);
+        });
+
+        // THEME TOGGLE
+        const themeToggle = document.getElementById('themeToggle');
+        const icon = themeToggle.querySelector('i');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+            document.body.classList.add('dark-theme'); icon.className = 'fas fa-sun'; themeToggle.title = 'Light mode';
+        } else { icon.className = 'fas fa-moon'; themeToggle.title = 'Dark mode'; }
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            if (document.body.classList.contains('dark-theme')) { icon.className = 'fas fa-sun'; themeToggle.title = 'Light mode'; localStorage.setItem('theme','dark'); }
+            else { icon.className = 'fas fa-moon'; themeToggle.title = 'Dark mode'; localStorage.setItem('theme','light'); }
+        });
+        
+        // BACK TO TOP
+        const backBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() { 
+            window.pageYOffset > 300 ? backBtn.classList.add('visible') : backBtn.classList.remove('visible'); 
+        });
+        backBtn.addEventListener('click', function(e) { 
+            e.preventDefault();
+            window.scrollTo({ top:0, behavior:'smooth' }); 
+        });
+        
+        // HAMBURGER MENU
+        const hamburger = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+        const closeBtn = document.getElementById('closeBtn');
+        
+        function openMenu() { mobileMenu.classList.add('active'); overlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeMenu() { mobileMenu.classList.remove('active'); overlay.classList.remove('active'); document.body.style.overflow = ''; }
+        
+        if (hamburger) hamburger.addEventListener('click', openMenu);
+        if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+        if (overlay) overlay.addEventListener('click', closeMenu);
+        
+        // Close mobile menu after clicking a link
+        document.querySelectorAll('.mobile-menu .nav-links-mobile a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const tabId = this.getAttribute('data-tab');
+                if (tabId) switchTab(tabId);
+                closeMenu();
+            });
+        });
+        
+        // ===== TAB SWITCHING + SCROLL TO TOP OF CONTENT (not hidden behind nav) =====
+        function switchTab(tabId) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(c => { 
+                c.style.display = 'none'; 
+                c.classList.remove('active'); 
+            });
+            
+            // Remove active from all nav links
+            document.querySelectorAll('[data-tab]').forEach(t => t.classList.remove('active'));
+            
+            // Show selected tab
+            const activeContent = document.getElementById(tabId);
+            if (activeContent) { 
+                activeContent.style.display = 'block'; 
+                setTimeout(() => activeContent.classList.add('active'), 10); 
+            }
+            
+            // Set active class on nav links (desktop + mobile)
+            const activeDesktop = document.querySelector(`.nav-links [data-tab="${tabId}"]`);
+            if (activeDesktop) activeDesktop.classList.add('active');
+            const activeMobile = document.querySelector(`.mobile-menu [data-tab="${tabId}"]`);
+            if (activeMobile) activeMobile.classList.add('active');
+            
+            history.pushState(null, null, `#${tabId}`);
+            
+            // **** FIX: Scroll to top of main content, but keep header fully visible ****
+            // Scroll the main element into view, but with offset to show header
+            const mainElement = document.querySelector('main');
+            if (mainElement) {
+                // Calculate position: top of main minus a small offset to keep header visible
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const navHeight = document.querySelector('nav').offsetHeight;
+                // Scroll so that main starts just below the navigation, header stays visible
+                window.scrollTo({
+                    top: mainElement.offsetTop - navHeight - 20, // 20px breathing room
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        // ===== AESRN LOGO CLICK: go home AND scroll to very top (header top) =====
+        document.getElementById('homeLogoBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            switchTab('home');
+            // Scroll all the way to the very top of page (header visible)
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Attach tab click to all elements with data-tab (desktop, footer, buttons)
+        document.addEventListener('DOMContentLoaded', function() {
+            const allTabs = document.querySelectorAll('[data-tab]');
+            allTabs.forEach(tab => {
+                tab.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const tabId = this.getAttribute('data-tab');
+                    if (tabId) switchTab(tabId);
+                });
+            });
+            
+            // Footer links also have data-tab, already covered above
+            
+            // Hash handling
+            const hash = window.location.hash.substring(1);
+            if (hash && document.getElementById(hash)) {
+                switchTab(hash);
+            } else {
+                switchTab('home');
+            }
+            
+            // Ensure we are at top after initial tab set (header visible)
+            window.scrollTo(0, 0);
+            
+            // Stats animation
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const stat = entry.target;
+                        const targetText = stat.textContent;
+                        const targetNumber = parseInt(targetText);
+                        let current = 0;
+                        const inc = targetNumber / 30;
+                        const timer = setInterval(() => {
+                            current += inc;
+                            if (current >= targetNumber) { 
+                                stat.textContent = targetText; 
+                                clearInterval(timer); 
+                            } else stat.textContent = Math.floor(current);
+                        }, 50);
+                        observer.unobserve(stat);
+                    }
+                });
+            }, { threshold:0.5 });
+            statNumbers.forEach(s => observer.observe(s));
+            
+            // Fade in cards
+            const animateElements = document.querySelectorAll('.team-member, .research-card, .process-step');
+            const cardObs = new IntersectionObserver((entries) => {
+                entries.forEach(e => { 
+                    if(e.isIntersecting) { 
+                        e.target.style.animation = 'fadeIn 0.6s ease-out forwards'; 
+                        cardObs.unobserve(e.target); 
+                    } 
+                });
+            }, { threshold:0.1, rootMargin:'0px 0px -50px 0px' });
+            animateElements.forEach(el => { 
+                el.style.opacity = '0'; 
+                cardObs.observe(el); 
+            });
+        });
+    </script>
+</body>
 </html>
