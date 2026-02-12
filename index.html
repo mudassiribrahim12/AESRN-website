@@ -14,7 +14,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     
-    <!-- Favicons – consistent with network identity -->
+    <!-- Favicons – consistent with network identity – FAVICON INFORNT OF TITLE -->
     <link rel="icon" href="https://raw.githubusercontent.com/aesrn30/aesrn/main/favicon-32x32.png" type="image/png">
     <link itemprop="image" href="https://raw.githubusercontent.com/aesrn30/aesrn/main/favicon-32x32.png">
     <meta property="og:logo" content="https://raw.githubusercontent.com/aesrn30/aesrn/main/favicon-32x32.png">
@@ -148,6 +148,10 @@
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--light);
@@ -191,7 +195,7 @@
         #back-to-top.visible { opacity: 1; visibility: visible; }
         #back-to-top:hover { transform: translateY(-5px); background: var(--primary); }
         
-        /* header */
+        /* header - full visibility at top */
         header {
             background: var(--gradient); color: white; padding: 30px 0 40px;
             position: relative; overflow: hidden;
@@ -203,17 +207,78 @@
         }
         .logo-header { display: flex; align-items: center; margin-bottom: 25px; position: relative; z-index: 2; }
         .logo-container { position: relative; margin-right: 25px; }
+        
+        /* EXTERNAL LOGO URL – FITS PERFECTLY IN THE BOX, SAME SIZE */
         .logo-placeholder {
-            width: 100px; height: 100px; background: rgba(255,255,255,0.1);
+            width: 100px; height: 100px; 
+            background: rgba(255,255,255,0.1);
             border-radius: 20px; display: flex; align-items: center; justify-content: center;
             border: 2px solid rgba(255,255,255,0.3); backdrop-filter: blur(10px);
             transition: var(--transition);
+            overflow: hidden; padding: 0;
         }
+        .logo-placeholder img {
+            width: 100%; height: 100%; object-fit: contain; display: block;
+        }
+        .logo-placeholder i { display: none; }
         .logo-placeholder:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
-        .logo-placeholder i { font-size: 3rem; color: var(--accent-light); }
+        
         .logo-text { flex: 1; }
         h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2.8rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 10px; line-height: 1.2; }
         .tagline { font-size: 1.2rem; opacity: 0.9; font-weight: 300; max-width: 800px; }
+        
+                /* ---------- ZOOMED IN SMALLER – FACES FILL FRAME, PROFESSIONAL LOOK ---------- */
+        .member-img {
+            height: 260px;
+            overflow: hidden;        /* crops excess – zoom effect */
+            background: #f0f2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .dark-theme .member-img {
+            background: #2a2a2a;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;       /* 🔥 ZOOMS IN – fills container, crops edges */
+            object-position: center 20%; /* shifts slightly up for face focus */
+            transition: transform 0.5s ease;
+            transform: scale(1.1);   /* 🔥 ZOOMED IN SMALLER – faces are clear */
+        }
+        .team-member:hover .member-img img {
+            transform: scale(1.15);   /* subtle zoom on hover */
+        }
+        
+        /* fine-tune each image for best face visibility */
+        .member-img img[alt="Mudasir Mohammed Ibrahim"] {
+            object-position: center 25%; /* adjust face position */
+            transform: scale(1.15);
+        }
+        .member-img img[alt="Edna Die"] {
+            object-position: center 30%;
+            transform: scale(1.2);
+        }
+        .member-img img[alt="Abdul-Malik Seidu"] {
+            object-position: center 20%;
+            transform: scale(1.12);
+        }
+        .member-img img[alt="Abdul Latif Abdul Rahaman"] {
+            object-position: center 25%;
+            transform: scale(1.15);
+        }
+        .member-img img[alt="Alhassan Issahaq"] {
+            object-position: center 30%;
+            transform: scale(1.18);
+        }
+        
+        /* dark mode adjustments */
+        .dark-theme .member-img img {
+            filter: brightness(0.95) contrast(1.05);
+        }
         
         /* ---------- HAMBURGER NAVIGATION – FULLY RESPONSIVE ---------- */
         nav {
@@ -232,6 +297,7 @@
         .nav-logo {
             font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700;
             color: var(--primary); text-decoration: none; display: flex; align-items: center;
+            cursor: pointer;
         }
         .dark-theme .nav-logo { color: var(--accent-light); }
         .nav-logo i { margin-right: 10px; color: var(--accent); }
@@ -242,6 +308,7 @@
         .nav-links a {
             text-decoration: none; color: var(--text-dark); font-weight: 500;
             font-size: 1.05rem; padding: 8px 0; position: relative; transition: var(--transition);
+            cursor: pointer;
         }
         .dark-theme .nav-links a { color: var(--text-light); }
         .nav-links a:after {
@@ -295,6 +362,7 @@
             font-size: 1.4rem; font-weight: 600; color: var(--text-dark);
             text-decoration: none; padding: 10px 0; border-bottom: 1px solid rgba(128,128,128,0.2);
             transition: var(--transition); display: block;
+            cursor: pointer;
         }
         .dark-theme .mobile-menu .nav-links-mobile a { color: var(--text-light); }
         .mobile-menu .nav-links-mobile a.active { color: var(--accent); border-bottom-color: var(--accent); }
@@ -375,7 +443,7 @@
         .process-step h4 { color: var(--primary); margin-bottom: 15px; font-size: 1.3rem; }
         .dark-theme .process-step h4 { color: var(--accent-light); }
         
-        /* RESEARCH – nursing focus */
+        /* RESEARCH AREAS – nursing focus */
         .research-areas { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 30px; margin-top: 40px; }
         .research-card { background: var(--light); padding: 30px; border-radius: 15px; box-shadow: var(--shadow); transition: var(--transition); border-left: 5px solid var(--accent); border: 1px solid rgba(0,0,0,0.05); }
         .dark-theme .research-card { background: #2a2a2a; border: 1px solid rgba(255,255,255,0.05); }
@@ -386,33 +454,91 @@
         .research-card p { color: var(--text-dark); }
         .dark-theme .research-card p { color: #fff; }
         
-        /* MEMBERS – Ghanaian nurses */
+        /* MEMBERS – UNIFORM STYLE, AUTO-ADJUST CARDS, no extra space */
         .team-intro { text-align: center; max-width: 800px; margin: 0 auto 60px; font-size: 1.1rem; color: var(--text-dark); line-height: 1.8; }
         .dark-theme .team-intro { color: var(--text-light); }
-        .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 40px; margin-top: 40px; }
-        .team-member { background-color: var(--light); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); border: 1px solid rgba(0,0,0,0.05); }
+        .team-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+            gap: 40px; 
+            margin-top: 40px; 
+            align-items: stretch;
+        }
+        .team-member { 
+            background-color: var(--light); 
+            border-radius: 20px; 
+            overflow: hidden; 
+            box-shadow: var(--shadow); 
+            transition: var(--transition); 
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
         .dark-theme .team-member { background-color: #2a2a2a; border: 1px solid rgba(255,255,255,0.05); }
-        .team-member:hover { transform: translateY(-15px); box-shadow: var(--shadow-heavy); }
-        .member-img { height: 280px; overflow: hidden; }
-        .member-img img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
-        .team-member:hover .member-img img { transform: scale(1.1); }
-        .member-info { padding: 25px; }
-        .member-name { color: var(--primary); font-size: 1.5rem; margin-bottom: 8px; font-weight: 700; }
+        .team-member:hover { transform: translateY(-10px); box-shadow: var(--shadow-heavy); }
+        
+
+        .member-info { 
+            padding: 25px; 
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .member-name { 
+            color: var(--primary); 
+            font-size: 1.5rem; 
+            margin-bottom: 6px; 
+            font-weight: 700; 
+            line-height: 1.2;
+        }
         .dark-theme .member-name { color: var(--accent-light); }
-        .member-title { color: var(--accent); font-weight: 600; margin-bottom: 15px; font-size: 1rem; }
-        .member-workplace { color: var(--text-dark); margin-bottom: 15px; font-size: 0.95rem; display: flex; align-items: center; }
+        .member-title { 
+            color: var(--accent); 
+            font-weight: 600; 
+            margin-bottom: 12px; 
+            font-size: 1rem; 
+            letter-spacing: 0.3px;
+        }
+        .member-workplace { 
+            color: var(--text-dark); 
+            margin-bottom: 16px; 
+            font-size: 0.95rem; 
+            display: flex; 
+            align-items: center; 
+            gap: 6px;
+        }
         .dark-theme .member-workplace { color: var(--text-light); }
-        .member-workplace i { margin-right: 8px; color: var(--secondary); }
-        .member-interests { background-color: rgba(42,92,130,0.05); padding: 15px; border-radius: 10px; margin: 15px 0; }
-        .dark-theme .member-interests { background-color: rgba(42,92,130,0.2); }
-        .interests-label { font-weight: 600; color: var(--primary); margin-bottom: 8px; display: block; font-size: 0.9rem; }
-        .dark-theme .interests-label { color: var(--accent-light); }
-        .member-description { color: var(--text-dark); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; }
-        .dark-theme .member-description { color: var(--text-light); }
-        .social-icons { display: flex; gap: 12px; margin-top: 20px; }
-        .social-icons a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(42,92,130,0.08); color: var(--primary); border-radius: 10px; text-decoration: none; transition: var(--transition); }
+        .member-workplace i { 
+            color: var(--secondary); 
+            width: 18px;
+            text-align: center;
+        }
+        /* social icons - only the ones shown in founder card */
+        .social-icons { 
+            display: flex; 
+            gap: 12px; 
+            margin-top: 8px; 
+        }
+        .social-icons a { 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            width: 40px; 
+            height: 40px; 
+            background-color: rgba(42,92,130,0.08); 
+            color: var(--primary); 
+            border-radius: 10px; 
+            text-decoration: none; 
+            transition: var(--transition); 
+        }
         .dark-theme .social-icons a { background-color: rgba(42,92,130,0.3); color: var(--accent-light); }
         .social-icons a:hover { background-color: var(--primary); color: white; transform: translateY(-3px); }
+        
+        /* hide extra elements not present in Mudasir card */
+        .member-interests, .member-description, .interests-label {
+            display: none;
+        }
         
         .btn {
             display: inline-block; padding: 14px 32px; background: var(--accent); color: white;
@@ -423,6 +549,20 @@
         .btn-outline { background: transparent; border: 2px solid var(--accent); color: var(--accent); box-shadow: none; }
         .btn-outline:hover { background: var(--accent); color: white; }
         
+        /* PUBLICATIONS TAB – coming soon style */
+        .coming-soon-card {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            background: var(--light); border-radius: 30px; padding: 70px 40px; 
+            box-shadow: var(--shadow); text-align: center; margin: 40px auto; max-width: 800px;
+            border: 2px dashed var(--accent);
+        }
+        .dark-theme .coming-soon-card { background: #2a2a2a; }
+        .coming-soon-card i { font-size: 5rem; color: var(--accent); margin-bottom: 30px; opacity: 0.8; }
+        .coming-soon-card h3 { font-size: 2.8rem; color: var(--primary); margin-bottom: 20px; font-weight: 700; }
+        .dark-theme .coming-soon-card h3 { color: var(--accent-light); }
+        .coming-soon-card p { font-size: 1.3rem; color: var(--text-dark); max-width: 500px; }
+        .dark-theme .coming-soon-card p { color: var(--text-light); }
+        
         /* FOOTER – professional image statement */
         footer {
             background: var(--dark); color: white; padding: 60px 0 30px; margin-top: 80px; transition: var(--transition);
@@ -432,12 +572,11 @@
         .footer-section p { color: rgba(255,255,255,0.9); margin-bottom: 15px; line-height: 1.7; }
         .footer-links { list-style: none; }
         .footer-links li { margin-bottom: 12px; }
-        .footer-links a { color: rgba(255,255,255,0.9); text-decoration: none; transition: var(--transition); display: inline-block; }
+        .footer-links a { color: rgba(255,255,255,0.9); text-decoration: none; transition: var(--transition); display: inline-block; cursor: pointer; }
         .footer-links a:hover { color: var(--accent-light); transform: translateX(5px); }
         .email-link { color: var(--accent-light) !important; text-decoration: underline !important; }
         .copyright { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); font-size: 0.9rem; }
         
-        /* PROFESSIONAL IMAGE RIGHTS STATEMENT – REPLACED */
         .image-rights {
             text-align: center; margin-top: 20px; padding-top: 20px;
             border-top: 1px solid rgba(255,255,255,0.1);
@@ -463,9 +602,9 @@
             .logo-header { flex-direction: column; text-align: center; }
             .logo-container { margin-right: 0; margin-bottom: 20px; }
             .logo-placeholder { width: 80px; height: 80px; }
-            .logo-placeholder i { font-size: 2.5rem; }
             h1 { font-size: 2rem; }
             .tagline { font-size: 1rem; }
+            .team-grid { grid-template-columns: 1fr; }
         }
         
         @media (max-width: 576px) {
@@ -474,7 +613,6 @@
             .mobile-menu { width: 100%; border-left: none; }
         }
         
-        /* small tablet landscape adjustments */
         @media (min-width: 993px) {
             .hamburger { display: none; }
             .nav-desktop { display: flex; }
@@ -494,13 +632,16 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
     <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
     
-    <!-- header -->
-    <header>
+    <!-- header - fully visible at top -->
+    <header id="page-header">
         <div class="header-bg"></div>
         <div class="container">
             <div class="logo-header">
                 <div class="logo-container">
-                    <div class="logo-placeholder"><i class="fas fa-user-nurse"></i></div>
+                    <div class="logo-placeholder">
+                        <img src="https://raw.githubusercontent.com/aesrn30/aesrn/main/Lablogo.png" alt="AESRN Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <i class="fas fa-user-nurse" style="display: none;"></i>
+                    </div>
                 </div>
                 <div class="logo-text">
                     <h1>African Emerging Scholars Research Network (AESRN)</h1>
@@ -510,45 +651,48 @@
         </div>
     </header>
     
-    <!-- NAVIGATION – HAMBURGER READY, RESPONSIVE -->
+    <!-- NAVIGATION -->
     <nav>
         <div class="nav-container">
-            <a href="#" class="nav-logo" data-tab="home"><i class="fas fa-network-wired"></i> AESRN</a>
+            <!-- AESRN LOGO - click returns home & scroll to very top -->
+            <a class="nav-logo" id="homeLogoBtn"><i class="fas fa-network-wired"></i> AESRN</a>
             
-            <!-- DESKTOP VIEW (hidden on mobile) -->
+            <!-- DESKTOP VIEW -->
             <div class="nav-desktop">
                 <ul class="nav-links">
-                    <li><a href="#" class="active" data-tab="home">Home</a></li>
-                    <li><a href="#" data-tab="research">Research</a></li>
-                    <li><a href="#" data-tab="team">Members</a></li>
+                    <li><a class="active" data-tab="home">Home</a></li>
+                    <li><a data-tab="research">Research Areas</a></li>  <!-- renamed -->
+                    <li><a data-tab="team">Members</a></li>
+                    <li><a data-tab="publications">Publications <span style="background: var(--accent); color: white; padding: 3px 10px; border-radius: 30px; font-size: 0.7rem; margin-left: 6px; font-weight: 600;">soon</span></a></li>
                 </ul>
                 <a href="https://aesrnmemberlogin.mudasiribrahim.com/" class="portal-btn" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-sign-in-alt"></i> Member Portal Login
                 </a>
             </div>
             
-            <!-- HAMBURGER ICON (mobile/tablet) -->
+            <!-- HAMBURGER ICON -->
             <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
     
-    <!-- MOBILE MENU OVERLAY & SIDEBAR -->
+    <!-- MOBILE MENU -->
     <div class="overlay" id="overlay"></div>
     <div class="mobile-menu" id="mobileMenu">
         <button class="close-btn" id="closeBtn">&times;</button>
         <ul class="nav-links-mobile">
-            <li><a href="#" data-tab="home" class="active">Home</a></li>
-            <li><a href="#" data-tab="research">Research</a></li>
-            <li><a href="#" data-tab="team">Members</a></li>
+            <li><a data-tab="home" class="active">Home</a></li>
+            <li><a data-tab="research">Research Areas</a></li> <!-- renamed -->
+            <li><a data-tab="team">Members</a></li>
+            <li><a data-tab="publications">Publications <span style="background: var(--accent); color: white; padding: 4px 12px; border-radius: 40px; font-size: 0.8rem; margin-left: 10px;">coming soon</span></a></li>
         </ul>
         <a href="https://aesrnmemberlogin.mudasiribrahim.com/" class="mobile-portal-btn" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-sign-in-alt"></i> Member Portal Login
         </a>
     </div>
     
-    <!-- MAIN – 3 TABS -->
+    <!-- MAIN – 4 TABS -->
     <main class="container">
         <!-- HOME -->
         <div id="home" class="tab-content active">
@@ -556,11 +700,11 @@
                 <div class="hero-text">
                     <h2>From proposal to publication: together.</h2>
                     <p><strong>Peer network, not training.</strong> AESRN connects emerging African (Ghanaian) health researchers who already have research skills — we form teams, co-author, and publish. No mentorship track; pure collaboration among equals.</p>
-                    <a href="#" class="btn" data-tab="research">Explore Research Areas</a>
-                    <a href="#" class="btn btn-outline" data-tab="team">Meet our members</a>
+                    <a class="btn" data-tab="research">Explore Research Areas</a>
+                    <a class="btn btn-outline" data-tab="team">Meet our members</a>
                     <div class="stats">
-                        <div class="stat-item"><div class="stat-number">5+</div><div class="stat-label">Ghanaian nurse researchers</div></div>
-                        <div class="stat-item"><div class="stat-number">0</div><div class="stat-label">Joint publications</div></div>
+                        <div class="stat-item"><div class="stat-number">5</div><div class="stat-label">Ghanaian nurse researchers</div></div>
+                        <div class="stat-item"><div class="stat-number">0</div><div class="stat-label">Publications</div></div>
                         <div class="stat-item"><div class="stat-number">6</div><div class="stat-label">Research Areas</div></div>
                     </div>
                 </div>
@@ -597,7 +741,7 @@
             </div>
         </div>
         
-        <!-- RESEARCH -->
+        <!-- RESEARCH AREAS (renamed) -->
         <div id="research" class="tab-content">
             <h2 class="section-title center-title">Ghanaian nursing research priorities</h2>
             <p class="team-intro">Our network concentrates on nursing and healthcare research relevant to Ghana. We publish collaboratively on topics where Ghanaian nurses lead. No mentorship, only skilled nurse researchers working together.</p>
@@ -611,80 +755,110 @@
             </div>
         </div>
         
-        <!-- MEMBERS -->
+        <!-- MEMBERS – PERFECT IMAGE FIT: NOT ZOOMED IN, NOT TOO ZOOMED OUT -->
         <div id="team" class="tab-content">
             <h2 class="section-title center-title">Network Members</h2>
             <p class="team-intro">
                 We don't have mentors — All members are peers based in Ghana who contribute voluntarily, collaborate based on shared interests and complementary skills, and collectively advance research and professional practice.
             </p>
             <div class="team-grid">
-                <!-- member 1 -->
-<div class="team-member">
-    <div class="member-img"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Mudasir Mohammed Ibrahim"></div>
-    <div class="member-info">
-        <h3 class="member-name">Mudasir Mohammed Ibrahim</h3>
-        <p class="member-title">Founder & Member</p>
-        <p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital, Ghana</p>
-        <div class="social-icons">
-            <a href="https://scholar.google.com/citations?user=xEFzAvgAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://linkedin.com/in/mudasir-mohammed-ibrahim-16b5141b0" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="mailto:mudassiribrahim30@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <!-- member 1 - Mudasir Mohammed Ibrahim -->
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/mudasir.png" alt="Mudasir Mohammed Ibrahim">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Mudasir Mohammed Ibrahim</h3>
+                        <p class="member-title">Founder & Member</p>
+                        <p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital, Tamale, Ghana</p>
+                        <div class="social-icons">
+                            <a href="https://scholar.google.com/citations?user=xEFzAvgAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                            <a href="https://linkedin.com/in/mudasir-mohammed-ibrahim-16b5141b0" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:mudassiribrahim30@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- member 2 - Edna Die -->
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Edna Die">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Edna Die</h3>
+                        <p class="member-title">Member</p>
+                        <p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital, Tamale, Ghana</p>
+                        <div class="social-icons">
+                            <a href="#" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                            <a href="https://www.linkedin.com/in/edna-die-51a0471bb/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:ednadie93@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- member 3 - Abdul-Malik Seidu -->
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/malik.png" alt="Abdul-Malik Seidu">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Abdul-Malik Seidu</h3>
+                        <p class="member-title">Member</p>
+                        <p class="member-workplace"><i class="fas fa-university"></i> Nurses' and Midwives' Training College, Tamale, Ghana</p>
+                        <div class="social-icons">
+                            <a href="https://scholar.google.com/citations?user=trXPqNAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:Malikseidu4@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- member 4 - Abdul Latif Abdul Rahaman -->
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Abdul Latif Abdul Rahaman">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Abdul Latif Abdul Rahaman</h3>
+                        <p class="member-title">Member</p>
+                        <p class="member-workplace"><i class="fas fa-university"></i> Nurses' and Midwives' Training College, Tamale, Ghana</p>
+                        <div class="social-icons">
+                            <a href="https://scholar.google.com/citations?user=zo7lYgwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:abdul0247080685@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- member 5 - Alhassan Issahaq -->
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Alhassan.png" alt="Alhassan Issahaq">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Alhassan Issahaq</h3>
+                        <p class="member-title">Member</p>
+                        <p class="member-workplace"><i class="fas fa-university"></i> Nurses' and Midwives' Training College, Tamale, Ghana</p>
+                        <div class="social-icons">
+                            <a href="#" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:issahaqalhassan26@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-                <!-- member 2 -->
-                <div class="team-member">
-                    <div class="member-img"><img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Dr. Yaa Asantewaa"></div>
-                    <div class="member-info">
-                        <h3 class="member-name">Dr. Yaa Asantewaa</h3>
-                        <p class="member-title">Collaboration facilitator</p>
-                        <p class="member-workplace"><i class="fas fa-university"></i> Kwame Nkrumah University of Science and Technology, Kumasi</p>
-                        <div class="member-interests"><span class="interests-label">Research focus:</span><p>Chronic disease nursing, patient education, self‑management</p></div>
-                        <p class="member-description">Matches nurses from different Ghanaian regions with complementary methods expertise — from design to co‑authorship.</p>
-                        <div class="social-icons"><a href="#"><i class="fas fa-graduation-cap"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a></div>
-                    </div>
-                </div>
-                <!-- member 3 -->
-                <div class="team-member">
-                    <div class="member-img"><img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Dr. Kofi Mensah"></div>
-                    <div class="member-info">
-                        <h3 class="member-name">Dr. Kofi Mensah</h3>
-                        <p class="member-title">Nursing education coordinator</p>
-                        <p class="member-workplace"><i class="fas fa-university"></i> University of Cape Coast</p>
-                        <div class="member-interests"><span class="interests-label">Research focus:</span><p>Nursing education, clinical training, simulation, workforce</p></div>
-                        <p class="member-description">Builds interdisciplinary nursing teams across Ghanaian nursing training institutions — peer to peer.</p>
-                        <div class="social-icons"><a href="#"><i class="fas fa-graduation-cap"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a></div>
-                    </div>
-                </div>
-                <!-- member 4 -->
-                <div class="team-member">
-                    <div class="member-img"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Dr. Esi Amoah"></div>
-                    <div class="member-info">
-                        <h3 class="member-name">Dr. Esi Amoah</h3>
-                        <p class="member-title">Community health nursing coordinator</p>
-                        <p class="member-workplace"><i class="fas fa-university"></i> University for Development Studies, Tamale</p>
-                        <div class="member-interests"><span class="interests-label">Research focus:</span><p>Community health nursing, rural health, infectious disease prevention</p></div>
-                        <p class="member-description">Supports teams working on community‑based nursing research in northern Ghana — co‑author, not teacher.</p>
-                        <div class="social-icons"><a href="#"><i class="fas fa-graduation-cap"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a></div>
-                    </div>
-                </div>
-                <!-- member 5 -->
-                <div class="team-member">
-                    <div class="member-img"><img src="https://images.unsplash.com/photo-1551836026-d5c2c0b4d4ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Dr. Nana Ama Agyemang"></div>
-                    <div class="member-info">
-                        <h3 class="member-name">Dr. Nana Ama Agyemang</h3>
-                        <p class="member-title">Grant & writing facilitator</p>
-                        <p class="member-workplace"><i class="fas fa-university"></i> Ghana College of Nurses and Midwives, Accra</p>
-                        <div class="member-interests"><span class="interests-label">Research focus:</span><p>Nursing policy, leadership, evidence‑based practice</p></div>
-                        <p class="member-description">Identifies funding opportunities and supports proposal development — always as co‑applicant, not supervisor.</p>
-                        <div class="social-icons"><a href="#"><i class="fas fa-graduation-cap"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fas fa-envelope"></i></a></div>
-                    </div>
+        
+        <!-- PUBLICATIONS TAB – coming soon -->
+        <div id="publications" class="tab-content">
+            <div class="coming-soon-card">
+                <i class="fas fa-file-alt"></i>
+                <h3>Coming Soon</h3>
+                <p>Our collaborative publications will be listed here. The network is currently building joint manuscripts.</p>
+                <div style="margin-top: 40px;">
+                    <span style="background: var(--accent-light); color: var(--dark); padding: 12px 28px; border-radius: 50px; font-weight: 600; font-size: 1.1rem;">First publications expected 2026</span>
                 </div>
             </div>
         </div>
     </main>
     
-    <!-- FOOTER – professional image rights statement -->
+       <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -695,51 +869,57 @@
                 <div class="footer-section">
                     <h3>Network</h3>
                     <ul class="footer-links">
-                        <li><a href="#" data-tab="home">Home</a></li>
-                        <li><a href="#" data-tab="research">Research</a></li>
-                        <li><a href="#" data-tab="team">Members</a></li>
+                        <li><a data-tab="home">Home</a></li>
+                        <li><a data-tab="research">Research Areas</a></li>
+                        <li><a data-tab="team">Members</a></li>
+                        <li><a data-tab="publications">Publications (soon)</a></li>
                     </ul>
                 </div>
-<div class="footer-section">
-    <h3>Contact</h3>
-    <p><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/place/Tamale,+Ghana" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.9); text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.5);">Tamale, Ghana</a></p>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/place/Tamale,+Ghana" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.9); text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.5);">Tamale, Ghana</a></p>
                     <p><i class="fas fa-envelope"></i> <a href="mailto:contact@aesrn.org" class="email-link">research.aesrn@yahoo.com</a></p>
                     <p><i class="fas fa-user-nurse"></i> From proposal to publication: together.</p>
                 </div>
             </div>
+            
             <div class="copyright">
-                 <p>Copyright &copy; <span id="currentYear"></span> African Emerging Scholars Research Network (AESRN). All Rights Reserved.</p>
+                <p>Copyright &copy; <span id="currentYear"></span> African Emerging Scholars Research Network (AESRN). All Rights Reserved.</p>
                 <p style="margin-top:10px; font-size:0.8rem;">Connecting skills — creating nursing publications — building careers in Ghana</p>
             </div>
-            <!-- PROFESSIONAL IMAGE RIGHTS STATEMENT (replaced) -->
-            <div class="image-rights">
-                <p>All images displayed on this website are the exclusive property of their respective owners. The rights remain solely with the copyright holders. No ownership or claim is asserted by AESRN.</p>
+            
+            <!-- Bottom row: founded date left (faded/hidden) + full image rights right (visible) -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.08);">
+                <!-- Founded date - faded, easy to miss -->
+                <span style="font-size: 0.65rem; color: rgba(255,255,255,0.2); letter-spacing: 0.5px;">founded 31/01/2026</span>
+                
+                <!-- Full image rights text - visible, readable, current position -->
+                <span style="font-size: 0.7rem; color: rgba(255,255,255,0.6); text-align: right; max-width: 500px;">
+                    All images are property of their respective owners. No ownership claimed by AESRN.
+                </span>
             </div>
         </div>
     </footer>
     
     <script>
-        // ===== FIXED: PAGE ALWAYS OPENS AT VERY TOP =====
-        // Ensures no automatic scrolling when page loads/refreshes
-        if (history.scrollRestoration) {
-            history.scrollRestoration = 'manual';   // critical: prevent browser restoring previous scroll
-        }
-        window.scrollTo(0, 0);                     // force top on every fresh load
-
-        // auto-update copyright year
+        // ===== FIXES: HEADER VISIBLE, LOGO HOME + TOP, TABS SHOW TOP =====
+        
+        // Ensure scroll starts at the very top - header fully visible
+        if (history.scrollRestoration) history.scrollRestoration = 'manual';
+        window.scrollTo(0, 0);
+        setTimeout(() => window.scrollTo(0, 0), 10);
+        setTimeout(() => window.scrollTo(0, 0), 50);
+        
+        // Update copyright year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
         
-        // loader
+        // Loader
         window.addEventListener('load', function() {
             const loader = document.getElementById('loader');
             setTimeout(() => { loader.style.opacity = '0'; loader.style.visibility = 'hidden'; }, 800);
         });
 
-        // Force scroll top after small delay – ensures even if something tries to scroll
-        setTimeout(() => window.scrollTo(0, 0), 0);
-        setTimeout(() => window.scrollTo(0, 0), 50);
-        
-        // THEME
+        // THEME TOGGLE
         const themeToggle = document.getElementById('themeToggle');
         const icon = themeToggle.querySelector('i');
         const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
@@ -763,28 +943,20 @@
             window.scrollTo({ top:0, behavior:'smooth' }); 
         });
         
-        // HAMBURGER MENU TOGGLE
+        // HAMBURGER MENU
         const hamburger = document.getElementById('hamburgerBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         const overlay = document.getElementById('overlay');
         const closeBtn = document.getElementById('closeBtn');
         
-        function openMenu() {
-            mobileMenu.classList.add('active');
-            overlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeMenu() {
-            mobileMenu.classList.remove('active');
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
+        function openMenu() { mobileMenu.classList.add('active'); overlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeMenu() { mobileMenu.classList.remove('active'); overlay.classList.remove('active'); document.body.style.overflow = ''; }
         
         if (hamburger) hamburger.addEventListener('click', openMenu);
         if (closeBtn) closeBtn.addEventListener('click', closeMenu);
         if (overlay) overlay.addEventListener('click', closeMenu);
         
-        // close mobile menu after clicking a link
+        // Close mobile menu after clicking a link
         document.querySelectorAll('.mobile-menu .nav-links-mobile a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -794,23 +966,25 @@
             });
         });
         
-        // TAB SYSTEM (sync desktop & mobile)
+        // ===== TAB SWITCHING + SCROLL TO TOP OF CONTENT (not hidden behind nav) =====
         function switchTab(tabId) {
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabContents.forEach(c => { 
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(c => { 
                 c.style.display = 'none'; 
                 c.classList.remove('active'); 
             });
             
+            // Remove active from all nav links
             document.querySelectorAll('[data-tab]').forEach(t => t.classList.remove('active'));
             
+            // Show selected tab
             const activeContent = document.getElementById(tabId);
             if (activeContent) { 
                 activeContent.style.display = 'block'; 
-                setTimeout(() => activeContent.classList.add('active'),10); 
+                setTimeout(() => activeContent.classList.add('active'), 10); 
             }
             
-            // active class on desktop nav + mobile nav
+            // Set active class on nav links (desktop + mobile)
             const activeDesktop = document.querySelector(`.nav-links [data-tab="${tabId}"]`);
             if (activeDesktop) activeDesktop.classList.add('active');
             const activeMobile = document.querySelector(`.mobile-menu [data-tab="${tabId}"]`);
@@ -818,14 +992,30 @@
             
             history.pushState(null, null, `#${tabId}`);
             
-            // --- CRITICAL FIX: Scroll main into view WITHOUT jumping to top of page ---
-            // We want to see the header as it is, not hidden. Do not force scroll to main.
-            // Remove any automatic scroll that would hide the header.
-            // Instead, just ensure we don't scroll at all unless user clicks.
-            // No scroll command here – preserves natural header view.
+            // **** FIX: Scroll to top of main content, but keep header fully visible ****
+            // Scroll the main element into view, but with offset to show header
+            const mainElement = document.querySelector('main');
+            if (mainElement) {
+                // Calculate position: top of main minus a small offset to keep header visible
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const navHeight = document.querySelector('nav').offsetHeight;
+                // Scroll so that main starts just below the navigation, header stays visible
+                window.scrollTo({
+                    top: mainElement.offsetTop - navHeight - 20, // 20px breathing room
+                    behavior: 'smooth'
+                });
+            }
         }
         
-        // attach click to all tab links (desktop + mobile)
+        // ===== AESRN LOGO CLICK: go home AND scroll to very top (header top) =====
+        document.getElementById('homeLogoBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            switchTab('home');
+            // Scroll all the way to the very top of page (header visible)
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Attach tab click to all elements with data-tab (desktop, footer, buttons)
         document.addEventListener('DOMContentLoaded', function() {
             const allTabs = document.querySelectorAll('[data-tab]');
             allTabs.forEach(tab => {
@@ -836,16 +1026,9 @@
                 });
             });
             
-            // footer links
-            document.querySelectorAll('.footer-links a').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const tabId = this.getAttribute('data-tab');
-                    if (tabId) switchTab(tabId);
-                });
-            });
+            // Footer links also have data-tab, already covered above
             
-            // hash handling – but do NOT scroll to main on initial load.
+            // Hash handling
             const hash = window.location.hash.substring(1);
             if (hash && document.getElementById(hash)) {
                 switchTab(hash);
@@ -853,16 +1036,16 @@
                 switchTab('home');
             }
             
-            // Ensure we remain at top after initial tab set – no extra scrolling
-            // Already at top due to window.scrollTo(0,0) at very beginning.
+            // Ensure we are at top after initial tab set (header visible)
+            window.scrollTo(0, 0);
             
-            // animate stats – with observer
+            // Stats animation
             const statNumbers = document.querySelectorAll('.stat-number');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const stat = entry.target;
-                        const targetText = stat.textContent; // "5+" etc
+                        const targetText = stat.textContent;
                         const targetNumber = parseInt(targetText);
                         let current = 0;
                         const inc = targetNumber / 30;
@@ -871,8 +1054,7 @@
                             if (current >= targetNumber) { 
                                 stat.textContent = targetText; 
                                 clearInterval(timer); 
-                            }
-                            else stat.textContent = Math.floor(current);
+                            } else stat.textContent = Math.floor(current);
                         }, 50);
                         observer.unobserve(stat);
                     }
@@ -880,7 +1062,7 @@
             }, { threshold:0.5 });
             statNumbers.forEach(s => observer.observe(s));
             
-            // fade in cards
+            // Fade in cards
             const animateElements = document.querySelectorAll('.team-member, .research-card, .process-step');
             const cardObs = new IntersectionObserver((entries) => {
                 entries.forEach(e => { 
