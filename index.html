@@ -163,6 +163,68 @@
         
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
+        /* Email button styling - repositioned nicely */
+.email-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--accent);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    margin-top: 20px;
+    width: fit-content;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.25);
+}
+
+.email-button i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.email-button:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(42, 92, 130, 0.3);
+}
+
+.email-button:hover i {
+    transform: scale(1.1);
+}
+
+.dark-theme .email-button {
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
+}
+
+/* Adjust member-info for better button placement */
+.member-info {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Push button to bottom naturally with margin-top auto if you want it always at bottom */
+.member-info .email-button {
+    margin-top: auto;  /* This will push button to bottom of card if content varies */
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .email-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 100%;  /* Full width on mobile */
+        justify-content: center;
+    }
+}
+        
         /* LOADER */
         #loader {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -666,7 +728,7 @@
                 </div>
                 <div class="logo-text">
                     <h1>African Emerging Scholars Research Network (AESRN)</h1>
-                    <p class="tagline">Connecting emerging African (Ghanaian) nurse researchers for collaborative publication success, career development, and advancing health sciences literature</p>
+                    <p class="tagline">A network of Ghanaian nurse researchers who collaborate to develop ideas into research projects, producing publications that foster career development and advance nursing and health sciences.</p>
                 </div>
             </div>
         </div>
@@ -720,11 +782,11 @@
             <div class="hero-section">
                 <div class="hero-text">
                     <h2>From proposal to publication: together.</h2>
-                    <p><strong>Peer network, not training.</strong> AESRN connects emerging African (Ghanaian) health researchers who already have research skills — we form teams, co-author, and publish. No mentorship track; pure collaboration among equals.</p>
+                    <p>AESRN is a <strong>professional, skill-based peer network.</strong> We are not an NGO, not a training program, and not a mentorship platform. We are colleagues who already possess research competencies and have chosen to collaborate intentionally to contribute to the nursing and health sciences literature and to further build our career portfolios. No hierarchy. No mentorship track. Pure collaboration.</p>
                     <a class="btn" data-tab="research">Explore Research Areas</a>
                     <a class="btn btn-outline" data-tab="team">Meet our members</a>
                     <div class="stats">
-                        <div class="stat-item"><div class="stat-number">5</div><div class="stat-label">Ghanaian nurse researchers</div></div>
+                        <div class="stat-item"><div class="stat-number">5</div><div class="stat-label">Members</div></div>
                         <div class="stat-item"><div class="stat-number">0</div><div class="stat-label">Publications</div></div>
                         <div class="stat-item"><div class="stat-number">6</div><div class="stat-label">Research Areas</div></div>
                     </div>
@@ -736,28 +798,27 @@
             </div>
             
             <div class="mission-section">
-                <h3>Collaborate. Write. Publish. — Ghanaian way.</h3>
-                <p>AESRN is <strong>not an NGO, not a mentorship program</strong>. We are a skill‑based peer network of Ghanaian nurses. If you already know how to conduct nursing research, we match you with complementary co-authors from other Ghanaian institutions. Together we produce nursing literature — no hierarchy, just shared expertise.</p>
+                <h3>Collaborate. Write. Publish. — The Ghanaian way.</h3>
+                <p>AESRN is a collective of Ghanaian nurses across clinical practice, nursing education, and public health who work together to produce scholarly research. We do not recruit for training. We do not match mentors and mentees. Instead, we collaborate based on complementary expertise and shared academic goals. Together, we produce Ghanaian-led nursing literature grounded in our health system realities, with shared responsibility and shared authorship.</p>
                 <div style="margin: 30px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 20px;">
                     <div style="background: rgba(42,92,130,0.05); padding: 20px; border-radius: 10px;">
-                        <h4 style="color: var(--primary); margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 10px;"></i>Skill‑based matching</h4>
-                        <p style="color: var(--text-dark);">Clinical nurses, nursing educators, public health nurses, etc — we build balanced writing teams across Ghana.</p>
+                        <h4 style="color: var(--primary); margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 10px;"></i>Skill‑based collaboration</h4>
+                        <p style="color: var(--text-dark);">We combine our diverse expertise, including clinical practice, education, policy, research methods, and data analysis.</p>
                     </div>
                     <div style="background: rgba(42,92,130,0.05); padding: 20px; border-radius: 10px;">
                         <h4 style="color: var(--primary); margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 10px;"></i>Co‑authorship, not training</h4>
-                        <p style="color: var(--text-dark);">You already have nursing research skills. We connect you to turn project ideas into published papers in nursing journals.</p>
+                        <p style="color: var(--text-dark);">Each member already understands the research process, and we collectively transform ideas into research projects through shared effort.</p>
                     </div>
                     <div style="background: rgba(42,92,130,0.05); padding: 20px; border-radius: 10px;">
-                        <h4 style="color: var(--primary); margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 10px;"></i>Career portfolios</h4>
-                        <p style="color: var(--text-dark);">Build a strong publication record through genuine peer collaboration — essential for Ghanaian nursing academia.</p>
+                        <h4 style="color: var(--primary); margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 10px;"></i>Building career portfolios</h4>
+                        <p style="color: var(--text-dark);">Through collaboration, we produce research that strengthens our publication records and contributes meaningfully to Ghanaian nursing literature.</p>
                     </div>
                 </div>
                 <h3 style="margin-top: 40px;">The Publication Process Journey</h3>
                 <div class="process-container">
-                    <div class="process-step"><div class="step-number">1</div><h4>Complementary match</h4><p>We identify nurses with complementary expertise (clinical, education, policy) and form balanced teams.</p></div>
-                    <div class="process-step"><div class="step-number">2</div><h4>Joint proposal</h4><p>Teams co-develop nursing research questions, methodology, and data collection plan.</p></div>
-                    <div class="process-step"><div class="step-number">3</div><h4>Distributed research</h4><p>Multi‑institution collaboration across Ghana — everyone contributes equally.</p></div>
-                    <div class="process-step"><div class="step-number">4</div><h4>Publication together</h4><p>From writing to journal submission: shared work, shared authorship, Ghanaian-led nursing science.</p></div>
+                    <div class="process-step"><div class="step-number">1</div><h4>Complementary expertise</h4><p>We identify strengths within our network and form balanced project teams.</p></div>
+                    <div class="process-step"><div class="step-number">2</div><h4>Joint proposal development</h4><p>Research questions, methodology, and study plans are developed collectively through structured discussion, and data is then collected collaboratively across sites.</p></div>
+                    <div class="process-step"><div class="step-number">3</div><h4>Publication together</h4><p>We prepare the manuscript together. From writing to journal submission: shared work, shared authorship, Ghanaian-led nursing science.</p></div>
                 </div>
             </div>
         </div>
@@ -765,13 +826,13 @@
         <!-- RESEARCH AREAS (renamed) -->
         <div id="research" class="tab-content">
             <h2 class="section-title center-title">Ghanaian nursing research priorities</h2>
-            <p class="team-intro">Our network concentrates on nursing and healthcare research relevant to Ghana. We publish collaboratively on topics where Ghanaian nurses lead. No mentorship, only skilled nurse researchers working together.</p>
+            <p class="team-intro">Our network concentrates on nursing and healthcare research relevant to Ghana. We publish collaboratively on topics where Ghanaian nurses lead.</p>
             <div class="research-areas">
-                <div class="research-card"><i class="fas fa-baby"></i><h4>Maternal & Child Health</h4><p>Antenatal care, safe motherhood, neonatal care, childhood immunisation, and nutrition within the Ghanaian context. Focus areas include high-risk pregnancy management, maternal and neonatal mortality reduction, adolescent reproductive health, postpartum care, PMTCT, family planning, maternal and perinatal epidemiology, and implementation research to improve outcomes in resource-limited settings — Ghanaian perspectives.</p></div>
+                <div class="research-card"><i class="fas fa-baby"></i><h4>Maternal & Child Health</h4><p>Antenatal care, safe motherhood, neonatal care, childhood immunisation, and nutrition within the Ghanaian context. Focus areas include high-risk pregnancy management, maternal and neonatal mortality reduction, adolescent reproductive health, postpartum care, PMTCT, family planning, maternal and perinatal epidemiology, and implementation research to improve outcomes in resource-limited settings—all from Ghanaian perspectives.</p></div>
                 <div class="research-card"><i class="fas fa-heart"></i><h4>Chronic Disease Epidemiology</h4><p>Hypertension, diabetes, liver disease, cancer, kidney disease, and other non-communicable diseases in Ghana. Emphasis on prevention, early detection, lifestyle modification, patient self-management, palliative care, chronic disease epidemiology, risk factor surveillance, and data-driven strategies to strengthen NCD control.</p></div>
                 <div class="research-card"><i class="fas fa-hand-holding-heart"></i><h4>Mental Health & Psychiatry</h4><p>Depression, substance use, anxiety, and community mental health in Ghana. Areas of interest include stigma reduction, adolescent and maternal mental health, crisis intervention, integration of mental health into primary care, psychiatric epidemiology, and population-based approaches to improving access and outcomes.</p></div>
                 <div class="research-card"><i class="fas fa-ambulance"></i><h4>Emergency & Critical Care</h4><p>Triage, trauma care, sepsis management, intensive care, and emergency obstetric care in resource-limited hospitals. Focus on survival outcomes, patient safety, health services research, quality improvement, and data-informed emergency care systems strengthening.</p></div>
-                <div class="research-card"><i class="fas fa-hospital-user"></i><h4>Nursing Education & Workforce</h4><p>Nursing curricula, clinical training, nurse retention, leadership — strengthening Ghana's nursing workforce.</p></div>
+                <div class="research-card"><i class="fas fa-hospital-user"></i><h4>Nursing Education & Workforce</h4><p>Nursing curricula, clinical training, nurse retention, and leadership development—strengthening Ghana's nursing workforce through evidence and collaboration.</p></div>
                 <div class="research-card"><i class="fas fa-leaf"></i><h4>Community & Public Health</h4><p>Health promotion, infectious disease prevention (malaria, TB, HIV), chronic disease screening, and community outreach in Ghana. Focus on disease surveillance, outbreak response, field epidemiology, mobile health initiatives, and reducing health disparities through population-level interventions.</p></div>
             </div>
         </div>
@@ -780,91 +841,90 @@
         <div id="team" class="tab-content">
             <h2 class="section-title center-title">Network Members</h2>
             <p class="team-intro">
-                We don't have mentors — All members are peers based in Ghana who contribute voluntarily, collaborate based on shared interests and complementary skills, and collectively advance research and professional practice.
+                All members are healthcare professionals based in Ghana who contribute voluntarily, collaborate around shared interests and complementary skills, and work together to advance research and professional practice.
             </p>
-            <div class="team-grid">
-                <!-- member 1 - Mudasir Mohammed Ibrahim -->
-                <div class="team-member">
-                    <div class="member-img">
-                        <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/mudasir.png" alt="Mudasir Mohammed Ibrahim">
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Mudasir Mohammed Ibrahim</h3>
-                        <p class="member-title">Founder & Member</p>
-                        <p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital, Tamale, Ghana</p>
-                        <div class="social-icons">
-                            <a href="https://scholar.google.com/citations?user=xEFzAvgAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                            <a href="https://linkedin.com/in/mudasir-mohammed-ibrahim-16b5141b0" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="mailto:mudassiribrahim30@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- member 2 - Edna Die -->
-                <div class="team-member">
-                    <div class="member-img">
-                        <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Edna.png" alt="Edna Die">
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Edna Die</h3>
-                        <p class="member-title">Member</p>
-                        <p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital, Tamale, Ghana</p>
-                        <div class="social-icons">
-                            <a href="#" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                            <a href="https://www.linkedin.com/in/edna-die-51a0471bb/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="mailto:ednadie93@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- member 3 - Abdul-Malik Seidu -->
-                <div class="team-member">
-                    <div class="member-img">
-                        <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/malik.png" alt="Abdul-Malik Seidu">
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Abdul-Malik Seidu</h3>
-                        <p class="member-title">Member</p>
-                        <p class="member-workplace"><i class="fas fa-university"></i> Nurses' and Midwives' Training College, Tamale, Ghana</p>
-                        <div class="social-icons">
-                            <a href="https://scholar.google.com/citations?user=trXPqNAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="mailto:Malikseidu4@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- member 4 - Abdul Latif Abdul Rahaman -->
-                <div class="team-member">
-                    <div class="member-img">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Abdul Latif Abdul Rahaman">
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Abdul Latif Abdul Rahaman</h3>
-                        <p class="member-title">Member</p>
-                        <p class="member-workplace"><i class="fas fa-university"></i> Le Mete Ghana, Tamale Urology and Modern Surgical Centre </p>
-                        <div class="social-icons">
-                            <a href="https://scholar.google.com/citations?user=zo7lYgwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="mailto:abdul0247080685@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- member 5 - Alhassan Issahaq -->
-                <div class="team-member">
-                    <div class="member-img">
-                        <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Alhassan.png" alt="Alhassan Issahaq">
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Alhassan Issahaq</h3>
-                        <p class="member-title">Member</p>
-                        <p class="member-workplace"><i class="fas fa-university"></i> Nurses' and Midwives' Training College, Tamale, Ghana</p>
-                        <div class="social-icons">
-                            <a href="#" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="mailto:issahaqalhassan26@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="team-grid">
+    <!-- member 1 - Mudasir Mohammed Ibrahim -->
+    <div class="team-member">
+        <div class="member-img">
+            <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/mudasir.png" alt="Mudasir Mohammed Ibrahim">
         </div>
+        <div class="member-info">
+            <h3 class="member-name">Mudasir Mohammed Ibrahim</h3>
+            <p class="member-title">Founder & Member</p>
+            <p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital, Tamale, Ghana</p>
+            <a href="mailto:mudassiribrahim30@gmail.com" class="email-button" title="Email Mudasir">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- member 2 - Edna Die -->
+    <div class="team-member">
+        <div class="member-img">
+            <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Edna.png" alt="Edna Die">
+        </div>
+        <div class="member-info">
+            <h3 class="member-name">Edna Die</h3>
+            <p class="member-title">Member</p>
+            <p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital, Tamale, Ghana</p>
+            <a href="mailto:ednadie93@gmail.com" class="email-button" title="Email Edna">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- member 3 - Abdul-Malik Seidu -->
+    <div class="team-member">
+        <div class="member-img">
+            <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/malik.png" alt="Abdul-Malik Seidu">
+        </div>
+        <div class="member-info">
+            <h3 class="member-name">Abdul-Malik Seidu</h3>
+            <p class="member-title">Member</p>
+            <p class="member-workplace"><i class="fas fa-university"></i> Nurses' and Midwives' Training College, Tamale, Ghana</p>
+            <a href="mailto:Malikseidu4@gmail.com" class="email-button" title="Email Abdul-Malik">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- member 4 - Abdul Latif Abdul Rahaman -->
+    <div class="team-member">
+        <div class="member-img">
+            <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Latif.png" alt="Abdul Latif Abdul Rahaman">
+        </div>
+        <div class="member-info">
+            <h3 class="member-name">Abdul Latif Abdul Rahaman</h3>
+            <p class="member-title">Member</p>
+            <p class="member-workplace"><i class="fas fa-university"></i> Le Mete Ghana, Tamale Urology and Modern Surgical Centre</p>
+            <a href="mailto:abdul0247080685@gmail.com" class="email-button" title="Email Abdul Latif">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- member 5 - Alhassan Issahaq -->
+    <div class="team-member">
+        <div class="member-img">
+            <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Alhassan.png" alt="Alhassan Issahaq">
+        </div>
+        <div class="member-info">
+            <h3 class="member-name">Alhassan Issahaq</h3>
+            <p class="member-title">Member</p>
+            <p class="member-workplace"><i class="fas fa-university"></i> Nurses' and Midwives' Training College, Tamale, Ghana</p>
+            <a href="mailto:issahaqalhassan26@gmail.com" class="email-button" title="Email Alhassan">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
         
         <!-- PUBLICATIONS TAB – coming soon -->
         <div id="publications" class="tab-content">
