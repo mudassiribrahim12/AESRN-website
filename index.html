@@ -1097,5 +1097,15 @@
             });
         });
     </script>
+    <!-- small extra guard: on first load or reload, header stays visible -->
+    <script>
+        (function ensureHeaderVisible() {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function() { window.scrollTo(0, 0); });
+            } else {
+                window.scrollTo(0, 0);
+            }
+        })();
+    </script>
 </body>
 </html>
