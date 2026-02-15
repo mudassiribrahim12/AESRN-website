@@ -163,6 +163,55 @@
         
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
+        /* Social icons hover effects - only changes on hover, normal state unchanged */
+.social-icon {
+    color: white !important;
+    font-size: 1.2rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.social-icon:hover i {
+    animation: iconPop 0.3s ease;
+}
+
+@keyframes iconPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Portal button hover effects - only changes on hover */
+.portal-btn {
+    transition: all 0.3s ease !important;
+}
+
+.portal-btn:hover {
+    background: var(--primary) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(230, 57, 70, 0.4) !important;
+}
+
+.portal-btn:hover i {
+    animation: iconPop 0.3s ease;
+}
+
+/* Dark theme compatibility */
+.dark-theme .social-icon:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+        
         /* ===== PROFESSIONAL BODY TEXT SIZE REDUCTION ===== */
 body {
     font-size: 15px;
@@ -711,7 +760,7 @@ body {
     <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
     <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
     
-  <!-- header -->
+<!-- header -->
 <header id="page-header" style="padding: 12px 0;">
     <div class="header-bg"></div>
     <div class="container">
@@ -729,15 +778,15 @@ body {
                 </div>
             </div>
             
-            <!-- Right side: Social icons + Portal button -->
+            <!-- Right side: Social icons + Portal button with hover effects -->
             <div style="display: flex; align-items: center; gap: 20px;">
                 <div style="display: flex; align-items: center; gap: 16px;">
-                    <a href="https://facebook.com/AESRN" style="color: white; font-size: 1.2rem;" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://x.com/AESRN_" style="color: white; font-size: 1.2rem;" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://linkedin.com/company/aesrn" style="color: white; font-size: 1.2rem;" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://youtube.com/@AESRN" style="color: white; font-size: 1.2rem;" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://facebook.com/AESRN" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="https://x.com/AESRN_" class="social-icon" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/company/aesrn" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com/@AESRN" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
                 
-                    <a href="https://aesrnmemberlogin.mudasiribrahim.com/" class="portal-btn" style="background: var(--accent); color: white; padding: 8px 16px; border-radius: 30px; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; white-space: nowrap; box-shadow: 0 4px 10px rgba(230,57,70,0.25); transition: var(--transition);">
+                    <a href="https://aesrnmemberlogin.mudasiribrahim.com/" class="portal-btn" style="background: var(--accent); color: white; padding: 8px 16px; border-radius: 30px; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; white-space: nowrap; box-shadow: 0 4px 10px rgba(230,57,70,0.25);">
                         <i class="fas fa-sign-in-alt" style="font-size: 0.8rem;"></i> Sign In
                     </a>
                 </div>
