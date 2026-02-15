@@ -163,6 +163,217 @@
         
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
+        /* ===== PROFESSIONAL BODY TEXT SIZE REDUCTION ===== */
+body {
+    font-size: 15px; /* Base reduction from 16px */
+}
+
+/* Hero section */
+.hero-text p {
+    font-size: 1rem; /* Reduced from 1.2rem */
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem; /* Slightly reduced from 3rem */
+}
+
+/* Stats */
+.stat-number {
+    font-size: 2rem; /* Reduced from 2.5rem */
+}
+
+.stat-label {
+    font-size: 0.8rem !important; /* Reduced from 0.9rem */
+    letter-spacing: 0.5px;
+}
+
+/* Mission section */
+.mission-section p {
+    font-size: 0.95rem;
+}
+
+.mission-section h3 {
+    font-size: 1.8rem; /* Reduced from 2rem */
+}
+
+.process-step h4 {
+    font-size: 1.1rem; /* Reduced from 1.3rem */
+}
+
+.process-step p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem; /* Reduced from 1.5rem */
+}
+
+/* Research areas */
+.research-card h4 {
+    font-size: 1.2rem; /* Reduced from 1.4rem */
+}
+
+.research-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.research-card i {
+    font-size: 2rem; /* Reduced from 2.5rem */
+}
+
+/* Team section */
+.team-intro {
+    font-size: 1rem; /* Reduced from 1.1rem */
+    line-height: 1.6;
+}
+
+.member-name {
+    font-size: 1.3rem; /* Reduced from 1.5rem */
+}
+
+.member-title {
+    font-size: 0.9rem !important; /* Reduced from 1rem */
+}
+
+.member-workplace {
+    font-size: 0.85rem !important; /* Reduced from 0.95rem */
+    margin-bottom: 12px;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 28px; /* Slightly reduced padding */
+    font-size: 0.95rem; /* Reduced from 1rem */
+}
+
+/* Funding section */
+.funding-intro-sentence {
+    font-size: 1rem; /* Reduced from 1.2rem */
+    padding: 20px 25px;
+}
+
+.funding-form-group label {
+    font-size: 0.85rem; /* Reduced from 0.95rem */
+}
+
+.funding-submit-btn {
+    padding: 12px 30px;
+    font-size: 1rem; /* Reduced from 1.1rem */
+}
+
+/* Coming soon */
+.coming-soon-card h3 {
+    font-size: 2.2rem; /* Reduced from 2.8rem */
+}
+
+.coming-soon-card p {
+    font-size: 1.1rem; /* Reduced from 1.3rem */
+}
+
+.coming-soon-card i {
+    font-size: 4rem; /* Reduced from 5rem */
+}
+
+.coming-soon-card span {
+    font-size: 1rem !important; /* Reduced from 1.1rem */
+    padding: 10px 24px !important;
+}
+
+/* Footer */
+.footer-section h3 {
+    font-size: 1.2rem; /* Reduced from 1.4rem */
+}
+
+.footer-section p, 
+.footer-links a {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.copyright {
+    font-size: 0.8rem !important; /* Reduced from 0.9rem */
+}
+
+/* Navigation - already optimized, keep as is but ensure consistency */
+.nav-links a {
+    font-size: 0.95rem;
+}
+
+/* Section titles */
+.section-title {
+    font-size: 2.2rem; /* Reduced from 2.5rem */
+    margin-bottom: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .hero-text h2 {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .coming-soon-card h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .hero-text p {
+        font-size: 0.95rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .mission-section h3 {
+        font-size: 1.6rem;
+    }
+    
+    .process-step {
+        padding: 20px;
+    }
+    
+    .research-card {
+        padding: 20px;
+    }
+    
+    .member-info {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .coming-soon-card h3 {
+        font-size: 1.8rem;
+    }
+    
+    .coming-soon-card {
+        padding: 50px 20px;
+    }
+}
+        
         /* Email button styling - repositioned nicely */
         .email-button {
             display: inline-flex;
@@ -201,6 +412,7 @@
         .dark-theme .email-button {
             box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
         }
+        
 
         /* Adjust member-info for better button placement */
         .member-info {
@@ -907,23 +1119,56 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
     <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
     
-    <!-- header - fully visible at top -->
-    <header id="page-header">
-        <div class="header-bg"></div>
-        <div class="container">
-            <div class="logo-header">
-                <div class="logo-container">
-                    <div class="logo-placeholder">
-                        <img src="https://raw.githubusercontent.com/aesrn30/aesrn/main/Lablogo.png" alt="AESRN Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+  <!-- header - now compact, slim, with social icons and portal button -->
+<header id="page-header" style="padding: 12px 0;">
+    <div class="header-bg"></div>
+    <div class="container">
+        <div class="logo-header" style="margin-bottom: 0; align-items: center; justify-content: space-between; width: 100%;">
+            <!-- Left side: Logo and title -->
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div class="logo-container" style="margin-right: 0;">
+                    <div class="logo-placeholder" style="width: 48px; height: 48px; border-radius: 10px;">
+                        <img src="https://raw.githubusercontent.com/aesrn30/aesrn/main/Lablogo.png" alt="AESRN Logo" style="object-fit: cover; width: 100%; height: 100%;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                         <i class="fas fa-user-nurse" style="display: none;"></i>
                     </div>
                 </div>
                 <div class="logo-text">
-                    <h1>African Emerging Scholars Research Network (AESRN)</h1>
+                    <h1 style="font-size: 1.5rem; margin-bottom: 0; line-height: 1.2; letter-spacing: -0.5px;"> African Emerging Scholars Research Network (AESRN)</h1>
                 </div>
             </div>
+            
+            <!-- Right side: Social icons + Portal button (all external links) -->
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <!-- Social Icons - ALL FOUR: Facebook, X, LinkedIn, YouTube -->
+                <div style="display: flex; align-items: center; gap: 16px;">
+<!-- Facebook -->
+<a href="https://facebook.com/AESRN" style="color: white; font-size: 1.2rem; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'" title="Facebook">
+    <i class="fab fa-facebook-f"></i>
+</a>
+
+<!-- X (Twitter) -->
+<a href="https://x.com/AESRN_" style="color: white; font-size: 1.2rem; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'" title="X (Twitter)">
+    <i class="fab fa-x-twitter"></i>
+</a>
+
+<!-- LinkedIn -->
+<a href="https://linkedin.com/company/aesrn" style="color: white; font-size: 1.2rem; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'" title="LinkedIn">
+    <i class="fab fa-linkedin-in"></i>
+</a>
+
+<!-- YouTube -->
+<a href="https://youtube.com/@AESRN" style="color: white; font-size: 1.2rem; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'" title="YouTube">
+    <i class="fab fa-youtube"></i>
+</a>
+                
+                <!-- Member Portal Login (external link opens in new tab) -->
+<a href="https://aesrnmemberlogin.mudasiribrahim.com/" class="portal-btn" style="background: var(--accent); color: white; padding: 8px 16px; border-radius: 30px; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; white-space: nowrap; box-shadow: 0 4px 10px rgba(230,57,70,0.25); transition: var(--transition);">
+    <i class="fas fa-sign-in-alt" style="font-size: 0.8rem;"></i> Sign In
+</a>
+            </div>
         </div>
-    </header>
+    </div>
+</header>
     
     <!-- NAVIGATION -->
     <nav>
@@ -931,20 +1176,20 @@
             <!-- AESRN LOGO - click returns home & scroll to very top -->
             <a class="nav-logo" id="homeLogoBtn"><i class="fas fa-network-wired"></i> AESRN</a>
             
-            <!-- DESKTOP VIEW - with 6 tabs now (reduced size to accommodate) -->
-            <div class="nav-desktop">
-                <ul class="nav-links">
-                    <li><a class="active" data-tab="home">Home</a></li>
-                    <li><a data-tab="research">Research</a></li>  <!-- shortened -->
-                    <li><a data-tab="team">Members</a></li>
-                    <li><a data-tab="publications">Publications <span style="background: var(--accent); color: white; padding: 2px 6px; border-radius: 30px; font-size: 0.65rem; margin-left: 4px;">soon</span></a></li>
-                    <li><a data-tab="funding">Funding</a></li>      <!-- NEW TAB -->
-                    <li><a data-tab="join">Join Us</a></li>        <!-- NEW TAB -->
-                </ul>
-                <a href="https://aesrnmemberlogin.mudasiribrahim.com/" class="portal-btn">
-                    <i class="fas fa-sign-in-alt"></i>  Member Portal Login 
-                </a>
-            </div>
+<!-- DESKTOP VIEW - with 6 tabs only, Member Portal Login removed -->
+<div class="nav-desktop" style="display: flex; align-items: center; justify-content: center; width: 100%;">
+    <ul class="nav-links" style="display: flex; list-style: none; gap: 32px; margin: 0; padding: 0; align-items: center; justify-content: center;">
+        <li><a class="active" data-tab="home" style="text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 1.1rem; padding: 8px 0; position: relative; transition: var(--transition); cursor: pointer; white-space: nowrap;">Home</a></li>
+        <li><a data-tab="research" style="text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 1.1rem; padding: 8px 0; position: relative; transition: var(--transition); cursor: pointer; white-space: nowrap;">Research</a></li>
+        <li><a data-tab="team" style="text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 1.1rem; padding: 8px 0; position: relative; transition: var(--transition); cursor: pointer; white-space: nowrap;">Members</a></li>
+        <li><a data-tab="publications" style="text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 1.1rem; padding: 8px 0; position: relative; transition: var(--transition); cursor: pointer; white-space: nowrap;">
+            Publications <span style="background: var(--accent); color: white; padding: 2px 8px; border-radius: 30px; font-size: 0.7rem; margin-left: 6px; font-weight: 600;">soon</span>
+        </a></li>
+        <li><a data-tab="funding" style="text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 1.1rem; padding: 8px 0; position: relative; transition: var(--transition); cursor: pointer; white-space: nowrap;">Funding</a></li>
+        <li><a data-tab="join" style="text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 1.1rem; padding: 8px 0; position: relative; transition: var(--transition); cursor: pointer; white-space: nowrap;">Join Us</a></li>
+    </ul>
+</div>
+
             
             <!-- HAMBURGER ICON -->
             <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
