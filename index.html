@@ -379,7 +379,7 @@ body {
         
         /* theme toggle & back to top */
         .theme-toggle {
-            position: fixed; top: 100px; right: 20px; z-index: 1000;
+            position: fixed; top: 100px; right: 20px; z-index: 9999;
             background: var(--primary); color: white; width: 50px; height: 50px;
             border-radius: 50%; display: flex; align-items: center; justify-content: center;
             cursor: pointer; box-shadow: var(--shadow); border: none; transition: var(--transition);
@@ -858,9 +858,10 @@ body {
             <div style="display: flex; align-items: center; gap: 20px;">
                 <div style="display: flex; align-items: center; gap: 16px;">
                     <a href="https://facebook.com/AESRN" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-<a href="https://x.com/AESRN_" class="social-icon" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                    <a href="https://x.com/AESRN_" class="social-icon" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
                     <a href="https://linkedin.com/company/aesrn" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://youtube.com/@AESRN" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-icon" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
                 
                     <a href="https://signin.aesrn.net/" class="portal-btn" style="background: var(--accent); color: white; padding: 8px 16px; border-radius: 30px; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; white-space: nowrap; box-shadow: 0 4px 10px rgba(230,57,70,0.25);">
                         <i class="fas fa-sign-in-alt" style="font-size: 0.8rem;"></i> Sign In
@@ -1094,7 +1095,31 @@ body {
             <div class="footer-content">
                 <div class="footer-section"><h3>AESRN.net</h3><p>Peer network for Ghanaian nurse researchers. We don't train — we collaborate, write, and publish.</p></div>
                 <div class="footer-section"><h3>Network</h3><ul class="footer-links"><li><a data-tab="home">Home</a></li><li><a data-tab="research">Research</a></li><li><a data-tab="team">Members</a></li><li><a data-tab="publications">Publications (soon)</a></li><li><a data-tab="funding">Funding</a></li><li><a data-tab="join">Join Us</a></li></ul></div>
-                <div class="footer-section"><h3>Contact</h3><p><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/place/Tamale,+Ghana" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.9); text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.5);">Tamale, Ghana</a></p><p><i class="fas fa-envelope"></i> <a href="mailto:research.aesrn@yahoo.com" class="email-link">research.aesrn@yahoo.com</a></p><p><i class="fas fa-user-nurse"></i> From proposal to publication: together.</p></div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/place/Tamale,+Ghana" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.9); text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.5);">Tamale, Ghana</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:research.aesrn@yahoo.com" class="email-link">research.aesrn@yahoo.com</a></p>
+                    <p><i class="fas fa-user-nurse"></i> From proposal to publication: together.</p>
+                    
+                    <!-- Social Icons in Footer -->
+                    <div style="display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap;">
+                        <a href="https://facebook.com/AESRN" class="social-icon" title="Facebook" style="color: white; font-size: 1.2rem; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://x.com/AESRN_" class="social-icon" title="X (Twitter)" style="color: white; font-size: 1.2rem; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/aesrn" class="social-icon" title="LinkedIn" style="color: white; font-size: 1.2rem; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://youtube.com/@AESRN" class="social-icon" title="YouTube" style="color: white; font-size: 1.2rem; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-icon" title="Google Scholar" style="color: white; font-size: 1.2rem; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="copyright">
                 <p>Copyright &copy; <span id="currentYear"></span> African Emerging Scholars Research Network (AESRN). All Rights Reserved.</p>
