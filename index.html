@@ -211,6 +211,82 @@
 .dark-theme .social-icon:hover {
     background: rgba(255, 255, 255, 0.25);
 }
+
+/* INCREASE GAP BETWEEN HEADER AND ALL TAB CONTENT TITLES */
+/* Keep original font sizes, just add top margin to first heading in each tab */
+
+/* Home tab headline */
+.hero-text h2 {
+    margin-top: 48px !important;
+    font-size: 2rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 16px !important;
+}
+
+/* Research tab title */
+#research .section-title,
+#research .center-title {
+    margin-top: 48px !important;
+}
+
+/* Members/Team tab title */
+#team .section-title,
+#team .center-title {
+    margin-top: 48px !important;
+}
+
+/* Publications tab title (in coming-soon card) */
+#publications .coming-soon-card h3 {
+    margin-top: 48px !important;
+}
+
+/* Funding tab title */
+#funding .section-title,
+#funding .center-title {
+    margin-top: 48px !important;
+}
+
+/* Join Us tab title */
+#join .coming-soon-card h3 {
+    margin-top: 48px !important;
+}
+
+/* Ensure consistent spacing on all devices */
+@media (min-width: 992px) {
+    .hero-text h2,
+    #research .section-title,
+    #team .section-title,
+    #publications .coming-soon-card h3,
+    #funding .section-title,
+    #join .coming-soon-card h3 {
+        margin-top: 64px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h2,
+    #research .section-title,
+    #team .section-title,
+    #publications .coming-soon-card h3,
+    #funding .section-title,
+    #join .coming-soon-card h3 {
+        margin-top: 32px !important;
+    }
+}
+
+/* Keep original font sizes - no reduction */
+.hero-text h2 {
+    font-size: 2rem !important;
+}
+#research .section-title,
+#team .section-title,
+#funding .section-title {
+    font-size: 2.5rem !important;
+}
+#publications .coming-soon-card h3,
+#join .coming-soon-card h3 {
+    font-size: 2.8rem !important;
+}
         
         /* ===== PROFESSIONAL BODY TEXT SIZE REDUCTION ===== */
 body {
