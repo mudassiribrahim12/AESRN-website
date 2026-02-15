@@ -14,7 +14,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     
-    <!-- Favicons – consistent with network identity – FAVICON INFORNT OF TITLE -->
+    <!-- Favicons – consistent with network identity – FAVICON IN FRONT OF TITLE -->
     <link rel="icon" href="https://raw.githubusercontent.com/aesrn30/aesrn/main/favicon-32x32.png" type="image/png">
     <link itemprop="image" href="https://raw.githubusercontent.com/aesrn30/aesrn/main/favicon-32x32.png">
     <meta property="og:logo" content="https://raw.githubusercontent.com/aesrn30/aesrn/main/favicon-32x32.png">
@@ -164,66 +164,66 @@
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
         /* Email button styling - repositioned nicely */
-.email-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: var(--accent);
-    color: white;
-    padding: 12px 24px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: var(--transition);
-    margin-top: 20px;
-    width: fit-content;
-    border: 2px solid transparent;
-    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.25);
-}
+        .email-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            margin-top: 20px;
+            width: fit-content;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 12px rgba(230, 57, 70, 0.25);
+        }
 
-.email-button i {
-    font-size: 1.1rem;
-    transition: transform 0.3s ease;
-}
+        .email-button i {
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
 
-.email-button:hover {
-    background: var(--primary);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(42, 92, 130, 0.3);
-}
+        .email-button:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(42, 92, 130, 0.3);
+        }
 
-.email-button:hover i {
-    transform: scale(1.1);
-}
+        .email-button:hover i {
+            transform: scale(1.1);
+        }
 
-.dark-theme .email-button {
-    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
-}
+        .dark-theme .email-button {
+            box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
+        }
 
-/* Adjust member-info for better button placement */
-.member-info {
-    padding: 25px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
+        /* Adjust member-info for better button placement */
+        .member-info {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
 
-/* Push button to bottom naturally with margin-top auto if you want it always at bottom */
-.member-info .email-button {
-    margin-top: auto;  /* This will push button to bottom of card if content varies */
-}
+        /* Push button to bottom naturally with margin-top auto if you want it always at bottom */
+        .member-info .email-button {
+            margin-top: auto;  /* This will push button to bottom of card if content varies */
+        }
 
-/* Responsive adjustment */
-@media (max-width: 768px) {
-    .email-button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-        width: 100%;  /* Full width on mobile */
-        justify-content: center;
-    }
-}
+        /* Responsive adjustment */
+        @media (max-width: 768px) {
+            .email-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+                width: 100%;  /* Full width on mobile */
+                justify-content: center;
+            }
+        }
         
         /* LOADER */
         #loader {
@@ -774,6 +774,124 @@
                 box-sizing: border-box;
             }
         }
+        /* Styles for the new funding contact form */
+        .funding-form-card {
+            background: var(--light);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: var(--shadow);
+            margin: 30px 0 0;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .dark-theme .funding-form-card {
+            background: #2a2a2a;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .funding-form-group {
+            margin-bottom: 25px;
+        }
+        .funding-form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+        .dark-theme .funding-form-group label {
+            color: var(--accent-light);
+        }
+        .funding-form-group input,
+        .funding-form-group select,
+        .funding-form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 12px;
+            background: var(--light);
+            color: var(--text-dark);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        .dark-theme .funding-form-group input,
+        .dark-theme .funding-form-group select,
+        .dark-theme .funding-form-group textarea {
+            background: #1e1e1e;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-light);
+        }
+        .funding-form-group input:focus,
+        .funding-form-group select:focus,
+        .funding-form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(230,57,70,0.1);
+        }
+        .funding-submit-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 14px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 12px rgba(230,57,70,0.25);
+        }
+        .funding-submit-btn i { font-size: 1.1rem; }
+        .funding-submit-btn:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(42,92,130,0.3);
+        }
+        .funding-form-message {
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 20px 0 0;
+            display: none;
+            font-weight: 500;
+        }
+        .funding-form-message.success {
+            background: rgba(46, 204, 113, 0.15);
+            color: #27ae60;
+            border: 1px solid #27ae60;
+            display: block;
+        }
+        .funding-form-message.error {
+            background: rgba(231, 76, 60, 0.15);
+            color: #c0392b;
+            border: 1px solid #c0392b;
+            display: block;
+        }
+        /* Sentence style for funding intro */
+        .funding-intro-sentence {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: rgba(42,92,130,0.03);
+            padding: 25px 30px;
+            border-radius: 15px;
+            margin: 30px 0 0;
+            border-left: 5px solid var(--accent);
+        }
+        .dark-theme .funding-intro-sentence {
+            background: rgba(255,255,255,0.02);
+            color: var(--text-light);
+        }
+        .funding-intro-sentence a {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px dotted var(--accent);
+        }
+        .funding-intro-sentence a:hover {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
     </style>
 </head>
 <body>
@@ -823,9 +941,9 @@
                     <li><a data-tab="funding">Funding</a></li>      <!-- NEW TAB -->
                     <li><a data-tab="join">Join Us</a></li>        <!-- NEW TAB -->
                 </ul>
-<a href="https://aesrnmemberlogin.mudasiribrahim.com/" class="portal-btn">
-    <i class="fas fa-sign-in-alt"></i>  Member Portal Login 
-</a>
+                <a href="https://aesrnmemberlogin.mudasiribrahim.com/" class="portal-btn">
+                    <i class="fas fa-sign-in-alt"></i>  Member Portal Login 
+                </a>
             </div>
             
             <!-- HAMBURGER ICON -->
@@ -847,9 +965,9 @@
             <li><a data-tab="funding">Funding</a></li>      
             <li><a data-tab="join">Join Us</a></li>        
         </ul>
-<a href="https://aesrnmemberlogin.mudasiribrahim.com/" class="mobile-portal-btn">
-    <i class="fas fa-sign-in-alt"></i> Member Portal Login
-</a>
+        <a href="https://aesrnmemberlogin.mudasiribrahim.com/" class="mobile-portal-btn">
+            <i class="fas fa-sign-in-alt"></i> Member Portal Login
+        </a>
         <!-- subtle hint appears on very short screens -->
         <div class="mobile-scroll-hint">
             <i class="fas fa-chevron-down"></i> scroll for more <i class="fas fa-chevron-down"></i>
@@ -1002,17 +1120,53 @@
             </div>
         </div>
         
-        <!-- FUNDING TAB -->
+        <!-- FUNDING TAB (Updated) -->
         <div id="funding" class="tab-content">
-            <div class="coming-soon-card">
-                <i class="fas fa-hand-holding-usd"></i>
-                <h3>Funding Opportunities</h3>
-                <p>We welcome funding support to grow our network. If you are interested in sponsoring network activities, specific research projects, or grants for young or emerging scholars, we would be glad to explore partnership opportunities. Please contact us at</p>
-<div style="margin-top: 40px;">
-    <a href="mailto:research.aesrn@yahoo.com" style="background: var(--accent-light); color: var(--dark); padding: 12px 28px; border-radius: 50px; font-weight: 600; font-size: 1.1rem; text-decoration: none;">
-        research.aesrn@yahoo.com
-    </a>
-</div>
+            <h2 class="section-title center-title">Funding Opportunities</h2>
+            <!-- Intro sentence (card removed, presented nicely) -->
+            <div class="funding-intro-sentence">
+                <i class="fas fa-hand-holding-heart" style="color: var(--accent); margin-right: 10px;"></i>
+                We welcome funding support to grow our network. If you are interested in sponsoring network activities, specific research projects, or grants for young or emerging scholars, we would be glad to explore partnership opportunities. Please use the form below.
+            </div>
+            <!-- Contact Form (Formspree) -->
+            <div class="funding-form-card">
+                <h3 style="color: var(--primary); margin-bottom: 30px; font-size: 1.8rem;">📬 Send us a funding inquiry</h3>
+                <form id="fundingForm" action="https://formspree.io/f/xanrpwae" method="POST">
+                    <input type="hidden" name="_subject" value="New Funding Inquiry from AESRN Website">
+                    <input type="hidden" name="_gotcha" style="display:none">
+                    
+                    <div class="funding-form-group">
+                        <label for="funding-name">Full name *</label>
+                        <input type="text" id="funding-name" name="name" required placeholder="Your name / Organization name">
+                    </div>
+                    
+                    <div class="funding-form-group">
+                        <label for="funding-email">Email address *</label>
+                        <input type="email" id="funding-email" name="email" required placeholder="you@example.com">
+                    </div>
+                    
+                    <div class="funding-form-group">
+                        <label for="funding-type">Inquiry type *</label>
+                        <select id="funding-type" name="inquiry_type" required>
+                            <option value="" disabled selected>– Please select –</option>
+                            <option value="sponsor_activities">Sponsor network activities</option>
+                            <option value="research_project">Specific research project</option>
+                            <option value="grant_scholars">Grant / scholarship for scholars</option>
+                            <option value="other">Other partnership</option>
+                        </select>
+                    </div>
+                    
+                    <div class="funding-form-group">
+                        <label for="funding-message">Message *</label>
+                        <textarea id="funding-message" name="message" rows="5" required placeholder="Tell us about your interest or potential support..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="funding-submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send inquiry
+                    </button>
+                    
+                    <div id="fundingFormMessage" class="funding-form-message"></div>
+                </form>
             </div>
         </div>
         
@@ -1202,6 +1356,51 @@
                 });
             }, { threshold:0.1, rootMargin:'0px 0px -50px 0px' });
             animateElements.forEach(el => { el.style.opacity = '0'; cardObs.observe(el); });
+        });
+
+        // NEW: Funding form submission handler (Formspree)
+        document.addEventListener('DOMContentLoaded', function() {
+            const fundingForm = document.getElementById('fundingForm');
+            if (fundingForm) {
+                fundingForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(fundingForm);
+                    const submitBtn = fundingForm.querySelector('button[type="submit"]');
+                    const messageDiv = document.getElementById('fundingFormMessage');
+                    
+                    // Loading state
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                    submitBtn.disabled = true;
+                    
+                    try {
+                        const response = await fetch(fundingForm.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: { 'Accept': 'application/json' }
+                        });
+                        
+                        if (response.ok) {
+                            messageDiv.className = 'funding-form-message success';
+                            messageDiv.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your inquiry has been sent. We\'ll be in touch soon.';
+                            fundingForm.reset();
+                        } else {
+                            throw new Error('Form submission failed');
+                        }
+                    } catch (error) {
+                        messageDiv.className = 'funding-form-message error';
+                        messageDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> There was a problem sending your message. Please try again or email us directly.';
+                    } finally {
+                        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send inquiry';
+                        submitBtn.disabled = false;
+                        // Auto-hide after 7 seconds
+                        setTimeout(() => {
+                            messageDiv.style.display = 'none';
+                            messageDiv.className = 'funding-form-message'; // reset
+                        }, 7000);
+                    }
+                });
+            }
         });
     </script>
     <script>
