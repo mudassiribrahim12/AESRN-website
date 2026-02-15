@@ -116,7 +116,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* ----- SIMPLE, SAME COLORS – RESPONSIVE HAMBURGER, PROFESSIONAL IMAGE NOTE ----- */
+        /* ----- SIMPLE, SAME COLORS – HAMBURGER ON TABLET/MOBILE, DESKTOP VISIBLE TABS ----- */
         :root {
             --primary: #2A5C82;
             --secondary: #1A9AA0;
@@ -165,276 +165,77 @@
         
         /* ===== PROFESSIONAL BODY TEXT SIZE REDUCTION ===== */
 body {
-    font-size: 15px; /* Base reduction from 16px */
+    font-size: 15px;
 }
 
-/* Hero section */
-.hero-text p {
-    font-size: 1rem; /* Reduced from 1.2rem */
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
+.hero-text p { font-size: 1rem; line-height: 1.5; margin-bottom: 20px; }
+.hero-text h2 { font-size: 2.5rem; }
+.stat-number { font-size: 2rem; }
+.stat-label { font-size: 0.8rem !important; letter-spacing: 0.5px; }
+.mission-section p { font-size: 0.95rem; }
+.mission-section h3 { font-size: 1.8rem; }
+.process-step h4 { font-size: 1.1rem; }
+.process-step p { font-size: 0.9rem; line-height: 1.5; }
+.step-number { width: 40px; height: 40px; font-size: 1.2rem; }
+.research-card h4 { font-size: 1.2rem; }
+.research-card p { font-size: 0.9rem; line-height: 1.5; }
+.research-card i { font-size: 2rem; }
+.team-intro { font-size: 1rem; line-height: 1.6; }
+.member-name { font-size: 1.3rem; }
+.member-title { font-size: 0.9rem !important; }
+.member-workplace { font-size: 0.85rem !important; margin-bottom: 12px; }
+.btn { padding: 12px 28px; font-size: 0.95rem; }
+.funding-intro-sentence { font-size: 1rem; padding: 20px 25px; }
+.funding-form-group label { font-size: 0.85rem; }
+.funding-submit-btn { padding: 12px 30px; font-size: 1rem; }
+.coming-soon-card h3 { font-size: 2.2rem; }
+.coming-soon-card p { font-size: 1.1rem; }
+.coming-soon-card i { font-size: 4rem; }
+.coming-soon-card span { font-size: 1rem !important; padding: 10px 24px !important; }
+.footer-section h3 { font-size: 1.2rem; }
+.footer-section p, .footer-links a { font-size: 0.9rem; line-height: 1.6; }
+.copyright { font-size: 0.8rem !important; }
+.nav-links a { font-size: 0.95rem; }
+.section-title { font-size: 2.2rem; margin-bottom: 40px; }
 
-.hero-text h2 {
-    font-size: 2.5rem; /* Slightly reduced from 3rem */
-}
-
-/* Stats */
-.stat-number {
-    font-size: 2rem; /* Reduced from 2.5rem */
-}
-
-.stat-label {
-    font-size: 0.8rem !important; /* Reduced from 0.9rem */
-    letter-spacing: 0.5px;
-}
-
-/* Mission section */
-.mission-section p {
-    font-size: 0.95rem;
-}
-
-.mission-section h3 {
-    font-size: 1.8rem; /* Reduced from 2rem */
-}
-
-.process-step h4 {
-    font-size: 1.1rem; /* Reduced from 1.3rem */
-}
-
-.process-step p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.step-number {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem; /* Reduced from 1.5rem */
-}
-
-/* Research areas */
-.research-card h4 {
-    font-size: 1.2rem; /* Reduced from 1.4rem */
-}
-
-.research-card p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.research-card i {
-    font-size: 2rem; /* Reduced from 2.5rem */
-}
-
-/* Team section */
-.team-intro {
-    font-size: 1rem; /* Reduced from 1.1rem */
-    line-height: 1.6;
-}
-
-.member-name {
-    font-size: 1.3rem; /* Reduced from 1.5rem */
-}
-
-.member-title {
-    font-size: 0.9rem !important; /* Reduced from 1rem */
-}
-
-.member-workplace {
-    font-size: 0.85rem !important; /* Reduced from 0.95rem */
-    margin-bottom: 12px;
-}
-
-/* Buttons */
-.btn {
-    padding: 12px 28px; /* Slightly reduced padding */
-    font-size: 0.95rem; /* Reduced from 1rem */
-}
-
-/* Funding section */
-.funding-intro-sentence {
-    font-size: 1rem; /* Reduced from 1.2rem */
-    padding: 20px 25px;
-}
-
-.funding-form-group label {
-    font-size: 0.85rem; /* Reduced from 0.95rem */
-}
-
-.funding-submit-btn {
-    padding: 12px 30px;
-    font-size: 1rem; /* Reduced from 1.1rem */
-}
-
-/* Coming soon */
-.coming-soon-card h3 {
-    font-size: 2.2rem; /* Reduced from 2.8rem */
-}
-
-.coming-soon-card p {
-    font-size: 1.1rem; /* Reduced from 1.3rem */
-}
-
-.coming-soon-card i {
-    font-size: 4rem; /* Reduced from 5rem */
-}
-
-.coming-soon-card span {
-    font-size: 1rem !important; /* Reduced from 1.1rem */
-    padding: 10px 24px !important;
-}
-
-/* Footer */
-.footer-section h3 {
-    font-size: 1.2rem; /* Reduced from 1.4rem */
-}
-
-.footer-section p, 
-.footer-links a {
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-.copyright {
-    font-size: 0.8rem !important; /* Reduced from 0.9rem */
-}
-
-/* Navigation - already optimized, keep as is but ensure consistency */
-.nav-links a {
-    font-size: 0.95rem;
-}
-
-/* Section titles */
-.section-title {
-    font-size: 2.2rem; /* Reduced from 2.5rem */
-    margin-bottom: 40px;
-}
-
-/* Responsive adjustments */
 @media (max-width: 992px) {
-    .hero-text h2 {
-        font-size: 2.2rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .coming-soon-card h3 {
-        font-size: 2rem;
-    }
+    .hero-text h2 { font-size: 2.2rem; }
+    .section-title { font-size: 2rem; }
+    .coming-soon-card h3 { font-size: 2rem; }
 }
-
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-    
-    .hero-text p {
-        font-size: 0.95rem;
-    }
-    
-    .hero-text h2 {
-        font-size: 2rem;
-    }
-    
-    .section-title {
-        font-size: 1.8rem;
-    }
-    
-    .mission-section h3 {
-        font-size: 1.6rem;
-    }
-    
-    .process-step {
-        padding: 20px;
-    }
-    
-    .research-card {
-        padding: 20px;
-    }
-    
-    .member-info {
-        padding: 20px;
-    }
+    body { font-size: 14px; }
+    .hero-text p { font-size: 0.95rem; }
+    .hero-text h2 { font-size: 2rem; }
+    .section-title { font-size: 1.8rem; }
+    .mission-section h3 { font-size: 1.6rem; }
+    .process-step { padding: 20px; }
+    .research-card { padding: 20px; }
+    .member-info { padding: 20px; }
 }
-
 @media (max-width: 576px) {
-    .hero-text h2 {
-        font-size: 1.8rem;
-    }
-    
-    .coming-soon-card h3 {
-        font-size: 1.8rem;
-    }
-    
-    .coming-soon-card {
-        padding: 50px 20px;
-    }
+    .hero-text h2 { font-size: 1.8rem; }
+    .coming-soon-card h3 { font-size: 1.8rem; }
+    .coming-soon-card { padding: 50px 20px; }
 }
         
-        /* Email button styling - repositioned nicely */
+        /* Email button styling */
         .email-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: var(--accent);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            margin-top: 20px;
-            width: fit-content;
-            border: 2px solid transparent;
+            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+            background: var(--accent); color: white; padding: 12px 24px; border-radius: 50px;
+            text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: var(--transition);
+            margin-top: 20px; width: fit-content; border: 2px solid transparent;
             box-shadow: 0 4px 12px rgba(230, 57, 70, 0.25);
         }
-
-        .email-button i {
-            font-size: 1.1rem;
-            transition: transform 0.3s ease;
-        }
-
-        .email-button:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(42, 92, 130, 0.3);
-        }
-
-        .email-button:hover i {
-            transform: scale(1.1);
-        }
-
-        .dark-theme .email-button {
-            box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
-        }
+        .email-button i { font-size: 1.1rem; transition: transform 0.3s ease; }
+        .email-button:hover { background: var(--primary); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(42,92,130,0.3); }
+        .email-button:hover i { transform: scale(1.1); }
+        .dark-theme .email-button { box-shadow: 0 4px 12px rgba(230,57,70,0.4); }
         
-
-        /* Adjust member-info for better button placement */
-        .member-info {
-            padding: 25px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Push button to bottom naturally with margin-top auto if you want it always at bottom */
-        .member-info .email-button {
-            margin-top: auto;  /* This will push button to bottom of card if content varies */
-        }
-
-        /* Responsive adjustment */
+        .member-info { padding: 25px; flex: 1; display: flex; flex-direction: column; }
+        .member-info .email-button { margin-top: auto; }
         @media (max-width: 768px) {
-            .email-button {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-                width: 100%;  /* Full width on mobile */
-                justify-content: center;
-            }
+            .email-button { padding: 10px 20px; font-size: 0.9rem; width: 100%; justify-content: center; }
         }
         
         /* LOADER */
@@ -469,7 +270,7 @@ body {
         #back-to-top.visible { opacity: 1; visibility: visible; }
         #back-to-top:hover { transform: translateY(-5px); background: var(--primary); }
         
-        /* header - full visibility at top */
+        /* header */
         header {
             background: var(--gradient); color: white; padding: 30px 0 40px;
             position: relative; overflow: hidden;
@@ -481,56 +282,29 @@ body {
         }
         .logo-header { display: flex; align-items: center; margin-bottom: 25px; position: relative; z-index: 2; }
         .logo-container { position: relative; margin-right: 25px; }
-        
-        /* EXTERNAL LOGO URL – FITS PERFECTLY IN THE BOX, SAME SIZE */
-        /* EXTERNAL LOGO URL – NOW FITS PERFECTLY, ZOOMED IN TO FILL BOX */
         .logo-placeholder {
-            width: 100px; 
-            height: 100px; 
-            background: white;
-            border-radius: 20px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
-            border: 2px solid var(--accent);
-            transition: var(--transition);
-            overflow: hidden; 
-            padding: 0;
+            width: 100px; height: 100px; background: white; border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            border: 2px solid var(--accent); transition: var(--transition); overflow: hidden; padding: 0;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .logo-placeholder img {
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover;     /* ✅ VALID - fills entire box, crops if needed */
-            object-position: center;
-            display: block;
-        }
+        .logo-placeholder img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
         .logo-placeholder i { display: none; }
-        .logo-placeholder:hover { 
-            transform: translateY(-5px); 
-            border-color: var(--accent-light); 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
-        }
-        
-        /* Dark theme adjustment */
-        .dark-theme .logo-placeholder {
-            background: #1a1a1a;
-            border-color: var(--accent);
-        }
-        
+        .logo-placeholder:hover { transform: translateY(-5px); border-color: var(--accent-light); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .dark-theme .logo-placeholder { background: #1a1a1a; border-color: var(--accent); }
         .logo-text { flex: 1; }
         h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2.8rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 10px; line-height: 1.2; }
         .tagline { font-size: 1.2rem; opacity: 0.9; font-weight: 300; max-width: 800px; }
         
-                /* ---------- ZOOMED IN SMALLER – FACES FILL FRAME, PROFESSIONAL LOOK ---------- */
+           /* ORIGINAL MEMBER IMAGES - NO ZOOM, AS IN ORIGINAL */
         .member-img {
             height: 260px;
-            overflow: hidden;        /* crops excess – zoom effect */
             background: #f0f2f5;
             display: flex;
             align-items: center;
             justify-content: center;
             border-bottom: 1px solid rgba(0,0,0,0.05);
+            overflow: hidden;
         }
         .dark-theme .member-img {
             background: #2a2a2a;
@@ -539,43 +313,17 @@ body {
         .member-img img {
             width: 100%;
             height: 100%;
-            object-fit: contain;       /* 🔥 ZOOMS IN – fills container, crops edges */
-            object-position: center 20%; /* shifts slightly up for face focus */
-            transition: transform 0.5s ease;
-            transform: scale(1.1);   /* 🔥 ZOOMED IN SMALLER – faces are clear */
+            object-fit: contain;  /* Shows full image without cropping */
+            object-position: center;
+            transition: transform 0.3s ease;
         }
         .team-member:hover .member-img img {
-            transform: scale(1.15);   /* subtle zoom on hover */
+            transform: scale(1.02);  /* Very subtle hover effect only */
         }
-        
-        /* fine-tune each image for best face visibility */
-        .member-img img[alt="Mudasir Mohammed Ibrahim"] {
-            object-position: center 25%; /* adjust face position */
-            transform: scale(1.15);
-        }
-        .member-img img[alt="Edna Die"] {
-            object-position: center 30%;
-            transform: scale(1.2);
-        }
-        .member-img img[alt="Abdul-Malik Seidu"] {
-            object-position: center 20%;
-            transform: scale(1.12);
-        }
-        .member-img img[alt="Abdul Latif Abdul Rahaman"] {
-            object-position: center 25%;
-            transform: scale(1.15);
-        }
-        .member-img img[alt="Alhassan Issahaq"] {
-            object-position: center 30%;
-            transform: scale(1.18);
-        }
-        
-        /* dark mode adjustments */
         .dark-theme .member-img img {
             filter: brightness(0.95) contrast(1.05);
         }
-        
-        /* ---------- HAMBURGER NAVIGATION – FULLY RESPONSIVE + SCROLLABLE ON TINY SCREENS ---------- */
+        /* ========== NAVIGATION – DESKTOP VISIBLE, MOBILE HAMBURGER ========== */
         nav {
             background-color: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
             position: sticky; top: 0; z-index: 1000; box-shadow: 0 5px 20px rgba(0,0,0,0.05);
@@ -597,13 +345,29 @@ body {
         .dark-theme .nav-logo { color: var(--accent-light); }
         .nav-logo i { margin-right: 10px; color: var(--accent); }
         
-        /* desktop navigation - reduced gap to accommodate more tabs */
-        .nav-desktop { display: flex; align-items: center; gap: 20px; }
-        .nav-links { display: flex; list-style: none; gap: 20px; }
+        /* desktop navigation – visible only on large screens */
+        .nav-desktop {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
         .nav-links a {
-            text-decoration: none; color: var(--text-dark); font-weight: 500;
-            font-size: 0.95rem; padding: 6px 0; position: relative; transition: var(--transition);
-            cursor: pointer; white-space: nowrap;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 0;
+            position: relative;
+            transition: var(--transition);
+            cursor: pointer;
+            white-space: nowrap;
         }
         .dark-theme .nav-links a { color: var(--text-light); }
         .nav-links a:after {
@@ -617,64 +381,62 @@ body {
         .dark-theme .nav-links a.active { color: var(--accent-light); }
         .nav-links a.active:after { width: 100%; }
         
-        .portal-btn {
-            background: var(--accent); color: white !important; padding: 8px 16px !important;
-            border-radius: 30px; font-weight: 600; display: flex; align-items: center; gap: 8px;
-            transition: var(--transition); box-shadow: 0 5px 15px rgba(230,57,70,0.3);
-            border: none; text-decoration: none; white-space: nowrap; font-size: 0.9rem;
-        }
-        .portal-btn i { font-size: 0.9rem; }
-        .portal-btn:hover { background: var(--primary); transform: translateY(-2px); box-shadow: 0 10px 25px rgba(230,57,70,0.4); color: white !important; }
-        .portal-btn:hover:after { width: 0; }
-        .dark-theme .portal-btn { color: white !important; }
-        
-        /* hamburger icon - hidden on desktop */
+        /* hamburger icon – hidden on desktop, shown on tablet/mobile */
         .hamburger {
-            display: none; flex-direction: column; cursor: pointer; gap: 6px;
-            background: transparent; border: none; padding: 8px; z-index: 1100;
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+            background: transparent;
+            border: none;
+            padding: 8px;
+            z-index: 1100;
         }
         .hamburger span {
-            width: 28px; height: 3px; background: var(--primary);
-            border-radius: 3px; transition: var(--transition);
+            width: 28px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+            transition: var(--transition);
         }
         .dark-theme .hamburger span { background: var(--accent-light); }
         
-        /* mobile menu overlay — NOW WITH EXPLICIT SCROLL + VISIBLE PORTAL */
+        /* mobile menu overlay */
         .mobile-menu {
-            position: fixed; 
-            top: 0; 
-            right: -100%; 
-            width: min(85%, 400px); 
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: min(85%, 400px);
             height: 100vh;
-            background: var(--light); 
-            box-shadow: var(--shadow-heavy); 
+            background: var(--light);
+            box-shadow: var(--shadow-heavy);
             z-index: 1050;
             transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-            padding: 100px 30px 40px; 
-            display: flex; 
+            padding: 100px 30px 40px;
+            display: flex;
             flex-direction: column;
-            border-left: 2px solid var(--accent-light); 
-            overflow-y: auto;        /* 🔥 ENABLE SCROLLING INSIDE MENU */
+            border-left: 2px solid var(--accent-light);
+            overflow-y: auto;
             -webkit-overflow-scrolling: touch;
         }
         .dark-theme .mobile-menu { background: #1e1e1e; border-left-color: var(--accent); }
         .mobile-menu.active { right: 0; }
         
         .mobile-menu .nav-links-mobile {
-            display: flex; 
-            flex-direction: column; 
-            list-style: none; 
-            gap: 20px;               /* slightly reduced */
-            margin-bottom: 30px;      /* reduced */
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: 20px;
+            margin-bottom: 30px;
         }
         .mobile-menu .nav-links-mobile a {
-            font-size: 1.3rem;        /* slightly smaller */
-            font-weight: 600; 
+            font-size: 1.3rem;
+            font-weight: 600;
             color: var(--text-dark);
-            text-decoration: none; 
-            padding: 8px 0;           /* less padding */
+            text-decoration: none;
+            padding: 8px 0;
             border-bottom: 1px solid rgba(128,128,128,0.2);
-            transition: var(--transition); 
+            transition: var(--transition);
             display: block;
             cursor: pointer;
         }
@@ -682,42 +444,41 @@ body {
         .mobile-menu .nav-links-mobile a.active { color: var(--accent); border-bottom-color: var(--accent); }
         
         .mobile-portal-btn {
-            background: var(--accent); 
-            color: white !important; 
-            padding: 16px 20px !important;  /* slightly smaller padding */
-            border-radius: 40px; 
-            font-weight: 700; 
-            display: inline-flex; 
+            background: var(--accent);
+            color: white !important;
+            padding: 16px 20px !important;
+            border-radius: 40px;
+            font-weight: 700;
+            display: inline-flex;
             align-items: center;
-            justify-content: center; 
-            gap: 10px; 
-            text-decoration: none; 
-            margin-top: 15px; 
-            font-size: 1.1rem;        /* slightly smaller */
-            border: none; 
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            margin-top: 15px;
+            font-size: 1.1rem;
+            border: none;
             width: 100%;
-            flex-shrink: 0;            /* prevent squish */
+            flex-shrink: 0;
         }
         .close-btn {
-            position: absolute; 
-            top: 30px; 
-            right: 30px; 
+            position: absolute;
+            top: 30px;
+            right: 30px;
             font-size: 2rem;
-            color: var(--text-dark); 
-            cursor: pointer; 
-            background: none; 
+            color: var(--text-dark);
+            cursor: pointer;
+            background: none;
             border: none;
-            transition: var(--transition); 
-            width: 40px; 
+            transition: var(--transition);
+            width: 40px;
             height: 40px;
-            display: flex; 
-            align-items: center; 
+            display: flex;
+            align-items: center;
             justify-content: center;
         }
         .dark-theme .close-btn { color: var(--text-light); }
         .close-btn:hover { transform: rotate(90deg); color: var(--accent); }
         
-        /* tiny helper note – shows on very small screens to hint scroll */
         .mobile-scroll-hint {
             display: none;
             text-align: center;
@@ -728,9 +489,7 @@ body {
             border-top: 1px dashed rgba(128,128,128,0.3);
         }
         @media (max-height: 600px) {
-            .mobile-scroll-hint {
-                display: block;
-            }
+            .mobile-scroll-hint { display: block; }
         }
         
         .overlay {
@@ -759,7 +518,7 @@ body {
         .tab-content { display: none; animation: fadeIn 0.6s ease-out; min-height: 400px; }
         .tab-content.active { display: block; }
         
-        /* HOME – Ghana nursing */
+        /* HOME, RESEARCH, TEAM, PUBLICATIONS, FUNDING, JOIN styles (unchanged) */
         .hero-section { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px; }
         .hero-text h2 { font-size: 3rem; color: var(--primary); margin-bottom: 20px; line-height: 1.2; }
         .dark-theme .hero-text h2 { color: var(--accent-light); }
@@ -794,7 +553,6 @@ body {
         .process-step h4 { color: var(--primary); margin-bottom: 15px; font-size: 1.3rem; }
         .dark-theme .process-step h4 { color: var(--accent-light); }
         
-        /* RESEARCH AREAS – nursing focus */
         .research-areas { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 30px; margin-top: 40px; }
         .research-card { background: var(--light); padding: 30px; border-radius: 15px; box-shadow: var(--shadow); transition: var(--transition); border-left: 5px solid var(--accent); border: 1px solid rgba(0,0,0,0.05); }
         .dark-theme .research-card { background: #2a2a2a; border: 1px solid rgba(255,255,255,0.05); }
@@ -805,91 +563,24 @@ body {
         .research-card p { color: var(--text-dark); }
         .dark-theme .research-card p { color: #fff; }
         
-        /* MEMBERS – UNIFORM STYLE, AUTO-ADJUST CARDS, no extra space */
         .team-intro { text-align: center; max-width: 800px; margin: 0 auto 60px; font-size: 1.1rem; color: var(--text-dark); line-height: 1.8; }
         .dark-theme .team-intro { color: var(--text-light); }
-        .team-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
-            gap: 40px; 
-            margin-top: 40px; 
-            align-items: stretch;
-        }
-        .team-member { 
-            background-color: var(--light); 
-            border-radius: 20px; 
-            overflow: hidden; 
-            box-shadow: var(--shadow); 
-            transition: var(--transition); 
-            border: 1px solid rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 40px; margin-top: 40px; align-items: stretch; }
+        .team-member { background-color: var(--light); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column; height: 100%; }
         .dark-theme .team-member { background-color: #2a2a2a; border: 1px solid rgba(255,255,255,0.05); }
         .team-member:hover { transform: translateY(-10px); box-shadow: var(--shadow-heavy); }
-        
-
-        .member-info { 
-            padding: 25px; 
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .member-name { 
-            color: var(--primary); 
-            font-size: 1.5rem; 
-            margin-bottom: 6px; 
-            font-weight: 700; 
-            line-height: 1.2;
-        }
+        .member-info { padding: 25px; flex: 1; display: flex; flex-direction: column; }
+        .member-name { color: var(--primary); font-size: 1.5rem; margin-bottom: 6px; font-weight: 700; line-height: 1.2; }
         .dark-theme .member-name { color: var(--accent-light); }
-        .member-title { 
-            color: var(--accent); 
-            font-weight: 600; 
-            margin-bottom: 12px; 
-            font-size: 1rem; 
-            letter-spacing: 0.3px;
-        }
-        .member-workplace { 
-            color: var(--text-dark); 
-            margin-bottom: 16px; 
-            font-size: 0.95rem; 
-            display: flex; 
-            align-items: center; 
-            gap: 6px;
-        }
+        .member-title { color: var(--accent); font-weight: 600; margin-bottom: 12px; font-size: 1rem; letter-spacing: 0.3px; }
+        .member-workplace { color: var(--text-dark); margin-bottom: 16px; font-size: 0.95rem; display: flex; align-items: center; gap: 6px; }
         .dark-theme .member-workplace { color: var(--text-light); }
-        .member-workplace i { 
-            color: var(--secondary); 
-            width: 18px;
-            text-align: center;
-        }
-        /* social icons - only the ones shown in founder card */
-        .social-icons { 
-            display: flex; 
-            gap: 12px; 
-            margin-top: 8px; 
-        }
-        .social-icons a { 
-            display: inline-flex; 
-            align-items: center; 
-            justify-content: center; 
-            width: 40px; 
-            height: 40px; 
-            background-color: rgba(42,92,130,0.08); 
-            color: var(--primary); 
-            border-radius: 10px; 
-            text-decoration: none; 
-            transition: var(--transition); 
-        }
+        .member-workplace i { color: var(--secondary); width: 18px; text-align: center; }
+        .social-icons { display: flex; gap: 12px; margin-top: 8px; }
+        .social-icons a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(42,92,130,0.08); color: var(--primary); border-radius: 10px; text-decoration: none; transition: var(--transition); }
         .dark-theme .social-icons a { background-color: rgba(42,92,130,0.3); color: var(--accent-light); }
         .social-icons a:hover { background-color: var(--primary); color: white; transform: translateY(-3px); }
-        
-        /* hide extra elements not present in Mudasir card */
-        .member-interests, .member-description, .interests-label {
-            display: none;
-        }
+        .member-interests, .member-description, .interests-label { display: none; }
         
         .btn {
             display: inline-block; padding: 14px 32px; background: var(--accent); color: white;
@@ -900,10 +591,9 @@ body {
         .btn-outline { background: transparent; border: 2px solid var(--accent); color: var(--accent); box-shadow: none; }
         .btn-outline:hover { background: var(--accent); color: white; }
         
-        /* PUBLICATIONS TAB – coming soon style */
         .coming-soon-card {
             display: flex; flex-direction: column; align-items: center; justify-content: center;
-            background: var(--light); border-radius: 30px; padding: 70px 40px; 
+            background: var(--light); border-radius: 30px; padding: 70px 40px;
             box-shadow: var(--shadow); text-align: center; margin: 40px auto; max-width: 800px;
             border: 2px dashed var(--accent);
         }
@@ -914,7 +604,6 @@ body {
         .coming-soon-card p { font-size: 1.3rem; color: var(--text-dark); max-width: 500px; }
         .dark-theme .coming-soon-card p { color: var(--text-light); }
         
-        /* FOOTER – professional image statement */
         footer {
             background: var(--dark); color: white; padding: 60px 0 30px; margin-top: 80px; transition: var(--transition);
         }
@@ -937,19 +626,13 @@ body {
         
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         
-        /* ---------- RESPONSIVE BREAKPOINTS ---------- */
-        @media (max-width: 1100px) {
-            .nav-links { gap: 12px; }
-            .nav-links a { font-size: 0.9rem; }
-            .portal-btn { padding: 6px 12px !important; font-size: 0.85rem; }
-        }
-        
+        /* ---------- RESPONSIVE BREAKPOINTS – HAMBURGER ON TABLET/MOBILE ---------- */
         @media (max-width: 992px) {
+            .nav-desktop { display: none; }        /* hide desktop tabs */
+            .hamburger { display: flex; }          /* show hamburger */
             .hero-section { grid-template-columns: 1fr; gap: 40px; }
             .hero-text h2 { font-size: 2.5rem; }
             .theme-toggle { top: 80px; right: 15px; }
-            .hamburger { display: flex; }
-            .nav-desktop { display: none; }
         }
         
         @media (max-width: 768px) {
@@ -971,139 +654,48 @@ body {
         }
         
         @media (min-width: 993px) {
-            .hamburger { display: none; }
-            .nav-desktop { display: flex; }
+            .nav-desktop { display: flex; }        /* show desktop tabs */
+            .hamburger { display: none; }          /* hide hamburger */
         }
-
-        /* ===== ADDITIONAL RULE: make portal button full width on all small screens ===== */
-        @media (max-width: 768px) {
-            .portal-btn {
-                width: 100% !important;
-                justify-content: center !important;
-                padding: 12px 16px !important;
-                font-size: 1rem !important;
-                margin: 5px 0;
-                box-sizing: border-box;
-            }
-        }
-        /* Styles for the new funding contact form */
+        
+        /* portal button full width on mobile inside menu, already set */
         .funding-form-card {
-            background: var(--light);
-            border-radius: 20px;
-            padding: 35px;
-            box-shadow: var(--shadow);
-            margin: 30px 0 0;
-            border: 1px solid rgba(0,0,0,0.05);
+            background: var(--light); border-radius: 20px; padding: 35px;
+            box-shadow: var(--shadow); margin: 30px 0 0; border: 1px solid rgba(0,0,0,0.05);
         }
-        .dark-theme .funding-form-card {
-            background: #2a2a2a;
-            border: 1px solid rgba(255,255,255,0.05);
+        .dark-theme .funding-form-card { background: #2a2a2a; border: 1px solid rgba(255,255,255,0.05); }
+        .funding-form-group { margin-bottom: 25px; }
+        .funding-form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--primary); font-size: 0.95rem; }
+        .dark-theme .funding-form-group label { color: var(--accent-light); }
+        .funding-form-group input, .funding-form-group select, .funding-form-group textarea {
+            width: 100%; padding: 14px 18px; border: 1px solid rgba(0,0,0,0.1); border-radius: 12px;
+            background: var(--light); color: var(--text-dark); font-size: 1rem; transition: var(--transition);
         }
-        .funding-form-group {
-            margin-bottom: 25px;
+        .dark-theme .funding-form-group input, .dark-theme .funding-form-group select, .dark-theme .funding-form-group textarea {
+            background: #1e1e1e; border: 1px solid rgba(255,255,255,0.1); color: var(--text-light);
         }
-        .funding-form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--primary);
-            font-size: 0.95rem;
-        }
-        .dark-theme .funding-form-group label {
-            color: var(--accent-light);
-        }
-        .funding-form-group input,
-        .funding-form-group select,
-        .funding-form-group textarea {
-            width: 100%;
-            padding: 14px 18px;
-            border: 1px solid rgba(0,0,0,0.1);
-            border-radius: 12px;
-            background: var(--light);
-            color: var(--text-dark);
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-        .dark-theme .funding-form-group input,
-        .dark-theme .funding-form-group select,
-        .dark-theme .funding-form-group textarea {
-            background: #1e1e1e;
-            border: 1px solid rgba(255,255,255,0.1);
-            color: var(--text-light);
-        }
-        .funding-form-group input:focus,
-        .funding-form-group select:focus,
-        .funding-form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(230,57,70,0.1);
+        .funding-form-group input:focus, .funding-form-group select:focus, .funding-form-group textarea:focus {
+            outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(230,57,70,0.1);
         }
         .funding-submit-btn {
-            background: var(--accent);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            padding: 14px 35px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            border: 2px solid transparent;
+            background: var(--accent); color: white; border: none; border-radius: 50px; padding: 14px 35px;
+            font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition);
+            display: inline-flex; align-items: center; gap: 10px; border: 2px solid transparent;
             box-shadow: 0 4px 12px rgba(230,57,70,0.25);
         }
         .funding-submit-btn i { font-size: 1.1rem; }
-        .funding-submit-btn:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(42,92,130,0.3);
-        }
-        .funding-form-message {
-            padding: 15px 20px;
-            border-radius: 10px;
-            margin: 20px 0 0;
-            display: none;
-            font-weight: 500;
-        }
-        .funding-form-message.success {
-            background: rgba(46, 204, 113, 0.15);
-            color: #27ae60;
-            border: 1px solid #27ae60;
-            display: block;
-        }
-        .funding-form-message.error {
-            background: rgba(231, 76, 60, 0.15);
-            color: #c0392b;
-            border: 1px solid #c0392b;
-            display: block;
-        }
-        /* Sentence style for funding intro */
+        .funding-submit-btn:hover { background: var(--primary); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(42,92,130,0.3); }
+        .funding-form-message { padding: 15px 20px; border-radius: 10px; margin: 20px 0 0; display: none; font-weight: 500; }
+        .funding-form-message.success { background: rgba(46, 204, 113, 0.15); color: #27ae60; border: 1px solid #27ae60; display: block; }
+        .funding-form-message.error { background: rgba(231, 76, 60, 0.15); color: #c0392b; border: 1px solid #c0392b; display: block; }
         .funding-intro-sentence {
-            font-size: 1.2rem;
-            line-height: 1.7;
-            color: var(--text-dark);
-            background: rgba(42,92,130,0.03);
-            padding: 25px 30px;
-            border-radius: 15px;
-            margin: 30px 0 0;
-            border-left: 5px solid var(--accent);
+            font-size: 1.2rem; line-height: 1.7; color: var(--text-dark);
+            background: rgba(42,92,130,0.03); padding: 25px 30px; border-radius: 15px;
+            margin: 30px 0 0; border-left: 5px solid var(--accent);
         }
-        .dark-theme .funding-intro-sentence {
-            background: rgba(255,255,255,0.02);
-            color: var(--text-light);
-        }
-        .funding-intro-sentence a {
-            color: var(--accent);
-            font-weight: 600;
-            text-decoration: none;
-            border-bottom: 1px dotted var(--accent);
-        }
-        .funding-intro-sentence a:hover {
-            color: var(--primary);
-            border-bottom-color: var(--primary);
-        }
+        .dark-theme .funding-intro-sentence { background: rgba(255,255,255,0.02); color: var(--text-light); }
+        .funding-intro-sentence a { color: var(--accent); font-weight: 600; text-decoration: none; border-bottom: 1px dotted var(--accent); }
+        .funding-intro-sentence a:hover { color: var(--primary); border-bottom-color: var(--primary); }
     </style>
 </head>
 <body>
@@ -1119,7 +711,7 @@ body {
     <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
     <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
     
-  <!-- header - now compact, slim, with social icons and portal button -->
+  <!-- header -->
 <header id="page-header" style="padding: 12px 0;">
     <div class="header-bg"></div>
     <div class="container">
@@ -1137,34 +729,18 @@ body {
                 </div>
             </div>
             
-            <!-- Right side: Social icons + Portal button (all external links) -->
+            <!-- Right side: Social icons + Portal button -->
             <div style="display: flex; align-items: center; gap: 20px;">
-                <!-- Social Icons - ALL FOUR: Facebook, X, LinkedIn, YouTube -->
                 <div style="display: flex; align-items: center; gap: 16px;">
-<!-- Facebook -->
-<a href="https://facebook.com/AESRN" style="color: white; font-size: 1.2rem; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'" title="Facebook">
-    <i class="fab fa-facebook-f"></i>
-</a>
-
-<!-- X (Twitter) -->
-<a href="https://x.com/AESRN_" style="color: white; font-size: 1.2rem; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'" title="X (Twitter)">
-    <i class="fab fa-x-twitter"></i>
-</a>
-
-<!-- LinkedIn -->
-<a href="https://linkedin.com/company/aesrn" style="color: white; font-size: 1.2rem; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'" title="LinkedIn">
-    <i class="fab fa-linkedin-in"></i>
-</a>
-
-<!-- YouTube -->
-<a href="https://youtube.com/@AESRN" style="color: white; font-size: 1.2rem; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'" title="YouTube">
-    <i class="fab fa-youtube"></i>
-</a>
+                    <a href="https://facebook.com/AESRN" style="color: white; font-size: 1.2rem;" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/AESRN_" style="color: white; font-size: 1.2rem;" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com/company/aesrn" style="color: white; font-size: 1.2rem;" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com/@AESRN" style="color: white; font-size: 1.2rem;" title="YouTube"><i class="fab fa-youtube"></i></a>
                 
-                <!-- Member Portal Login (external link opens in new tab) -->
-<a href="https://aesrnmemberlogin.mudasiribrahim.com/" class="portal-btn" style="background: var(--accent); color: white; padding: 8px 16px; border-radius: 30px; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; white-space: nowrap; box-shadow: 0 4px 10px rgba(230,57,70,0.25); transition: var(--transition);">
-    <i class="fas fa-sign-in-alt" style="font-size: 0.8rem;"></i> Sign In
-</a>
+                    <a href="https://aesrnmemberlogin.mudasiribrahim.com/" class="portal-btn" style="background: var(--accent); color: white; padding: 8px 16px; border-radius: 30px; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; white-space: nowrap; box-shadow: 0 4px 10px rgba(230,57,70,0.25); transition: var(--transition);">
+                        <i class="fas fa-sign-in-alt" style="font-size: 0.8rem;"></i> Sign In
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -1173,32 +749,28 @@ body {
     <!-- NAVIGATION -->
     <nav>
         <div class="nav-container">
-            <!-- AESRN LOGO - click returns home & scroll to very top -->
             <a class="nav-logo" id="homeLogoBtn"><i class="fas fa-network-wired"></i> AESRN</a>
             
-<!-- DESKTOP VIEW - with 6 tabs only, Member Portal Login removed -->
-<div class="nav-desktop" style="display: flex; align-items: center; justify-content: center; width: 100%;">
-    <ul class="nav-links" style="display: flex; list-style: none; gap: 32px; margin: 0; padding: 0; align-items: center; justify-content: center;">
-        <li><a class="active" data-tab="home" style="text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 1.1rem; padding: 8px 0; position: relative; transition: var(--transition); cursor: pointer; white-space: nowrap;">Home</a></li>
-        <li><a data-tab="research" style="text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 1.1rem; padding: 8px 0; position: relative; transition: var(--transition); cursor: pointer; white-space: nowrap;">Research</a></li>
-        <li><a data-tab="team" style="text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 1.1rem; padding: 8px 0; position: relative; transition: var(--transition); cursor: pointer; white-space: nowrap;">Members</a></li>
-        <li><a data-tab="publications" style="text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 1.1rem; padding: 8px 0; position: relative; transition: var(--transition); cursor: pointer; white-space: nowrap;">
-            Publications <span style="background: var(--accent); color: white; padding: 2px 8px; border-radius: 30px; font-size: 0.7rem; margin-left: 6px; font-weight: 600;">soon</span>
-        </a></li>
-        <li><a data-tab="funding" style="text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 1.1rem; padding: 8px 0; position: relative; transition: var(--transition); cursor: pointer; white-space: nowrap;">Funding</a></li>
-        <li><a data-tab="join" style="text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 1.1rem; padding: 8px 0; position: relative; transition: var(--transition); cursor: pointer; white-space: nowrap;">Join Us</a></li>
-    </ul>
-</div>
-
+            <!-- DESKTOP VIEW (visible only above 992px) -->
+            <div class="nav-desktop">
+                <ul class="nav-links">
+                    <li><a class="active" data-tab="home">Home</a></li>
+                    <li><a data-tab="research">Research</a></li>
+                    <li><a data-tab="team">Members</a></li>
+                    <li><a data-tab="publications">Publications <span style="background: var(--accent); color: white; padding: 2px 8px; border-radius: 30px; font-size: 0.7rem; margin-left: 6px; font-weight: 600;">soon</span></a></li>
+                    <li><a data-tab="funding">Funding</a></li>
+                    <li><a data-tab="join">Join Us</a></li>
+                </ul>
+            </div>
             
-            <!-- HAMBURGER ICON -->
+            <!-- HAMBURGER ICON (visible below 992px) -->
             <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
     
-    <!-- MOBILE MENU – now scrollable + hint for small screens -->
+    <!-- MOBILE MENU (hidden by default, slides in) -->
     <div class="overlay" id="overlay"></div>
     <div class="mobile-menu" id="mobileMenu">
         <button class="close-btn" id="closeBtn">&times;</button>
@@ -1210,16 +782,9 @@ body {
             <li><a data-tab="funding">Funding</a></li>      
             <li><a data-tab="join">Join Us</a></li>        
         </ul>
-        <a href="https://aesrnmemberlogin.mudasiribrahim.com/" class="mobile-portal-btn">
-            <i class="fas fa-sign-in-alt"></i> Member Portal Login
-        </a>
-        <!-- subtle hint appears on very short screens -->
-        <div class="mobile-scroll-hint">
-            <i class="fas fa-chevron-down"></i> scroll for more <i class="fas fa-chevron-down"></i>
-        </div>
     </div>
     
-    <!-- MAIN – 6 TABS (content unchanged) -->
+    <!-- MAIN – 6 TABS (content unchanged, full as previous) -->
     <main class="container">
         <!-- HOME -->
         <div id="home" class="tab-content active">
@@ -1227,7 +792,7 @@ body {
                 <div class="hero-text">
                     <h2>From proposal to publication: together.</h2>
                     <p>AESRN is a <strong>peer-led network of young Ghanaian nurse researchers.</strong> We are not an NGO, training program, or mentorship platform. We are colleagues who come together to share ideas, design studies, conduct research, and publish collaboratively.</p>
-                                        <p>Our purpose is simple: advance Ghanaian nursing and health sciences research while building our own research portfolios, purely through collaboration. No hierarchy. No external programs. Just researchers working side by side.</p>
+                    <p>Our purpose is simple: advance Ghanaian nursing and health sciences research while building our own research portfolios, purely through collaboration. No hierarchy. No external programs. Just researchers working side by side.</p>
                     <a class="btn" data-tab="research">Explore Our Research Areas</a>
                     <a class="btn btn-outline" data-tab="team">Meet Our Members</a>
                     <div class="stats">
@@ -1241,7 +806,6 @@ body {
                     <div class="image-overlay"></div>
                 </div>
             </div>
-            
             <div class="mission-section">
                 <h3>Collaborate. Write. Publish. — Not Mentorship</h3>
                 <p>At AESRN, collaboration drives everything. Members combine their research skills, creativity, and experience to turn ideas into published work. The following principles define our network:</p>
@@ -1270,7 +834,7 @@ body {
             </div>
         </div>
         
-        <!-- RESEARCH AREAS (renamed) -->
+        <!-- RESEARCH AREAS -->
         <div id="research" class="tab-content">
             <h2 class="section-title center-title">Research Areas</h2>
             <p class="team-intro">Our members focus on areas that address pressing health challenges in Ghana while building collective expertise and research portfolios.</p>
@@ -1284,7 +848,7 @@ body {
             </div>
         </div>
         
-        <!-- MEMBERS -->
+   <!-- MEMBERS -->
         <div id="team" class="tab-content">
             <h2 class="section-title center-title">Network Members</h2>
             <p class="team-intro">
@@ -1353,77 +917,45 @@ body {
             </div>
         </div>
         
-        <!-- PUBLICATIONS TAB -->
+        <!-- PUBLICATIONS -->
         <div id="publications" class="tab-content">
             <div class="coming-soon-card">
                 <i class="fas fa-file-alt"></i>
                 <h3>Coming Soon</h3>
                 <p>Our collaborative publications will be listed here. The network is currently working on research projects.</p>
-                <div style="margin-top: 40px;">
-                    <span style="background: var(--accent-light); color: var(--dark); padding: 12px 28px; border-radius: 50px; font-weight: 600; font-size: 1.1rem;">First publications expected 2026</span>
-                </div>
+                <div style="margin-top: 40px;"><span style="background: var(--accent-light); color: var(--dark); padding: 12px 28px; border-radius: 50px; font-weight: 600; font-size: 1.1rem;">First publications expected 2026</span></div>
             </div>
         </div>
         
-        <!-- FUNDING TAB (Updated) -->
+        <!-- FUNDING -->
         <div id="funding" class="tab-content">
             <h2 class="section-title center-title">Funding Opportunities</h2>
-            <!-- Intro sentence (card removed, presented nicely) -->
             <div class="funding-intro-sentence">
                 <i class="fas fa-hand-holding-heart" style="color: var(--accent); margin-right: 10px;"></i>
                 We welcome funding support to grow our network. If you are interested in sponsoring network activities, specific research projects, or grants for young or emerging scholars, we would be glad to explore partnership opportunities. Please use the form below.
             </div>
-            <!-- Contact Form (Formspree) -->
             <div class="funding-form-card">
                 <h3 style="color: var(--primary); margin-bottom: 30px; font-size: 1.8rem;">📬 Send us a funding inquiry</h3>
                 <form id="fundingForm" action="https://formspree.io/f/xanrpwae" method="POST">
                     <input type="hidden" name="_subject" value="New Funding Inquiry from AESRN Website">
                     <input type="hidden" name="_gotcha" style="display:none">
-                    
-                    <div class="funding-form-group">
-                        <label for="funding-name">Full name *</label>
-                        <input type="text" id="funding-name" name="name" required placeholder="Your name / Organization name">
-                    </div>
-                    
-                    <div class="funding-form-group">
-                        <label for="funding-email">Email address *</label>
-                        <input type="email" id="funding-email" name="email" required placeholder="you@example.com">
-                    </div>
-                    
-                    <div class="funding-form-group">
-                        <label for="funding-type">Inquiry type *</label>
-                        <select id="funding-type" name="inquiry_type" required>
-                            <option value="" disabled selected>– Please select –</option>
-                            <option value="sponsor_activities">Sponsor network activities</option>
-                            <option value="research_project">Specific research project</option>
-                            <option value="grant_scholars">Grant / scholarship for scholars</option>
-                            <option value="other">Other partnership</option>
-                        </select>
-                    </div>
-                    
-                    <div class="funding-form-group">
-                        <label for="funding-message">Message *</label>
-                        <textarea id="funding-message" name="message" rows="5" required placeholder="Tell us about your interest or potential support..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="funding-submit-btn">
-                        <i class="fas fa-paper-plane"></i> Send inquiry
-                    </button>
-                    
+                    <div class="funding-form-group"><label for="funding-name">Full name *</label><input type="text" id="funding-name" name="name" required placeholder="Your name / Organization name"></div>
+                    <div class="funding-form-group"><label for="funding-email">Email address *</label><input type="email" id="funding-email" name="email" required placeholder="you@example.com"></div>
+                    <div class="funding-form-group"><label for="funding-type">Inquiry type *</label><select id="funding-type" name="inquiry_type" required><option value="" disabled selected>– Please select –</option><option value="sponsor_activities">Sponsor network activities</option><option value="research_project">Specific research project</option><option value="grant_scholars">Grant / scholarship for scholars</option><option value="other">Other partnership</option></select></div>
+                    <div class="funding-form-group"><label for="funding-message">Message *</label><textarea id="funding-message" name="message" rows="5" required placeholder="Tell us about your interest or potential support..."></textarea></div>
+                    <button type="submit" class="funding-submit-btn"><i class="fas fa-paper-plane"></i> Send inquiry</button>
                     <div id="fundingFormMessage" class="funding-form-message"></div>
                 </form>
             </div>
         </div>
         
-        <!-- JOIN US TAB -->
+        <!-- JOIN US -->
         <div id="join" class="tab-content">
             <div class="coming-soon-card">
                 <i class="fas fa-user-plus"></i>
                 <h3>Joining Our Network</h3>
                 <p>Interested in joining AESRN?</p>
-                <div style="margin-top: 30px; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-                    <span style="background: var(--primary); color: white; padding: 12px 28px; border-radius: 50px; font-weight: 600; font-size: 1.1rem;">Eligibility: Research experience required</span>
-                </div>
+                <div style="margin-top: 30px; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;"><span style="background: var(--primary); color: white; padding: 12px 28px; border-radius: 50px; font-weight: 600; font-size: 1.1rem;">Eligibility: Research experience required</span></div>
                 <p style="margin-top: 30px;">For inquiries, contact: <a href="mailto:research.aesrn@yahoo.com" style="color: var(--accent);">research.aesrn@yahoo.com</a></p>
             </div>
         </div>
@@ -1433,48 +965,24 @@ body {
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>AESRN · Ghana</h3>
-                    <p>Peer network for Ghanaian nurse researchers. We don't train — we collaborate, write, and publish.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Network</h3>
-                    <ul class="footer-links">
-                        <li><a data-tab="home">Home</a></li>
-                        <li><a data-tab="research">Research</a></li>
-                        <li><a data-tab="team">Members</a></li>
-                        <li><a data-tab="publications">Publications (soon)</a></li>
-                        <li><a data-tab="funding">Funding</a></li>
-                        <li><a data-tab="join">Join Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/place/Tamale,+Ghana" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.9); text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.5);">Tamale, Ghana</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:research.aesrn@yahoo.com" class="email-link">research.aesrn@yahoo.com</a></p>
-                    <p><i class="fas fa-user-nurse"></i> From proposal to publication: together.</p>
-                </div>
+                <div class="footer-section"><h3>AESRN · Ghana</h3><p>Peer network for Ghanaian nurse researchers. We don't train — we collaborate, write, and publish.</p></div>
+                <div class="footer-section"><h3>Network</h3><ul class="footer-links"><li><a data-tab="home">Home</a></li><li><a data-tab="research">Research</a></li><li><a data-tab="team">Members</a></li><li><a data-tab="publications">Publications (soon)</a></li><li><a data-tab="funding">Funding</a></li><li><a data-tab="join">Join Us</a></li></ul></div>
+                <div class="footer-section"><h3>Contact</h3><p><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/place/Tamale,+Ghana" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.9); text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.5);">Tamale, Ghana</a></p><p><i class="fas fa-envelope"></i> <a href="mailto:research.aesrn@yahoo.com" class="email-link">research.aesrn@yahoo.com</a></p><p><i class="fas fa-user-nurse"></i> From proposal to publication: together.</p></div>
             </div>
-            
             <div class="copyright">
                 <p>Copyright &copy; <span id="currentYear"></span> African Emerging Scholars Research Network (AESRN). All Rights Reserved.</p>
-            
-            <!-- Bottom row -->
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.08);">
-                <span style="font-size: 0.65rem; color: rgba(255,255,255,0.2); letter-spacing: 0.5px;">founded 31/01/2026</span>
-                <span style="font-size: 0.7rem; color: rgba(255,255,255,0.6); text-align: right; max-width: 500px;">
-                    All images are property of their respective owners. No ownership claimed by AESRN.
-                </span>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.08);">
+                    <span style="font-size: 0.65rem; color: rgba(255,255,255,0.2); letter-spacing: 0.5px;">founded 31/01/2026</span>
+                    <span style="font-size: 0.7rem; color: rgba(255,255,255,0.6); text-align: right; max-width: 500px;">All images are property of their respective owners. No ownership claimed by AESRN.</span>
+                </div>
             </div>
         </div>
     </footer>
     
     <script>
-        // ===== (JavaScript unchanged – all existing functionality) =====
         if (history.scrollRestoration) history.scrollRestoration = 'manual';
         window.scrollTo(0, 0);
         setTimeout(() => window.scrollTo(0, 0), 10);
-        
         document.getElementById('currentYear').textContent = new Date().getFullYear();
         
         window.addEventListener('load', function() {
@@ -1499,10 +1007,7 @@ body {
         window.addEventListener('scroll', function() { 
             window.pageYOffset > 300 ? backBtn.classList.add('visible') : backBtn.classList.remove('visible'); 
         });
-        backBtn.addEventListener('click', function(e) { 
-            e.preventDefault();
-            window.scrollTo({ top:0, behavior:'smooth' }); 
-        });
+        backBtn.addEventListener('click', function(e) { e.preventDefault(); window.scrollTo({ top:0, behavior:'smooth' }); });
         
         // HAMBURGER
         const hamburger = document.getElementById('hamburgerBtn');
@@ -1539,10 +1044,8 @@ body {
             if (activeMobile) activeMobile.classList.add('active');
             
             history.pushState(null, null, `#${tabId}`);
-            
             const mainElement = document.querySelector('main');
             if (mainElement) {
-                const headerHeight = document.querySelector('header').offsetHeight;
                 const navHeight = document.querySelector('nav').offsetHeight;
                 window.scrollTo({ top: mainElement.offsetTop - navHeight - 20, behavior: 'smooth' });
             }
@@ -1570,7 +1073,7 @@ body {
             
             window.scrollTo(0, 0);
             
-            // simple observer (stat animation etc. – kept concise)
+            // simple observer for stats
             const statNumbers = document.querySelectorAll('.stat-number');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -1603,46 +1106,33 @@ body {
             animateElements.forEach(el => { el.style.opacity = '0'; cardObs.observe(el); });
         });
 
-        // NEW: Funding form submission handler (Formspree)
+        // Funding form handler
         document.addEventListener('DOMContentLoaded', function() {
             const fundingForm = document.getElementById('fundingForm');
             if (fundingForm) {
                 fundingForm.addEventListener('submit', async function(e) {
                     e.preventDefault();
-                    
                     const formData = new FormData(fundingForm);
                     const submitBtn = fundingForm.querySelector('button[type="submit"]');
                     const messageDiv = document.getElementById('fundingFormMessage');
                     
-                    // Loading state
                     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
                     submitBtn.disabled = true;
                     
                     try {
-                        const response = await fetch(fundingForm.action, {
-                            method: 'POST',
-                            body: formData,
-                            headers: { 'Accept': 'application/json' }
-                        });
-                        
+                        const response = await fetch(fundingForm.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
                         if (response.ok) {
                             messageDiv.className = 'funding-form-message success';
                             messageDiv.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your inquiry has been sent. We\'ll be in touch soon.';
                             fundingForm.reset();
-                        } else {
-                            throw new Error('Form submission failed');
-                        }
+                        } else { throw new Error('Form submission failed'); }
                     } catch (error) {
                         messageDiv.className = 'funding-form-message error';
                         messageDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> There was a problem sending your message. Please try again or email us directly.';
                     } finally {
                         submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send inquiry';
                         submitBtn.disabled = false;
-                        // Auto-hide after 7 seconds
-                        setTimeout(() => {
-                            messageDiv.style.display = 'none';
-                            messageDiv.className = 'funding-form-message'; // reset
-                        }, 7000);
+                        setTimeout(() => { messageDiv.style.display = 'none'; messageDiv.className = 'funding-form-message'; }, 7000);
                     }
                 });
             }
