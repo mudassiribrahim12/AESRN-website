@@ -797,24 +797,26 @@ body {
     
     <!-- NAVIGATION -->
     <nav>
-        <div class="nav-container">
-            <a class="nav-logo" id="homeLogoBtn"><i class="fas fa-network-wired"></i> AESRN.net</a>
+        <div class="nav-container" style="padding: 14px 20px;">
+            <a class="nav-logo" id="homeLogoBtn" style="font-size: 1.5rem;"><i class="fas fa-network-wired" style="font-size: 1.4rem; margin-right: 8px;"></i> AESRN.net</a>
             
             <!-- DESKTOP VIEW (visible only above 992px) -->
             <div class="nav-desktop">
-                <ul class="nav-links">
-                    <li><a class="active" data-tab="home">Home</a></li>
-                    <li><a data-tab="research">Research</a></li>
-                    <li><a data-tab="team">Members</a></li>
-                    <li><a data-tab="publications">Publications <span style="background: var(--accent); color: white; padding: 2px 8px; border-radius: 30px; font-size: 0.7rem; margin-left: 6px; font-weight: 600;">soon</span></a></li>
-                    <li><a data-tab="funding">Funding</a></li>
-                    <li><a data-tab="join">Join Us</a></li>
+                <ul class="nav-links" style="gap: 28px;">
+                    <li><a class="active" data-tab="home" style="font-size: 1.05rem; padding: 8px 0; font-weight: 500;">Home</a></li>
+                    <li><a data-tab="research" style="font-size: 1.05rem; padding: 8px 0; font-weight: 500;">Research</a></li>
+                    <li><a data-tab="team" style="font-size: 1.05rem; padding: 8px 0; font-weight: 500;">Members</a></li>
+                    <li><a data-tab="publications" style="font-size: 1.05rem; padding: 8px 0; font-weight: 500;">Publications <span style="background: var(--accent); color: white; padding: 3px 10px; border-radius: 30px; font-size: 0.75rem; margin-left: 6px; font-weight: 600; letter-spacing: 0.3px;">soon</span></a></li>
+                    <li><a data-tab="funding" style="font-size: 1.05rem; padding: 8px 0; font-weight: 500;">Funding</a></li>
+                    <li><a data-tab="join" style="font-size: 1.05rem; padding: 8px 0; font-weight: 500;">Join Us</a></li>
                 </ul>
             </div>
             
             <!-- HAMBURGER ICON (visible below 992px) -->
             <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
-                <span></span><span></span><span></span>
+                <span style="width: 30px; height: 3.5px;"></span>
+                <span style="width: 30px; height: 3.5px;"></span>
+                <span style="width: 30px; height: 3.5px;"></span>
             </button>
         </div>
     </nav>
@@ -822,32 +824,32 @@ body {
     <!-- MOBILE MENU (hidden by default, slides in) -->
     <div class="overlay" id="overlay"></div>
     <div class="mobile-menu" id="mobileMenu">
-        <button class="close-btn" id="closeBtn">&times;</button>
-        <ul class="nav-links-mobile">
-            <li><a data-tab="home" class="active">Home</a></li>
-            <li><a data-tab="research">Research</a></li>
-            <li><a data-tab="team">Members</a></li>
-            <li><a data-tab="publications">Publications <span style="background: var(--accent); color: white; padding: 4px 12px; border-radius: 40px; font-size: 0.8rem; margin-left: 10px;">soon</span></a></li>
-            <li><a data-tab="funding">Funding</a></li>      
-            <li><a data-tab="join">Join Us</a></li>        
+        <button class="close-btn" id="closeBtn" style="font-size: 2.2rem; top: 25px; right: 25px;">&times;</button>
+        <ul class="nav-links-mobile" style="gap: 18px; margin-top: 40px;">
+            <li><a data-tab="home" class="active" style="font-size: 1.3rem; padding: 10px 0; font-weight: 600;">Home</a></li>
+            <li><a data-tab="research" style="font-size: 1.3rem; padding: 10px 0; font-weight: 600;">Research</a></li>
+            <li><a data-tab="team" style="font-size: 1.3rem; padding: 10px 0; font-weight: 600;">Members</a></li>
+            <li><a data-tab="publications" style="font-size: 1.3rem; padding: 10px 0; font-weight: 600;">Publications <span style="background: var(--accent); color: white; padding: 4px 12px; border-radius: 40px; font-size: 0.8rem; margin-left: 10px; font-weight: 600;">soon</span></a></li>
+            <li><a data-tab="funding" style="font-size: 1.3rem; padding: 10px 0; font-weight: 600;">Funding</a></li>      
+            <li><a data-tab="join" style="font-size: 1.3rem; padding: 10px 0; font-weight: 600;">Join Us</a></li>        
         </ul>
     </div>
     
     <!-- MAIN – 6 TABS (content unchanged, full as previous) -->
     <main class="container">
-        <!-- HOME -->
+<!-- HOME -->
         <div id="home" class="tab-content active">
             <div class="hero-section">
                 <div class="hero-text">
-                    <h2>From proposal to publication: together.</h2>
-                    <p>AESRN is a <strong>peer-led network of young Ghanaian nurse researchers.</strong> We are not an NGO, training program, or mentorship platform. We are colleagues who come together to share ideas, design studies, conduct research, and publish collaboratively.</p>
-                    <p>Our purpose is simple: advance Ghanaian nursing and health sciences research while building our own research portfolios, purely through collaboration. No hierarchy. No external programs. Just researchers working side by side.</p>
-                    <a class="btn" data-tab="research">Explore Our Research Areas</a>
-                    <a class="btn btn-outline" data-tab="team">Meet Our Members</a>
-                    <div class="stats">
-                        <div class="stat-item"><div class="stat-number">5</div><div class="stat-label">Members</div></div>
-                        <div class="stat-item"><div class="stat-number">0</div><div class="stat-label">Publications</div></div>
-                        <div class="stat-item"><div class="stat-number">6</div><div class="stat-label">Research Areas</div></div>
+                    <h2 style="font-size: 2rem;">From proposal to publication: together.</h2>
+                    <p style="font-size: 1.0rem; line-height: 1.5; margin-bottom: 15px;">AESRN is a <strong>peer-led network of young Ghanaian nurse researchers.</strong> We are not an NGO, training program, or mentorship platform. We are colleagues who come together to share ideas, design studies, conduct research, and publish collaboratively.</p>
+                    <p style="font-size: 1.0rem; line-height: 1.5; margin-bottom: 20px;">Our purpose is simple: advance Ghanaian nursing and health sciences research while building our own research portfolios, purely through collaboration. No hierarchy. No external programs. Just researchers working side by side.</p>
+                    <a class="btn" data-tab="research" style="padding: 10px 22px; font-size: 0.85rem;">Explore Our Research Areas</a>
+                    <a class="btn btn-outline" data-tab="team" style="padding: 10px 22px; font-size: 0.85rem;">Meet Our Members</a>
+                    <div class="stats" style="margin-top: 25px;">
+                        <div class="stat-item"><div class="stat-number" style="font-size: 1.5rem;">5</div><div class="stat-label" style="font-size: 0.7rem;">Members</div></div>
+                        <div class="stat-item"><div class="stat-number" style="font-size: 1.5rem;">0</div><div class="stat-label" style="font-size: 0.7rem;">Publications</div></div>
+                        <div class="stat-item"><div class="stat-number" style="font-size: 1.5rem;">6</div><div class="stat-label" style="font-size: 0.7rem;">Research Areas</div></div>
                     </div>
                 </div>
                 <div class="hero-image">
