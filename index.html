@@ -457,31 +457,54 @@ body {
         .dark-theme nav { background-color: rgba(30,30,30,0.95); border-bottom: 1px solid rgba(255,255,255,0.1); }
         
         .nav-container {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 15px 20px; max-width: 1200px; margin: 0 auto;
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
             position: relative;
         }
         
+        /* Logo on left side - clickable */
         .nav-logo {
-            font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700;
-            color: var(--primary); text-decoration: none; display: flex; align-items: center;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-right: 40px;
             cursor: pointer;
+            text-decoration: none;
         }
-        .dark-theme .nav-logo { color: var(--accent-light); }
-        .nav-logo i { margin-right: 10px; color: var(--accent); }
+        .nav-logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .nav-logo span {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .dark-theme .nav-logo span {
+            color: var(--accent-light);
+        }
         
         /* desktop navigation – visible only on large screens */
         .nav-desktop {
             display: flex;
             align-items: center;
+            width: 100%;
+            justify-content: flex-end;
         }
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 32px;
+            gap: 28px;
             margin: 0;
             padding: 0;
             align-items: center;
+            margin-right: 20px;
         }
         .nav-links a {
             text-decoration: none;
@@ -505,6 +528,159 @@ body {
         .nav-links a.active { color: var(--primary); font-weight: 600; }
         .dark-theme .nav-links a.active { color: var(--accent-light); }
         .nav-links a.active:after { width: 100%; }
+        
+        /* Search container positioned on the right */
+        .search-container {
+            position: relative;
+        }
+        .search-icon {
+            color: var(--text-dark);
+            font-size: 1.3rem;
+            cursor: pointer;
+            padding: 8px;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+        }
+        .dark-theme .search-icon {
+            color: var(--text-light);
+        }
+        .search-icon:hover {
+            color: var(--accent);
+            transform: scale(1.1);
+        }
+        
+        /* Search overlay */
+        .search-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 120px;
+        }
+        .search-overlay.active {
+            display: flex;
+        }
+        
+        .search-modal {
+            width: 90%;
+            max-width: 600px;
+            background: var(--light);
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            animation: modalSlideDown 0.3s ease;
+        }
+        .dark-theme .search-modal {
+            background: #2a2a2a;
+        }
+        
+        @keyframes modalSlideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .search-modal-header {
+            padding: 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .dark-theme .search-modal-header {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .search-modal-header i {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+        .search-modal-header input {
+            width: 100%;
+            padding: 10px 0;
+            border: none;
+            background: transparent;
+            font-size: 1.1rem;
+            outline: none;
+            color: var(--text-dark);
+        }
+        .dark-theme .search-modal-header input {
+            color: var(--text-light);
+        }
+        .search-modal-header input::placeholder {
+            color: var(--gray);
+        }
+        .close-search {
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--gray);
+            transition: var(--transition);
+            padding: 5px 10px;
+        }
+        .close-search:hover {
+            color: var(--accent);
+            transform: rotate(90deg);
+        }
+        
+        .search-results {
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+        .search-result-item {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            border-left: 3px solid transparent;
+            background: rgba(0,0,0,0.02);
+            transition: background 0.2s ease;
+        }
+        .dark-theme .search-result-item {
+            background: rgba(255,255,255,0.02);
+        }
+        .search-result-item:hover {
+            background: rgba(230, 57, 70, 0.1);
+            border-left-color: var(--accent);
+        }
+        .result-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+        .dark-theme .result-title {
+            color: var(--accent-light);
+        }
+        .result-context {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+        .no-results {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray);
+            font-style: italic;
+        }
+        
+        /* Highlight for searched content */
+        .search-highlight {
+            background: rgba(230, 57, 70, 0.3) !important;
+            transition: background 0.5s;
+            border-radius: 3px;
+        }
         
         /* hamburger icon – hidden on desktop, shown on tablet/mobile */
         .hamburger {
@@ -874,29 +1050,50 @@ body {
     
     <!-- NAVIGATION -->
     <nav>
-        <div class="nav-container" style="padding: 14px 20px;">
-            <a class="nav-logo" id="homeLogoBtn" style="font-size: 1.5rem;"><i class="fas fa-network-wired" style="font-size: 1.4rem; margin-right: 8px;"></i> AESRN.net</a>
+        <div class="nav-container">
+            <!-- Logo on left side - clickable to return home -->
+            <a class="nav-logo" id="homeLogoBtn">
+                <img src="https://raw.githubusercontent.com/aesrn30/aesrn/main/Lablogo.png" alt="AESRN Logo">
+                <span>AESRN</span>
+            </a>
             
             <!-- DESKTOP VIEW (visible only above 992px) -->
             <div class="nav-desktop">
-                <ul class="nav-links" style="gap: 28px;">
-                    <li><a class="active" data-tab="home" style="font-size: 1.05rem; padding: 8px 0; font-weight: 500;">Home</a></li>
-                    <li><a data-tab="research" style="font-size: 1.05rem; padding: 8px 0; font-weight: 500;">Research</a></li>
-                    <li><a data-tab="team" style="font-size: 1.05rem; padding: 8px 0; font-weight: 500;">Members</a></li>
-                    <li><a data-tab="publications" style="font-size: 1.05rem; padding: 8px 0; font-weight: 500;">Publications <span style="background: var(--accent); color: white; padding: 3px 10px; border-radius: 30px; font-size: 0.75rem; margin-left: 6px; font-weight: 600; letter-spacing: 0.3px;">soon</span></a></li>
-                    <li><a data-tab="funding" style="font-size: 1.05rem; padding: 8px 0; font-weight: 500;">Funding</a></li>
-                    <li><a data-tab="join" style="font-size: 1.05rem; padding: 8px 0; font-weight: 500;">Join Us</a></li>
+                <ul class="nav-links">
+                    <li><a class="active" data-tab="home">Home</a></li>
+                    <li><a data-tab="research">Research</a></li>
+                    <li><a data-tab="team">Members</a></li>
+                    <li><a data-tab="publications">Publications <span style="background: var(--accent); color: white; padding: 3px 10px; border-radius: 30px; font-size: 0.75rem; margin-left: 6px; font-weight: 600; letter-spacing: 0.3px;">soon</span></a></li>
+                    <li><a data-tab="funding">Funding</a></li>
+                    <li><a data-tab="join">Join Us</a></li>
                 </ul>
+                
+                <!-- Search icon on the right -->
+                <div class="search-container">
+                    <span class="search-icon" id="searchIcon"><i class="fas fa-search"></i></span>
+                </div>
             </div>
             
             <!-- HAMBURGER ICON (visible below 992px) -->
             <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
-                <span style="width: 30px; height: 3.5px;"></span>
-                <span style="width: 30px; height: 3.5px;"></span>
-                <span style="width: 30px; height: 3.5px;"></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </div>
     </nav>
+    
+    <!-- Search Overlay Modal -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-modal">
+            <div class="search-modal-header">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search anything..." autocomplete="off" autofocus>
+                <span class="close-search" id="closeSearch"><i class="fas fa-times"></i></span>
+            </div>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
     
     <!-- MOBILE MENU (hidden by default, slides in) -->
     <div class="overlay" id="overlay"></div>
@@ -1203,12 +1400,6 @@ body {
             }
         }
         
-        document.getElementById('homeLogoBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            switchTab('home');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-        
         document.addEventListener('DOMContentLoaded', function() {
             const allTabs = document.querySelectorAll('[data-tab]');
             allTabs.forEach(tab => {
@@ -1217,6 +1408,14 @@ body {
                     const tabId = this.getAttribute('data-tab');
                     if (tabId) switchTab(tabId);
                 });
+            });
+            
+            // Logo click to return home
+            document.getElementById('homeLogoBtn').addEventListener('click', function(e) {
+                e.preventDefault();
+                // Reload the page to return to home
+                window.location.href = window.location.pathname + '#home';
+                window.location.reload();
             });
             
             const hash = window.location.hash.substring(1);
@@ -1256,6 +1455,9 @@ body {
                 });
             }, { threshold:0.1, rootMargin:'0px 0px -50px 0px' });
             animateElements.forEach(el => { el.style.opacity = '0'; cardObs.observe(el); });
+            
+            // Initialize search functionality
+            initSearch();
         });
 
         // Funding form handler
@@ -1289,8 +1491,198 @@ body {
                 });
             }
         });
-    </script>
-    <script>
+        
+        // Search functionality - DEFAULT WORKING SEARCH
+        function initSearch() {
+            const searchIcon = document.getElementById('searchIcon');
+            const searchOverlay = document.getElementById('searchOverlay');
+            const searchInput = document.getElementById('searchInput');
+            const searchResults = document.getElementById('searchResults');
+            const closeSearch = document.getElementById('closeSearch');
+            
+            // Open search overlay on icon click
+            searchIcon.addEventListener('click', function(e) {
+                e.preventDefault();
+                searchOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                setTimeout(() => {
+                    searchInput.focus();
+                }, 100);
+            });
+            
+            // Close search overlay
+            function closeSearchOverlay() {
+                searchOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+                searchInput.value = '';
+                searchResults.innerHTML = '<div class="no-results">Start typing to search...</div>';
+            }
+            
+            closeSearch.addEventListener('click', closeSearchOverlay);
+            
+            // Close when clicking outside the modal
+            searchOverlay.addEventListener('click', function(e) {
+                if (e.target === searchOverlay) {
+                    closeSearchOverlay();
+                }
+            });
+            
+            // Close with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
+                    closeSearchOverlay();
+                }
+            });
+            
+            // Search as you type
+            searchInput.addEventListener('input', function() {
+                const query = this.value.trim().toLowerCase();
+                if (query.length < 2) {
+                    searchResults.innerHTML = '<div class="no-results">Type at least 2 characters to search</div>';
+                    return;
+                }
+                
+                // Collect all searchable content from the website
+                const searchableContent = collectSearchableContent();
+                const results = [];
+                
+                // Search through all content
+                searchableContent.forEach(item => {
+                    if (item.text.toLowerCase().includes(query)) {
+                        results.push(item);
+                    }
+                });
+                
+                // Display results
+                displaySearchResults(results, query);
+            });
+            
+            function collectSearchableContent() {
+                const content = [];
+                const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, .section-title, .team-intro, .research-card p, .mission-section p, .process-step p, .hero-text p, .footer-section p, .footer-links a');
+                
+                elements.forEach(el => {
+                    // Get the tab context
+                    const tabContent = el.closest('.tab-content');
+                    const tabId = tabContent ? tabContent.id : 'footer';
+                    
+                    // Get a readable section name
+                    let sectionName = '';
+                    if (tabId === 'home') sectionName = 'Home';
+                    else if (tabId === 'research') sectionName = 'Research';
+                    else if (tabId === 'team') sectionName = 'Members';
+                    else if (tabId === 'publications') sectionName = 'Publications';
+                    else if (tabId === 'funding') sectionName = 'Funding';
+                    else if (tabId === 'join') sectionName = 'Join Us';
+                    else sectionName = 'Footer';
+                    
+                    const text = el.textContent.trim();
+                    if (text && text.length > 0) {
+                        // Get the closest heading for context
+                        let contextHeading = '';
+                        const heading = el.closest('h1, h2, h3, h4, h5, h6');
+                        if (heading && heading !== el) {
+                            contextHeading = heading.textContent.trim();
+                        } else {
+                            // Look for a nearby heading
+                            const parent = el.parentElement;
+                            if (parent) {
+                                const nearbyHeading = parent.querySelector('h1, h2, h3, h4, h5, h6');
+                                if (nearbyHeading) {
+                                    contextHeading = nearbyHeading.textContent.trim();
+                                }
+                            }
+                        }
+                        
+                        content.push({
+                            text: text,
+                            context: contextHeading || sectionName,
+                            tabId: tabId,
+                            element: el
+                        });
+                    }
+                });
+                
+                return content;
+            }
+            
+            function displaySearchResults(results, query) {
+                if (results.length === 0) {
+                    searchResults.innerHTML = '<div class="no-results">No results found for "' + query + '"</div>';
+                    return;
+                }
+                
+                // Limit to top 15 results
+                const topResults = results.slice(0, 15);
+                let html = '';
+                
+                topResults.forEach((result, index) => {
+                    // Create a unique ID for each result element
+                    const resultId = 'search-result-' + Date.now() + '-' + index;
+                    
+                    // Highlight the matching text
+                    let displayText = result.text;
+                    const matchIndex = displayText.toLowerCase().indexOf(query);
+                    if (matchIndex !== -1) {
+                        const before = displayText.substring(0, matchIndex);
+                        const match = displayText.substring(matchIndex, matchIndex + query.length);
+                        const after = displayText.substring(matchIndex + query.length);
+                        displayText = before + '<span style="background: var(--accent); color: white; padding: 2px 4px; border-radius: 3px;">' + match + '</span>' + after;
+                    }
+                    
+                    html += `
+                        <div class="search-result-item" data-tab="${result.tabId}" data-result-id="${resultId}">
+                            <div class="result-title">${displayText.substring(0, 150)}${displayText.length > 150 ? '...' : ''}</div>
+                            <div class="result-context">in ${result.context}</div>
+                        </div>
+                    `;
+                });
+                
+                if (results.length > 15) {
+                    html += '<div class="no-results" style="padding: 10px; text-align: center;">+' + (results.length - 15) + ' more results</div>';
+                }
+                
+                searchResults.innerHTML = html;
+                
+                // Add click handlers to results
+                document.querySelectorAll('.search-result-item').forEach((item, index) => {
+                    item.addEventListener('click', function() {
+                        const tabId = this.getAttribute('data-tab');
+                        if (tabId && tabId !== 'footer') {
+                            // Switch to the tab
+                            switchTab(tabId);
+                            
+                            // Close search overlay
+                            closeSearchOverlay();
+                            
+                            // Find the corresponding element
+                            const resultElement = topResults[index].element;
+                            
+                            // Scroll to the element and highlight it
+                            setTimeout(() => {
+                                if (resultElement) {
+                                    resultElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                    
+                                    // Remove any existing highlights
+                                    document.querySelectorAll('.search-highlight').forEach(el => {
+                                        el.classList.remove('search-highlight');
+                                    });
+                                    
+                                    // Add highlight
+                                    resultElement.classList.add('search-highlight');
+                                    
+                                    // Remove highlight after 3 seconds
+                                    setTimeout(() => {
+                                        resultElement.classList.remove('search-highlight');
+                                    }, 3000);
+                                }
+                            }, 300);
+                        }
+                    });
+                });
+            }
+        }
+
         (function ensureHeaderVisible() {
             if (document.readyState === 'loading') {
                 document.addEventListener('DOMContentLoaded', function() { window.scrollTo(0, 0); });
