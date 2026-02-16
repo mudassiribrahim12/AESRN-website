@@ -425,26 +425,53 @@
             gap: 16px;
         }
 
-        .desktop-signin {
-            background: transparent;
-            color: var(--text);
-            padding: 4px 12px;
-            border-radius: 30px;
-            font-weight: 500;
-            font-size: 0.85rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            text-decoration: none;
-            transition: var(--transition);
-            border: 1px solid var(--border);
-        }
+  /* Desktop sign-in button - Black background with white text */
+.desktop-signin {
+    background: #000000;
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid #000000;
+}
 
-        .desktop-signin:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            transform: translateY(-1px);
-        }
+.desktop-signin i {
+    color: #ffffff;
+}
+
+.desktop-signin:hover {
+    background: #333333;
+    border-color: #333333;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.desktop-signin:hover i {
+    color: #ffffff;
+}
+
+/* Dark theme override - keep black in dark mode too */
+.dark-theme .desktop-signin {
+    background: #000000;
+    border-color: #000000;
+    color: #ffffff;
+}
+
+.dark-theme .desktop-signin i {
+    color: #ffffff;
+}
+
+.dark-theme .desktop-signin:hover {
+    background: #222222;
+    border-color: #222222;
+}
 
         .desktop-search {
             color: var(--text);
@@ -546,26 +573,54 @@
             gap: 12px;
         }
 
-        .mobile-signin {
-            background: transparent;
-            color: var(--text);
-            padding: 12px 20px;
-            border-radius: 40px;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            border: 1px solid var(--border);
-        }
+    /* Mobile sign-in button - Black background with white text */
+.mobile-signin {
+    background: #000000;
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 40px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    border: 1px solid #000000;
+    width: 100%;
+}
 
-        .mobile-signin:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
+.mobile-signin i {
+    color: #ffffff;
+}
+
+.mobile-signin:hover {
+    background: #333333;
+    border-color: #333333;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.mobile-signin:hover i {
+    color: #ffffff;
+}
+
+/* Dark theme override for mobile sign-in */
+.dark-theme .mobile-signin {
+    background: #000000;
+    border-color: #000000;
+    color: #ffffff;
+}
+
+.dark-theme .mobile-signin i {
+    color: #ffffff;
+}
+
+.dark-theme .mobile-signin:hover {
+    background: #222222;
+    border-color: #222222;
+}
 
         .mobile-search-btn {
             background: transparent;
