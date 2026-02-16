@@ -459,6 +459,7 @@ body {
         .nav-container {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             padding: 15px 20px;
             max-width: 1200px;
             margin: 0 auto;
@@ -470,7 +471,6 @@ body {
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-right: 40px;
             cursor: pointer;
             text-decoration: none;
         }
@@ -494,8 +494,7 @@ body {
         .nav-desktop {
             display: flex;
             align-items: center;
-            width: 100%;
-            justify-content: flex-end;
+            gap: 20px;
         }
         .nav-links {
             display: flex;
@@ -504,7 +503,6 @@ body {
             margin: 0;
             padding: 0;
             align-items: center;
-            margin-right: 20px;
         }
         .nav-links a {
             text-decoration: none;
@@ -529,11 +527,36 @@ body {
         .dark-theme .nav-links a.active { color: var(--accent-light); }
         .nav-links a.active:after { width: 100%; }
         
-        /* Search container positioned on the right */
-        .search-container {
-            position: relative;
+        /* Desktop sign in and search */
+        .desktop-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
-        .search-icon {
+        .desktop-signin {
+            background: var(--accent);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(230,57,70,0.25);
+            transition: var(--transition);
+        }
+        .desktop-signin:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(230, 57, 70, 0.4);
+        }
+        .desktop-signin i {
+            font-size: 0.8rem;
+        }
+        .desktop-search {
             color: var(--text-dark);
             font-size: 1.3rem;
             cursor: pointer;
@@ -542,10 +565,10 @@ body {
             display: inline-flex;
             align-items: center;
         }
-        .dark-theme .search-icon {
+        .dark-theme .desktop-search {
             color: var(--text-light);
         }
-        .search-icon:hover {
+        .desktop-search:hover {
             color: var(--accent);
             transform: scale(1.1);
         }
@@ -744,10 +767,17 @@ body {
         .dark-theme .mobile-menu .nav-links-mobile a { color: var(--text-light); }
         .mobile-menu .nav-links-mobile a.active { color: var(--accent); border-bottom-color: var(--accent); }
         
-        .mobile-portal-btn {
+        /* Mobile action buttons */
+        .mobile-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .mobile-signin {
             background: var(--accent);
-            color: white !important;
-            padding: 16px 20px !important;
+            color: white;
+            padding: 16px 20px;
             border-radius: 40px;
             font-weight: 700;
             display: inline-flex;
@@ -755,12 +785,37 @@ body {
             justify-content: center;
             gap: 10px;
             text-decoration: none;
-            margin-top: 15px;
             font-size: 1.1rem;
             border: none;
             width: 100%;
-            flex-shrink: 0;
+            transition: var(--transition);
         }
+        .mobile-signin:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        .mobile-search-btn {
+            background: var(--primary);
+            color: white;
+            padding: 16px 20px;
+            border-radius: 40px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .mobile-search-btn:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+        
         .close-btn {
             position: absolute;
             top: 30px;
@@ -929,8 +984,8 @@ body {
         
         /* ---------- RESPONSIVE BREAKPOINTS – HAMBURGER ON TABLET/MOBILE ---------- */
         @media (max-width: 992px) {
-            .nav-desktop { display: none; }        /* hide desktop tabs */
-            .hamburger { display: flex; }          /* show hamburger */
+            .nav-desktop { display: none; }        /* hide desktop tabs and actions */
+            .hamburger { display: flex; }          /* show hamburger at right end */
             .hero-section { grid-template-columns: 1fr; gap: 40px; }
             .hero-text h2 { font-size: 2.5rem; }
             .theme-toggle { top: 80px; right: 15px; }
@@ -1030,18 +1085,14 @@ body {
                 </div>
             </div>
             
-            <!-- Right side: Social icons + Portal button with hover effects -->
-            <div style="display: flex; align-items: center; gap: 20px;">
+            <!-- Right side: Social icons + Portal button with hover effects (desktop only) -->
+            <div style="display: flex; align-items: center; gap: 20px;" class="desktop-social">
                 <div style="display: flex; align-items: center; gap: 16px;">
                     <a href="https://facebook.com/AESRN" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://x.com/AESRN_" class="social-icon" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
                     <a href="https://linkedin.com/company/aesrn" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://youtube.com/@AESRN" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
                     <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-icon" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                
-                    <a href="https://signin.aesrn.net/" class="portal-btn" style="background: var(--accent); color: white; padding: 8px 16px; border-radius: 30px; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; white-space: nowrap; box-shadow: 0 4px 10px rgba(230,57,70,0.25);">
-                        <i class="fas fa-sign-in-alt" style="font-size: 0.8rem;"></i> Sign In
-                    </a>
                 </div>
             </div>
         </div>
@@ -1068,13 +1119,16 @@ body {
                     <li><a data-tab="join">Join Us</a></li>
                 </ul>
                 
-                <!-- Search icon on the right -->
-                <div class="search-container">
-                    <span class="search-icon" id="searchIcon"><i class="fas fa-search"></i></span>
+                <!-- Desktop actions - sign in and search -->
+                <div class="desktop-actions">
+                    <a href="https://signin.aesrn.net/" class="desktop-signin">
+                        <i class="fas fa-sign-in-alt"></i> Sign In
+                    </a>
+                    <span class="desktop-search" id="desktopSearchIcon"><i class="fas fa-search"></i></span>
                 </div>
             </div>
             
-            <!-- HAMBURGER ICON (visible below 992px) -->
+            <!-- HAMBURGER ICON (visible below 992px) - positioned at right end -->
             <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
                 <span></span>
                 <span></span>
@@ -1095,18 +1149,33 @@ body {
         </div>
     </div>
     
-    <!-- MOBILE MENU (hidden by default, slides in) -->
+    <!-- MOBILE MENU (hidden by default, slides in) - contains all navigation items -->
     <div class="overlay" id="overlay"></div>
     <div class="mobile-menu" id="mobileMenu">
-        <button class="close-btn" id="closeBtn" style="font-size: 2.2rem; top: 25px; right: 25px;">&times;</button>
-        <ul class="nav-links-mobile" style="gap: 18px; margin-top: 40px;">
-            <li><a data-tab="home" class="active" style="font-size: 1.3rem; padding: 10px 0; font-weight: 600;">Home</a></li>
-            <li><a data-tab="research" style="font-size: 1.3rem; padding: 10px 0; font-weight: 600;">Research</a></li>
-            <li><a data-tab="team" style="font-size: 1.3rem; padding: 10px 0; font-weight: 600;">Members</a></li>
-            <li><a data-tab="publications" style="font-size: 1.3rem; padding: 10px 0; font-weight: 600;">Publications <span style="background: var(--accent); color: white; padding: 4px 12px; border-radius: 40px; font-size: 0.8rem; margin-left: 10px; font-weight: 600;">soon</span></a></li>
-            <li><a data-tab="funding" style="font-size: 1.3rem; padding: 10px 0; font-weight: 600;">Funding</a></li>      
-            <li><a data-tab="join" style="font-size: 1.3rem; padding: 10px 0; font-weight: 600;">Join Us</a></li>        
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <ul class="nav-links-mobile">
+            <li><a data-tab="home" class="active">Home</a></li>
+            <li><a data-tab="research">Research</a></li>
+            <li><a data-tab="team">Members</a></li>
+            <li><a data-tab="publications">Publications <span style="background: var(--accent); color: white; padding: 4px 12px; border-radius: 40px; font-size: 0.8rem; margin-left: 10px; font-weight: 600;">soon</span></a></li>
+            <li><a data-tab="funding">Funding</a></li>
+            <li><a data-tab="join">Join Us</a></li>
         </ul>
+        
+        <!-- Mobile action buttons -->
+        <div class="mobile-actions">
+            <a href="https://signin.aesrn.net/" class="mobile-signin">
+                <i class="fas fa-sign-in-alt"></i> Sign In
+            </a>
+            <button class="mobile-search-btn" id="mobileSearchBtn">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+        
+        <!-- Scroll hint for small screens -->
+        <div class="mobile-scroll-hint">
+            <i class="fas fa-chevron-up"></i> Scroll for more <i class="fas fa-chevron-down"></i>
+        </div>
     </div>
     
     <!-- MAIN – 6 TABS (content unchanged, full as previous) -->
@@ -1290,7 +1359,7 @@ body {
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section"><h3>AESRN</h3><p>Peer network for Ghanaian nurse researchers. We don't train — we collaborate, write, and publish.</p></div>
+                <div class="footer-section"><h3>AESRN.net</h3><p>Peer network for Ghanaian nurse researchers. We don't train — we collaborate, write, and publish.</p></div>
                 <div class="footer-section"><h3>Network</h3><ul class="footer-links"><li><a data-tab="home">Home</a></li><li><a data-tab="research">Research</a></li><li><a data-tab="team">Members</a></li><li><a data-tab="publications">Publications (soon)</a></li><li><a data-tab="funding">Funding</a></li><li><a data-tab="join">Join Us</a></li></ul></div>
                 <div class="footer-section">
                     <h3>Contact</h3>
@@ -1358,19 +1427,28 @@ body {
         });
         backBtn.addEventListener('click', function(e) { e.preventDefault(); window.scrollTo({ top:0, behavior:'smooth' }); });
         
-        // HAMBURGER
+        // HAMBURGER - positioned at right end
         const hamburger = document.getElementById('hamburgerBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         const overlay = document.getElementById('overlay');
         const closeBtn = document.getElementById('closeBtn');
         
-        function openMenu() { mobileMenu.classList.add('active'); overlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
-        function closeMenu() { mobileMenu.classList.remove('active'); overlay.classList.remove('active'); document.body.style.overflow = ''; }
+        function openMenu() { 
+            mobileMenu.classList.add('active'); 
+            overlay.classList.add('active'); 
+            document.body.style.overflow = 'hidden'; 
+        }
+        function closeMenu() { 
+            mobileMenu.classList.remove('active'); 
+            overlay.classList.remove('active'); 
+            document.body.style.overflow = ''; 
+        }
         
         if (hamburger) hamburger.addEventListener('click', openMenu);
         if (closeBtn) closeBtn.addEventListener('click', closeMenu);
         if (overlay) overlay.addEventListener('click', closeMenu);
         
+        // Mobile menu links
         document.querySelectorAll('.mobile-menu .nav-links-mobile a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1378,6 +1456,14 @@ body {
                 if (tabId) switchTab(tabId);
                 closeMenu();
             });
+        });
+        
+        // Mobile search button
+        document.getElementById('mobileSearchBtn').addEventListener('click', function() {
+            closeMenu();
+            setTimeout(() => {
+                openSearch();
+            }, 300);
         });
         
         function switchTab(tabId) {
@@ -1413,7 +1499,6 @@ body {
             // Logo click to return home
             document.getElementById('homeLogoBtn').addEventListener('click', function(e) {
                 e.preventDefault();
-                // Reload the page to return to home
                 window.location.href = window.location.pathname + '#home';
                 window.location.reload();
             });
@@ -1492,23 +1577,30 @@ body {
             }
         });
         
-        // Search functionality - DEFAULT WORKING SEARCH
+        // Search functionality
         function initSearch() {
-            const searchIcon = document.getElementById('searchIcon');
             const searchOverlay = document.getElementById('searchOverlay');
             const searchInput = document.getElementById('searchInput');
             const searchResults = document.getElementById('searchResults');
             const closeSearch = document.getElementById('closeSearch');
             
-            // Open search overlay on icon click
-            searchIcon.addEventListener('click', function(e) {
-                e.preventDefault();
+            // Desktop search icon
+            const desktopSearchIcon = document.getElementById('desktopSearchIcon');
+            if (desktopSearchIcon) {
+                desktopSearchIcon.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openSearch();
+                });
+            }
+            
+            // Open search function
+            window.openSearch = function() {
                 searchOverlay.classList.add('active');
                 document.body.style.overflow = 'hidden';
                 setTimeout(() => {
                     searchInput.focus();
                 }, 100);
-            });
+            };
             
             // Close search overlay
             function closeSearchOverlay() {
