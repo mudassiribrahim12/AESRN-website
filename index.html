@@ -2000,10 +2000,14 @@
             
             history.pushState(null, null, `#${tabId}`);
             
+            // When tab is switched via click, scroll to the top of the main content, but keep header visible
             const main = document.querySelector('main');
             if (main) {
+                // Get the distance from top of main to top of document
+                const mainOffsetTop = main.getBoundingClientRect().top + window.pageYOffset;
+                // Subtract nav height so header stays visible
                 const navHeight = document.querySelector('nav').offsetHeight;
-                window.scrollTo({ top: main.offsetTop - navHeight - 20, behavior: 'smooth' });
+                window.scrollTo({ top: mainOffsetTop - navHeight - 20, behavior: 'smooth' });
             }
             
             if (tabId === 'home') setTimeout(startCounterAnimation, 300);
@@ -2295,6 +2299,28 @@ function animatePaint() {
 }
 
 animatePaint();
+
+// === FORCE PAGE TO START AT THE VERY TOP ON EVERY LOAD/RELOAD ===
+window.addEventListener('load', function() {
+    // Ensure we are at the top after loader hides
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 100); // small delay ensures DOM is ready
+});
+
+// Also handle when page is restored from bfcache (back/forward)
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        window.scrollTo(0, 0);
+    }
+});
+
+// Finally, if any hash is present, we still want the header visible, 
+// but our switchTab handles the scroll to main content appropriately.
+// For initial load without hash, ensure we are at 0,0.
+if (!window.location.hash || window.location.hash === '#home') {
+    window.scrollTo(0, 0);
+}
         
     </script>
 </body>
