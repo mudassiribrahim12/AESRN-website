@@ -7,7 +7,7 @@
     
     <!-- Primary meta – network first, founder in context -->
     <meta name="title" content="African Emerging Scholars Research Network (AESRN) – Ghanaian Nursing Research Collaboration">
-    <meta name="description" content="AESRN is a peer network for Ghanaian nurses with research skills. We collaborate on publications, not mentorship. Based in Tamale, Ghana, for Ghana.">
+    <meta name="description" content="AESRN is an informal peer network of Ghanaian nurses with research expertise. The network fosters collaboration on scholarly publications rather than structured mentorship. It is based in Tamale, Ghana, and operates with a focus on strengthening individual research portfolios as well as advancing research in Ghana.">
     <meta name="theme-color" content="#2A5C82">
     
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -37,11 +37,11 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.aesrn.net/#home">
     <meta property="twitter:title" content="AESRN – Ghanaian Nursing Research Network">
-    <meta property="twitter:description" content="Peer network for Ghanaian nurse researchers. Collaborate on publications, build careers.">
+    <meta property="twitter:description" content="Informal peer network for Ghanaian nurse researchers. Collaborate on publications, build careers.">
     <meta property="twitter:image" content="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Networknewlogo.png">
     
     <!-- Canonical & Robots -->
-    <link rel="canonical" href="https://www.aesrn.net/#home">
+    <link rel="canonical" href="https://www.aesrn.net/">
     <meta name="author" content="African Emerging Scholars Research Network">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
@@ -49,37 +49,49 @@
     <!-- Google verification -->
     <meta name="google-site-verification" content="6zzEO7tBZ4x_xpC3utqGKn3jJekDVz2EkfZ7rCODSqQ" />
     
-    <!-- Schema.org -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": "https://www.aesrn.net/#home",
-        "name": "African Emerging Scholars Research Network",
-        "alternateName": "AESRN",
-        "url": "https://www.aesrn.net/#home",
-        "logo": "https://raw.githubusercontent.com/mudassiribrahim12/me/main/favicon-32x32.png",
-        "description": "Peer network for Ghanaian nurses with research skills. Collaborative publication, no mentorship.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Tamale",
-            "addressRegion": "Northern Region",
-            "addressCountry": "GH"
-        },
-        "founder": {
-            "@type": "Person",
-            "name": "Mudasir Mohammed Ibrahim",
-            "jobTitle": "Founder & Member",
-            "worksFor": {
-                "@type": "Hospital",
-                "name": "Tamale Teaching Hospital"
-            }
-        },
-        "knowsAbout": ["Nursing research", "Peer collaboration", "Health sciences publication"],
-        "inLanguage": "en"
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.aesrn.net/#website",
+    "url": "https://www.aesrn.net/",
+    "name": "African Emerging Scholars Research Network (AESRN)",
+    "description": "AESRN is an informal peer network of Ghanaian nurses with research expertise.",
+    "publisher": {
+        "@id": "https://www.aesrn.net/#organization"
     }
-    </script>
+}
+</script>
     
+    <!-- Schema.org -->
+   <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.aesrn.net/#organization",
+    "name": "African Emerging Scholars Research Network",
+    "alternateName": "AESRN",
+    "url": "https://www.aesrn.net/",
+    "logo": "https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Networknewlogo.png",
+    "description": "Informal peer network for Ghanaian nurses with research skills. Collaborative publication, no mentorship.",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tamale",
+        "addressRegion": "Northern Region",
+        "addressCountry": "GH"
+    },
+    "founder": {
+        "@type": "Person",
+        "name": "Mudasir Mohammed Ibrahim"
+    },
+    "sameAs": [
+        "https://facebook.com/AESRN",
+        "https://x.com/AESRN_",
+        "https://linkedin.com/company/aesrn",
+        "https://youtube.com/@AESRN"
+    ]
+}
+</script>    
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -87,7 +99,7 @@
         "@id": "https://www.mudasiribrahim.com/#person",
         "name": "Mudasir Mohammed Ibrahim",
         "url": "https://www.mudasiribrahim.com/",
-        "image": "https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Networknewlogo",
+"image": "https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Networknewlogo.png",
         "description": "Founder of AESRN. Registered Nurse and health researcher in Ghana.",
         "jobTitle": "Founder & Member",
         "affiliation": {
@@ -796,6 +808,117 @@
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        
+        /* ===== TEAM GRID - THREE PER ROW WITH CENTERED CONTENT ===== */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Forces exactly 3 columns */
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.team-member {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: var(--transition);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers all content horizontally */
+    text-align: center;    /* Centers text */
+}
+
+.team-member.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-member:hover {
+    background: var(--overlay);
+    transform: translateY(-4px);
+}
+
+.member-img {
+    width: 100%;
+    height: 240px;
+    background: var(--overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.member-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.team-member:hover .member-img img {
+    transform: scale(1.02);
+}
+
+.member-info {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers all text content */
+}
+
+.member-name {
+    color: var(--text);
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+    font-weight: 600;
+    text-align: center;   /* Ensures name is centered */
+}
+
+.member-title {
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    text-align: center;   /* Centers title */
+}
+
+.member-workplace {
+    color: var(--text);
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Centers the icon and text */
+    gap: 4px;
+    font-weight: 400;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.member-workplace i {
+    color: var(--accent);
+}
+
+/* Responsive: 2 columns on tablet, 1 column on mobile */
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
 
         /* ===== HERO SECTION ===== */
         .hero-section {
@@ -1666,14 +1789,16 @@
             
             <!-- Desktop navigation -->
             <div class="nav-desktop">
-                <ul class="nav-links">
-                    <li><a class="active" data-tab="home">Home</a></li>
-                    <li><a data-tab="research">Research</a></li>
-                    <li><a data-tab="team">Members</a></li>
-                    <li><a data-tab="publications">Publications <span style="font-size: 0.65rem; opacity: 0.7; margin-left: 2px;">(soon)</span></a></li>
-                    <li><a data-tab="funding">Funding</a></li>
-                    <li><a data-tab="join">Join Us</a></li>
-                </ul>
+<ul class="nav-links">
+    <li><a class="active" data-tab="home">Home</a></li>
+    <li><a data-tab="research">Research</a></li>
+    <li><a data-tab="team">Members</a></li>
+    <li><a data-tab="publications">Key Publications</a></li>
+    <li><a data-tab="activities">Activities</a></li>
+    <li><a data-tab="meetings">Meetings</a></li>
+    <li><a data-tab="funding">Support</a></li>
+    <li><a data-tab="join">Join Us</a></li>
+</ul>
                 
                 <div class="desktop-actions">
                     <a href="https://signin.aesrn.net/" class="desktop-signin">
@@ -1710,14 +1835,16 @@
     <div class="overlay" id="overlay"></div>
     <div class="mobile-menu" id="mobileMenu">
         <button class="close-btn" id="closeBtn">&times;</button>
-        <ul class="nav-links-mobile">
-            <li><a data-tab="home" class="active">Home</a></li>
-            <li><a data-tab="research">Research</a></li>
-            <li><a data-tab="team">Members</a></li>
-            <li><a data-tab="publications">Publications <span style="font-size: 0.65rem; opacity: 0.7;">(soon)</span></a></li>
-            <li><a data-tab="funding">Funding</a></li>
-            <li><a data-tab="join">Join Us</a></li>
-        </ul>
+<ul class="nav-links-mobile">
+    <li><a data-tab="home" class="active">Home</a></li>
+    <li><a data-tab="research">Research</a></li>
+    <li><a data-tab="team">Members</a></li>
+    <li><a data-tab="publications">Key Publications</a></li>
+    <li><a data-tab="activities">Activities</a></li>
+    <li><a data-tab="meetings">Meetings</a></li>
+    <li><a data-tab="funding">Support</a></li>
+    <li><a data-tab="join">Join Us</a></li>
+</ul>
         
         <div class="mobile-actions">
             <a href="https://signin.aesrn.net/" class="mobile-signin">
@@ -1736,9 +1863,9 @@
             <div class="hero-section">
                 <div class="hero-text">
                     <h2><i class="fas fa-users"></i> From proposal to publication: together.</h2>
-                    <p><strong>AESRN is a peer-led network of young Ghanaian nurse researchers.</strong> We are not an NGO, training program, or mentorship platform. We are colleagues who come together to share ideas, design studies, conduct research, and publish collaboratively.</p>
-                    <p>Our purpose is simple: advance Ghanaian nursing and health sciences research while building our own research portfolios, purely through collaboration. No hierarchy. No external programs. Just researchers working side by side.</p>
-                    <a class="btn" data-tab="research">Explore Research Areas</a>
+                    <p><strong>AESRN is an informal, peer-led network of young Ghanaian nurse researchers.</strong> We are not an NGO, a training program, or a mentorship platform. Rather, we are colleagues who voluntarily come together to exchange ideas, design studies, conduct research, and publish collaboratively.</p>
+                    <p>Our purpose is simple: to advance nursing and health sciences research in Ghana while strengthening our individual research portfolios through collective effort. There is no hierarchy and no external programming—just researchers working side by side in a spirit of shared inquiry and collaboration.</p>
+                    <a class="btn" data-tab="research">Explore Our Research Areas</a>
                     <a class="btn btn-outline" data-tab="team">Meet Our Members</a>
                     <div class="stats">
                         <div class="stat-item"><div class="stat-number" id="stat-members" data-target="6">0</div><div class="stat-label">Members</div></div>
@@ -1798,30 +1925,109 @@ Homeheropic2.png" alt="Ghanaian nurses collaborating">
             </div>
         </div>
         
-        <!-- TEAM TAB -->
-        <div id="team" class="tab-content">
-            <h2 class="section-title center-title"><i class="fas fa-user-friends"></i> Meet the researchers</h2>
-            <p class="team-intro">AESRN members are Ghanaian nurses and healthcare professionals united by a shared passion for research. Each member contributes their expertise to collaborative projects.</p>
-            
-            <div class="team-grid">
-                <div class="team-member"><div class="member-img"><img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/mudasir.png" alt="Mudasir Mohammed Ibrahim"></div><div class="member-info"><h3 class="member-name">Mudasir Mohammed Ibrahim</h3><p class="member-title">Founder & Member</p><p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital</p></div></div>
-                <div class="team-member"><div class="member-img"><img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Edna.png" alt="Edna Die"></div><div class="member-info"><h3 class="member-name">Edna Die</h3><p class="member-title">Member</p><p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital</p></div></div>
-                <div class="team-member"><div class="member-img"><img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/malik.png" alt="Abdul-Malik Seidu"></div><div class="member-info"><h3 class="member-name">Abdul-Malik Seidu</h3><p class="member-title">Member</p><p class="member-workplace"><i class="fas fa-university"></i> Nurses' & Midwives' Training College, Tamale</p></div></div>
-                <div class="team-member"><div class="member-img"><img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Latif.png" alt="Abdul Latif Abdul Rahaman"></div><div class="member-info"><h3 class="member-name">Abdul Latif Abdul Rahaman</h3><p class="member-title">Member</p><p class="member-workplace"><i class="fas fa-university"></i> Le Mete Ghana, Tamale Urology and Modern Surgical Centre</p></div></div>
-                <div class="team-member"><div class="member-img"><img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Alhassan.png" alt="Alhassan Issahaq"></div><div class="member-info"><h3 class="member-name">Alhassan Issahaq</h3><p class="member-title">Member</p><p class="member-workplace"><i class="fas fa-university"></i> Nurses' & Midwives' Training College, Tamale</p></div></div>
-                            <div class="team-member"><div class="member-img"><img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/razak.png" alt="Iddrisu Abdul-Razak"></div><div class="member-info"><h3 class="member-name">Iddrisu Abdul-Razak</h3><p class="member-title">Member</p><p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital</p></div></div>
+<!-- TEAM TAB -->
+<div id="team" class="tab-content">
+    <h2 class="section-title center-title"><i class="fas fa-user-friends"></i> Meet the researchers</h2>
+    <p class="team-intro">AESRN members are Ghanaian nurses and healthcare professionals united by a shared passion for research. Each member contributes their expertise to collaborative projects.</p>
+    
+    <div class="team-grid three-per-row">
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/mudasir.png" alt="Mudasir Mohammed Ibrahim">
+            </div>
+            <div class="member-info">
+                <h3 class="member-name">Mudasir Mohammed Ibrahim</h3>
+                <p class="member-title">Founder & Network Coordinator</p>
+                <p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital</p>
             </div>
         </div>
+        
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Edna.png" alt="Edna Die">
+            </div>
+            <div class="member-info">
+                <h3 class="member-name">Edna Die</h3>
+                <p class="member-title">Member</p>
+                <p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital</p>
+            </div>
+        </div>
+        
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/malik.png" alt="Abdul-Malik Seidu">
+            </div>
+            <div class="member-info">
+                <h3 class="member-name">Abdul-Malik Seidu</h3>
+                <p class="member-title">Member</p>
+                <p class="member-workplace"><i class="fas fa-university"></i> Nurses' & Midwives' Training College, Tamale</p>
+            </div>
+        </div>
+        
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Latif.png" alt="Abdul Latif Abdul Rahaman">
+            </div>
+            <div class="member-info">
+                <h3 class="member-name">Abdul Latif Abdul Rahaman</h3>
+                <p class="member-title">Member</p>
+                <p class="member-workplace"><i class="fas fa-university"></i> Le Mete Ghana, Tamale Urology and Modern Surgical Centre</p>
+            </div>
+        </div>
+        
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Alhassan.png" alt="Alhassan Issahaq">
+            </div>
+            <div class="member-info">
+                <h3 class="member-name">Alhassan Issahaq</h3>
+                <p class="member-title">Member</p>
+                <p class="member-workplace"><i class="fas fa-university"></i> Nurses' & Midwives' Training College, Tamale</p>
+            </div>
+        </div>
+        
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/razak.png" alt="Iddrisu Abdul-Razak">
+            </div>
+            <div class="member-info">
+                <h3 class="member-name">Iddrisu Abdul-Razak</h3>
+                <p class="member-title">Member</p>
+                <p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital</p>
+            </div>
+        </div>
+    </div>
+</div>
         
         <!-- PUBLICATIONS TAB -->
         <div id="publications" class="tab-content">
             <div class="coming-soon-card">
                 <i class="fas fa-file-alt"></i>
-                <h3><i class="fas fa-clock"></i> Coming Soon</h3>
+                <h3><i class="fas fa-clock"></i> Key Publications</h3>
                 <p>Our collaborative publications will be listed here. The network is currently working on research projects.</p>
-                <div class="coming-soon-badge">First publications expected 2026</div>
+                <div class="coming-soon-badge">Coming soon</div>
             </div>
         </div>
+        
+        <!-- ACTIVITIES TAB -->
+<div id="activities" class="tab-content">
+    <div class="coming-soon-card">
+        <i class="fas fa-calendar-check"></i>
+        <h3><i class="fas fa-clock"></i> Activities</h3>
+        <p>Information about AESRN's collaborative activities, workshops, and research events will be shared here.</p>
+        <div class="coming-soon-badge">Coming soon</div>
+    </div>
+</div>
+
+<!-- MEETINGS TAB -->
+<div id="meetings" class="tab-content">
+    <div class="coming-soon-card">
+        <i class="fas fa-users"></i>
+        <h3><i class="fas fa-clock"></i> Meetings</h3>
+        <p>Schedule and updates from our network meetings, including agendas and summaries, will be posted here.</p>
+        <div class="coming-soon-badge">Coming soon</div>
+    </div>
+</div>
         
         <!-- FUNDING TAB -->
         <div id="funding" class="tab-content">
@@ -1844,16 +2050,89 @@ Homeheropic2.png" alt="Ghanaian nurses collaborating">
             </div>
         </div>
         
-        <!-- JOIN US TAB -->
-        <div id="join" class="tab-content">
-            <div class="coming-soon-card">
-                <i class="fas fa-user-plus"></i>
-                <h3><i class="fas fa-door-open"></i> Joining Our Network</h3>
-                <p>Interested in joining AESRN?</p>
-                <div class="coming-soon-badge">Eligibility: Research experience required</div>
-                <p style="margin-top: 24px;">For inquiries: <a href="mailto:research.aesrn@yahoo.com" style="color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent);">research.aesrn@yahoo.com</a></p>
-            </div>
+<!-- JOIN US TAB -->
+<div id="join" class="tab-content">
+    <h2 class="section-title center-title"><i class="fas fa-user-plus"></i> Join the Network</h2>
+    
+    <div class="principle-grid" style="margin-bottom: 40px;">
+        <div class="principle-card">
+            <h4><i class="fas fa-check-circle" style="color: var(--accent);"></i> Who Can Join?</h4>
+            <p>Ghanaian nurses and midwives with a strong interest in health research, evidence-based practice, and improving patient outcomes.</p>
         </div>
+        <div class="principle-card">
+            <h4><i class="fas fa-check-circle" style="color: var(--accent);"></i> What We Expect</h4>
+            <p>Active participation in collaborative projects, responsiveness to team communication, and commitment to shared authorship principles.</p>
+        </div>
+        <div class="principle-card">
+            <h4><i class="fas fa-check-circle" style="color: var(--accent);"></i> What You Gain</h4>
+            <p>Expanded research portfolio, co-authorship on publications, and connections with fellow Ghanaian researchers across institutions.</p>
+        </div>
+    </div>
+    
+    <div class="funding-form-card" style="padding: 48px;">
+        <h3 style="margin-bottom: 32px;"><i class="fas fa-clipboard-list"></i> Membership Requirements</h3>
+        
+        <div style="margin-bottom: 40px;">
+            <p style="margin-bottom: 24px; font-size: 1rem;">To be considered for membership, applicants must meet the following criteria:</p>
+            
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 24px; display: flex; align-items: flex-start; gap: 12px;">
+                    <i class="fas fa-graduation-cap" style="color: var(--accent); font-size: 1.2rem; margin-top: 2px;"></i>
+                    <div>
+                        <strong style="font-size: 1rem;">Professional qualification</strong>
+                        <p style="margin: 4px 0 0; opacity: 0.9;">Hold a nursing/midwifery license from a recognized institution in Ghana.</p>
+                    </div>
+                </li>
+                <li style="margin-bottom: 24px; display: flex; align-items: flex-start; gap: 12px;">
+                    <i class="fas fa-file-pdf" style="color: var(--accent); font-size: 1.2rem; margin-top: 2px;"></i>
+                    <div>
+                        <strong style="font-size: 1rem;">Curriculum Vitae</strong>
+                        <p style="margin: 4px 0 0; opacity: 0.9;">Submit an up-to-date Curriculum Vitae (CV) highlighting your research experience, publications (if any), education, work experience, and current affiliation.</p>
+                    </div>
+                <li style="margin-bottom: 24px; display: flex; align-items: flex-start; gap: 12px;">
+                    <i class="fas fa-clock" style="color: var(--accent); font-size: 1.2rem; margin-top: 2px;"></i>
+                    <div>
+                        <strong style="font-size: 1rem;">Time commitment</strong>
+                        <p style="margin: 4px 0 0; opacity: 0.9;">Ability to dedicate 4–6 hours per week to assigned sections and complete them by the given deadlines.</p>
+                    </div>
+                </li>
+                <li style="margin-bottom: 24px; display: flex; align-items: flex-start; gap: 12px;">
+                    <i class="fas fa-users" style="color: var(--accent); font-size: 1.2rem; margin-top: 2px;"></i>
+                    <div>
+                        <strong style="font-size: 1rem;">Collaborative mindset</strong>
+                        <p style="margin: 4px 0 0; opacity: 0.9;">Commitment to shared credit, constructive feedback, and team-based authorship.</p>
+                    </div>
+                </li>
+                                </li>
+                <li style="margin-bottom: 24px; display: flex; align-items: flex-start; gap: 12px;">
+                    <i class="fas fa-file-alt" style="color: var(--accent); font-size: 1.2rem; margin-top: 2px;"></i>
+                    <div>
+                        <strong style="font-size: 1rem;">Proposal writing assessment</strong>
+                        <p style="margin: 4px 0 0; opacity: 0.9;">After submitting application and meeting basic eligibility criteria, you will be contacted and asked to write one section of a research proposal (introduction, methods, or literature review) on a provided topic. This helps us understand your writing style and research thinking.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; border-top: 1px solid var(--border); padding-top: 40px;">
+            <h4 style="margin-bottom: 16px; font-size: 1.2rem;">Ready to submit?</h4>
+            <p style="margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto;">Complete the online application form. You will be asked to upload your CV. After an initial review, eligible candidates will be contacted for a proposal-writing assessment, followed by an online interview via Zoom.</p>
+            
+            <a href="https://tally.so/r/RG0Adv" target="_blank" rel="noopener noreferrer" class="desktop-signin" style="display: inline-flex; padding: 14px 40px; font-size: 1.1rem; gap: 12px; background: var(--accent); border-color: var(--accent);">
+                <i class="fas fa-file-signature"></i> Apply to Join AESRN
+            </a>
+            
+            <p style="margin-top: 24px; font-size: 0.85rem; opacity: 0.8;">
+                <i class="fas fa-envelope"></i> Questions? <a href="mailto:research.aesrn@yahoo.com" style="color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent);">research.aesrn@yahoo.com</a>
+            </p>
+        </div>
+    </div>
+    
+    <div style="margin-top: 40px; padding: 24px; border: 1px dashed var(--border); border-radius: 4px; text-align: center;">
+        <i class="fas fa-clock" style="color: var(--text-lighter); margin-right: 8px;"></i>
+        <span style="font-size: 0.9rem;">Applications are reviewed monthly. Shortlisted candidates will be contacted within 4 weeks for the proposal writing assessment.</span>
+    </div>
+</div>
     </main>
     
     <!-- Footer -->
@@ -1862,18 +2141,20 @@ Homeheropic2.png" alt="Ghanaian nurses collaborating">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>AESRN</h3>
-                    <p>Peer network for Ghanaian nurse researchers. We collaborate, write, and publish.</p>
+                    <p>Informal peer network for Ghanaian nurse researchers. We collaborate, write, and publish.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Network</h3>
-                    <ul class="footer-links">
-                        <li><a data-tab="home">Home</a></li>
-                        <li><a data-tab="research">Research</a></li>
-                        <li><a data-tab="team">Members</a></li>
-                        <li><a data-tab="publications">Publications</a></li>
-                        <li><a data-tab="funding">Funding</a></li>
-                        <li><a data-tab="join">Join Us</a></li>
-                    </ul>
+    <ul class="footer-links">
+        <li><a data-tab="home">Home</a></li>
+        <li><a data-tab="research">Research</a></li>
+        <li><a data-tab="team">Members</a></li>
+        <li><a data-tab="publications">Key Publications</a></li>
+        <li><a data-tab="activities">Activities</a></li>
+        <li><a data-tab="meetings">Meetings</a></li>
+        <li><a data-tab="funding">Funding</a></li>
+        <li><a data-tab="join">Join Us</a></li>
+    </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
@@ -2057,13 +2338,45 @@ Homeheropic2.png" alt="Ghanaian nurses collaborating">
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && searchOverlay.classList.contains('active')) closeSearchOverlay(); });
         
         // Search index
+        // Search index - Updated to cover all tabs including new Activities and Meetings
         const searchableContent = [];
-        document.querySelectorAll('h2, h3, h4, p, .research-card p, .hero-text p').forEach(el => {
+        document.querySelectorAll('h2, h3, h4, p, .research-card p, .hero-text p, .principle-card p, .process-step p, .funding-intro-sentence, .coming-soon-card p').forEach(el => {
             const text = el.textContent.trim();
             if (text && text.length > 15) {
                 const tab = el.closest('.tab-content');
                 const tabId = tab ? tab.id : 'footer';
-                let context = tabId === 'home' ? 'Home' : tabId === 'research' ? 'Research' : tabId === 'team' ? 'Members' : tabId === 'funding' ? 'Funding' : 'AESRN';
+                let context = '';
+                
+                // Map tab IDs to readable context names
+                switch(tabId) {
+                    case 'home':
+                        context = 'Home';
+                        break;
+                    case 'research':
+                        context = 'Research';
+                        break;
+                    case 'team':
+                        context = 'Members';
+                        break;
+                    case 'publications':
+                        context = 'Publications';
+                        break;
+                    case 'activities':
+                        context = 'Activities';
+                        break;
+                    case 'meetings':
+                        context = 'Meetings';
+                        break;
+                    case 'funding':
+                        context = 'Funding';
+                        break;
+                    case 'join':
+                        context = 'Join Us';
+                        break;
+                    default:
+                        context = 'AESRN';
+                }
+                
                 searchableContent.push({ text, context, tabId, element: el });
             }
         });
