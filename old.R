@@ -1,0 +1,2589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>African Emerging Scholars Research Network (AESRN)</title>
+    
+    <!-- Primary meta – network first, founder in context -->
+    <meta name="title" content="African Emerging Scholars Research Network (AESRN) – Ghanaian Nursing Research Collaboration">
+    <meta name="description" content="AESRN is an informal peer network of Ghanaian nurses with research expertise. The network fosters collaboration on scholarly publications rather than structured mentorship. It is based in Tamale, Ghana, and operates with a focus on strengthening individual research portfolios as well as advancing research in Ghana.">
+    <meta name="theme-color" content="#2A5C82">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+  <!-- Favicons – consistent with network identity -->
+<link rel="icon" href="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/favicon-32x32.png" type="image/png">
+<link itemprop="image" href="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/favicon-32x32.png">
+<meta property="og:logo" content="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/favicon-32x32.png">
+<meta name="twitter:logo" content="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/favicon-32x32.png">
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/favicon-16x16.png">
+<link rel="manifest" href="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/site.webmanifest">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="African Emerging Scholars Research Network (AESRN)">
+    <meta property="og:title" content="African Emerging Scholars Research Network – Peer Collaboration for Ghanaian Nurses">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aesrn.net/#home">
+    <meta property="og:description" content="AESRN connects Ghanaian nurses who already have research skills. We form teams, co-author, and publish — no mentorship, just collaboration among equals.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Networknewlogo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.aesrn.net/#home">
+    <meta property="twitter:title" content="AESRN – Ghanaian Nursing Research Network">
+    <meta property="twitter:description" content="Informal peer network for Ghanaian nurse researchers. Collaborate on publications, build careers.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Networknewlogo.png">
+    
+    <!-- Canonical & Robots -->
+    <link rel="canonical" href="https://www.aesrn.net/">
+    <meta name="author" content="African Emerging Scholars Research Network">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Google verification -->
+    <meta name="google-site-verification" content="6zzEO7tBZ4x_xpC3utqGKn3jJekDVz2EkfZ7rCODSqQ" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.aesrn.net/#website",
+    "url": "https://www.aesrn.net/",
+    "name": "African Emerging Scholars Research Network (AESRN)",
+    "description": "AESRN is an informal peer network of Ghanaian nurses with research expertise.",
+    "publisher": {
+        "@id": "https://www.aesrn.net/#organization"
+    }
+}
+</script>
+    
+    <!-- Schema.org -->
+   <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.aesrn.net/#organization",
+    "name": "African Emerging Scholars Research Network",
+    "alternateName": "AESRN",
+    "url": "https://www.aesrn.net/",
+    "logo": "https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Networknewlogo.png",
+    "description": "Informal peer network for Ghanaian nurses with research skills. Collaborative publication, no mentorship.",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tamale",
+        "addressRegion": "Northern Region",
+        "addressCountry": "GH"
+    },
+    "founder": {
+        "@type": "Person",
+        "name": "Mudasir Mohammed Ibrahim"
+    },
+    "sameAs": [
+        "https://facebook.com/AESRN",
+        "https://x.com/AESRN_",
+        "https://linkedin.com/company/aesrn",
+        "https://youtube.com/@AESRN"
+    ]
+}
+</script>    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://www.mudasiribrahim.com/#person",
+        "name": "Mudasir Mohammed Ibrahim",
+        "url": "https://www.mudasiribrahim.com/",
+"image": "https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Networknewlogo.png",
+        "description": "Founder of AESRN. Registered Nurse and health researcher in Ghana.",
+        "jobTitle": "Founder & Member",
+        "affiliation": {
+            "@id": "https://www.mudasiribrahim.com/#organization"
+        },
+        "worksFor": {
+            "@type": "Hospital",
+            "name": "Tamale Teaching Hospital",
+            "url": "https://tth.gov.gh"
+        },
+        "sameAs": [
+            "https://orcid.org/0000-0002-9049-8222",
+            "https://scholar.google.com/citations?user=xEFzAvgAAAAJ&hl=en",
+            "https://github.com/mudassiribrahim30",
+            "https://linkedin.com/in/mudasir-mohammed-ibrahim-16b5141b0",
+            "https://www.youtube.com/@mudasirmohammedibrahim1026"
+        ],
+        "knowsAbout": ["Nursing informatics", "Clinical education", "Patient safety", "Peer research collaboration"]
+    }
+    </script>
+    
+    <!-- STRN.CO INSPIRED MINIMALIST STYLESHEET - Professional studio aesthetic -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== STRN.CO MINIMALIST STUDIO DESIGN SYSTEM ===== */
+        /* Enhanced with better typography and dark mode effects */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #fafafa;
+            --text: #000000;  /* Pure black for light mode */
+            --text-light: #222222;
+            --text-lighter: #444444;
+            --border: rgba(0,0,0,0.08);
+            --accent: #2A5C82;
+            --accent-light: #5D8AA8;
+            --accent-dark: #0A2342;
+            --overlay: rgba(0,0,0,0.02);
+            --shadow: 0 4px 12px rgba(0,0,0,0.02);
+            --transition: all 0.2s ease;
+        }
+
+        .dark-theme {
+            --bg: #0a0a0a;
+            --text: #ffffff;  /* Pure white for dark mode - crystal clear */
+            --text-light: #f0f0f0;
+            --text-lighter: #cccccc;
+            --border: rgba(255,255,255,0.1);
+            --accent: #5D8AA8;
+            --accent-light: #8AAAC8;
+            --accent-dark: #2A5C82;
+            --overlay: rgba(255,255,255,0.03);
+            --shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            font-weight: 400;
+            font-size: 15px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            position: relative;
+        }
+
+        /* Subtle grid background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: 
+                linear-gradient(var(--overlay) 1px, transparent 1px),
+                linear-gradient(90deg, var(--overlay) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* ===== MAGICAL INTERACTIVE PAINT EFFECT - DARK MODE ONLY ===== */
+        #paint-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            display: none;
+        }
+        
+        .dark-theme #paint-canvas {
+            display: block;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ===== TYPOGRAPHY - Enhanced for clarity ===== */
+        h1, h2, h3, h4 {
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: var(--text);
+        }
+
+        p, li, a, .stat-label, .member-workplace, .footer-section p {
+            font-weight: 400;
+            color: var(--text);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: var(--text);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title i {
+            color: var(--accent);
+            margin-right: 8px;
+            font-size: 1.8rem;
+            vertical-align: middle;
+        }
+
+        .center-title {
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* ===== HEADER ===== */
+        #page-header {
+            padding: 32px 0 24px;
+            background: transparent;
+            color: var(--text);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .logo-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .logo-container {
+            margin-right: 16px;
+        }
+
+        .logo-placeholder {
+            width: 48px;
+            height: 48px;
+            border-radius: 4px;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        .logo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* ===== SOCIAL ICONS ===== */
+        .social-icon {
+            color: var(--text);
+            font-size: 1.1rem;
+            width: 36px;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+            text-decoration: none;
+            background: transparent;
+        }
+
+        .social-icon:hover {
+            background: var(--overlay);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .desktop-social {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-social {
+                display: none;
+            }
+            .logo-text h1 {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            background: transparent;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            background-color: rgba(250,250,250,0.8);
+        }
+
+        .dark-theme nav {
+            background-color: rgba(10,10,10,0.8);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .nav-logo span {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        /* Desktop navigation */
+        .nav-desktop {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 4px 0;
+            position: relative;
+            transition: color 0.2s ease;
+            cursor: pointer;
+            letter-spacing: -0.01em;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: width 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .nav-links a.active:after {
+            width: 100%;
+        }
+
+        /* Desktop actions */
+        .desktop-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+  /* Desktop sign-in button - Black background with white text */
+.desktop-signin {
+    background: #000000;
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid #000000;
+}
+
+.desktop-signin i {
+    color: #ffffff;
+}
+
+.desktop-signin:hover {
+    background: #333333;
+    border-color: #333333;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.desktop-signin:hover i {
+    color: #ffffff;
+}
+
+/* Dark theme override - keep black in dark mode too */
+.dark-theme .desktop-signin {
+    background: #000000;
+    border-color: #000000;
+    color: #ffffff;
+}
+
+.dark-theme .desktop-signin i {
+    color: #ffffff;
+}
+
+.dark-theme .desktop-signin:hover {
+    background: #222222;
+    border-color: #222222;
+}
+
+        .desktop-search {
+            color: var(--text);
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 4px;
+            transition: color 0.2s ease;
+        }
+
+        .desktop-search:hover {
+            color: var(--accent);
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+            background: transparent;
+            border: none;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            width: 22px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: min(85%, 340px);
+            height: 100vh;
+            background: var(--bg);
+            z-index: 1050;
+            transition: right 0.3s ease;
+            padding: 80px 24px 32px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            border-left: 1px solid var(--border);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: var(--text);
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-links-mobile {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .nav-links-mobile li {
+            margin-bottom: 16px;
+        }
+
+        .nav-links-mobile a {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text);
+            text-decoration: none;
+            padding: 8px 0;
+            display: block;
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links-mobile a.active {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .mobile-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+    /* Mobile sign-in button - Black background with white text */
+.mobile-signin {
+    background: #000000;
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 40px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    border: 1px solid #000000;
+    width: 100%;
+}
+
+.mobile-signin i {
+    color: #ffffff;
+}
+
+.mobile-signin:hover {
+    background: #333333;
+    border-color: #333333;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.mobile-signin:hover i {
+    color: #ffffff;
+}
+
+/* Dark theme override for mobile sign-in */
+.dark-theme .mobile-signin {
+    background: #000000;
+    border-color: #000000;
+    color: #ffffff;
+}
+
+.dark-theme .mobile-signin i {
+    color: #ffffff;
+}
+
+.dark-theme .mobile-signin:hover {
+    background: #222222;
+    border-color: #222222;
+}
+
+        .mobile-search-btn {
+            background: transparent;
+            color: var(--text);
+            padding: 12px 20px;
+            border-radius: 40px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border: 1px solid var(--border);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .mobile-search-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(4px);
+            z-index: 1040;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* ===== SEARCH OVERLAY ===== */
+        .search-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 120px;
+        }
+
+        .search-overlay.active {
+            display: flex;
+        }
+
+        .search-modal {
+            width: 90%;
+            max-width: 480px;
+            background: var(--bg);
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .search-modal-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .search-modal-header i {
+            color: var(--text-lighter);
+            font-size: 0.9rem;
+        }
+
+        .search-modal-header input {
+            width: 100%;
+            padding: 8px 0;
+            border: none;
+            background: transparent;
+            font-size: 0.95rem;
+            outline: none;
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        .search-modal-header input::placeholder {
+            color: var(--text-lighter);
+            font-weight: 400;
+        }
+
+        .close-search {
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-lighter);
+            transition: color 0.2s ease;
+            padding: 4px;
+        }
+
+        .close-search:hover {
+            color: var(--accent);
+        }
+
+        .search-results {
+            max-height: 360px;
+            overflow-y: auto;
+            padding: 8px 0;
+        }
+
+        .search-result-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            border-left: 2px solid transparent;
+        }
+
+        .search-result-item:hover {
+            background: var(--overlay);
+            border-left-color: var(--accent);
+        }
+
+        .result-title {
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 4px;
+            font-size: 0.9rem;
+        }
+
+        .result-context {
+            font-size: 0.75rem;
+            color: var(--text-lighter);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 32px 16px;
+            color: var(--text-lighter);
+            font-weight: 400;
+        }
+
+        .search-highlight {
+            background: rgba(42,92,130,0.1);
+            transition: background 0.5s;
+            border-radius: 2px;
+            padding: 0 2px;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        main {
+            min-height: 60vh;
+            padding: 60px 0 80px;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* ===== TEAM GRID - THREE PER ROW WITH CENTERED CONTENT ===== */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Forces exactly 3 columns */
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.team-member {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: var(--transition);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers all content horizontally */
+    text-align: center;    /* Centers text */
+}
+
+.team-member.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-member:hover {
+    background: var(--overlay);
+    transform: translateY(-4px);
+}
+
+.member-img {
+    width: 100%;
+    height: 240px;
+    background: var(--overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.member-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.team-member:hover .member-img img {
+    transform: scale(1.02);
+}
+
+.member-info {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers all text content */
+}
+
+.member-name {
+    color: var(--text);
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+    font-weight: 600;
+    text-align: center;   /* Ensures name is centered */
+}
+
+.member-title {
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    text-align: center;   /* Centers title */
+}
+
+.member-workplace {
+    color: var(--text);
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Centers the icon and text */
+    gap: 4px;
+    font-weight: 400;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.member-workplace i {
+    color: var(--accent);
+}
+
+/* Responsive: 2 columns on tablet, 1 column on mobile */
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .hero-text h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--text);
+            letter-spacing: -0.02em;
+        }
+
+        .hero-text h2 i {
+            color: var(--accent);
+            margin-right: 8px;
+            font-size: 2rem;
+        }
+
+        .hero-text p {
+            font-size: 0.95rem;
+            color: var(--text);
+            margin-bottom: 16px;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .hero-text strong {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 16px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            background: var(--overlay);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 4px;
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            color: var(--text);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+            opacity: 0.8;
+        }
+
+        .hero-image {
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            height: 380px;
+            background: var(--overlay);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent-dark) 0%, transparent 100%);
+            opacity: 0.15;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            margin-right: 12px;
+            margin-bottom: 8px;
+        }
+
+        .btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+        }
+
+        /* ===== MISSION SECTION ===== */
+        .mission-section {
+            padding: 60px 0 0;
+            margin-bottom: 60px;
+            border-top: 1px solid var(--border);
+        }
+
+        .mission-section h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .mission-section h3 i {
+            color: var(--accent);
+            margin-right: 8px;
+            font-size: 1.6rem;
+        }
+
+        .principle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+
+        .principle-card {
+            padding: 24px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .principle-card:hover {
+            background: var(--overlay);
+        }
+
+        .principle-card h4 {
+            color: var(--text);
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .principle-card h4 i {
+            color: var(--accent);
+            margin-right: 6px;
+            font-size: 1rem;
+        }
+
+        .principle-card p {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: var(--text);
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .process-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .process-step {
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .process-step:hover {
+            background: var(--overlay);
+        }
+
+        .step-number {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 12px;
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        .process-step h4 {
+            color: var(--text);
+            margin-bottom: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .process-step p {
+            font-size: 0.8rem;
+            line-height: 1.5;
+            color: var(--text);
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        /* ===== RESEARCH CARDS ===== */
+        .research-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .research-card {
+            padding: 32px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease;
+        }
+
+        .research-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .research-card:hover {
+            background: var(--overlay);
+        }
+
+        .research-card i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .research-card h4 {
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .research-card p {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: var(--text);
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        /* ===== TEAM CARDS ===== */
+        .team-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 48px;
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease;
+        }
+
+        .team-member.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .team-member:hover {
+            background: var(--overlay);
+        }
+
+        .member-img {
+            height: 240px;
+            background: var(--overlay);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            transition: transform 0.4s ease;
+        }
+
+        .team-member:hover .member-img img {
+            transform: scale(1.02);
+        }
+
+        .member-info {
+            padding: 20px;
+        }
+
+        .member-name {
+            color: var(--text);
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .member-title {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+        }
+
+        .member-workplace {
+            color: var(--text);
+            margin-bottom: 0;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        /* ===== COMING SOON CARDS ===== */
+        .coming-soon-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 40px;
+            text-align: center;
+            margin: 40px auto;
+            max-width: 700px;
+            border: 1px dashed var(--border);
+            border-radius: 4px;
+        }
+
+        .coming-soon-card i {
+            font-size: 3.5rem;
+            color: var(--text-lighter);
+            margin-bottom: 24px;
+        }
+
+        .coming-soon-card h3 {
+            font-size: 2rem;
+            color: var(--text);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .coming-soon-card h3 i {
+            font-size: 1.8rem;
+            margin-right: 8px;
+            color: var(--accent);
+        }
+
+        .coming-soon-card p {
+            font-size: 0.95rem;
+            color: var(--text);
+            max-width: 500px;
+            margin-bottom: 24px;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .coming-soon-badge {
+            background: transparent;
+            color: var(--text);
+            padding: 8px 24px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        /* ===== FUNDING SECTION ===== */
+        .funding-intro-sentence {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text);
+            padding: 24px 28px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            margin: 40px 0 24px;
+            font-weight: 400;
+        }
+
+        .funding-intro-sentence i {
+            color: var(--accent);
+            margin-right: 8px;
+        }
+
+        .funding-form-card {
+            padding: 48px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            margin: 32px 0;
+        }
+
+        .funding-form-card h3 {
+            color: var(--text);
+            margin-bottom: 32px;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .funding-form-card h3 i {
+            color: var(--accent);
+            margin-right: 8px;
+            font-size: 1.4rem;
+        }
+
+        .funding-form-group {
+            margin-bottom: 24px;
+        }
+
+        .funding-form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text);
+            font-size: 0.8rem;
+            letter-spacing: 0.3px;
+        }
+
+        .funding-form-group input,
+        .funding-form-group select,
+        .funding-form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background: transparent;
+            color: var(--text);
+            font-size: 0.9rem;
+            transition: border-color 0.2s ease;
+            font-weight: 400;
+        }
+
+        .funding-form-group input:focus,
+        .funding-form-group select:focus,
+        .funding-form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .funding-submit-btn {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 12px 32px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .funding-submit-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .funding-form-message {
+            padding: 12px 16px;
+            border-radius: 4px;
+            margin-top: 16px;
+            display: none;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+        }
+
+        .funding-form-message.success {
+            border-color: #27ae60;
+            color: #27ae60;
+            display: block;
+        }
+
+        .funding-form-message.error {
+            border-color: #c0392b;
+            color: #c0392b;
+            display: block;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 60px 0 40px;
+            margin-top: 60px;
+            background: transparent;
+            color: var(--text);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: var(--text);
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .footer-section p {
+            color: var(--text);
+            margin-bottom: 8px;
+            line-height: 1.6;
+            font-size: 0.85rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.2s ease;
+            font-size: 0.85rem;
+            cursor: pointer;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            opacity: 1;
+        }
+
+        .email-link {
+            color: var(--accent) !important;
+            opacity: 1 !important;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            color: var(--text);
+            font-size: 0.75rem;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* ===== UTILITY COMPONENTS ===== */
+        .theme-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 10000;
+            background: var(--bg);
+            color: var(--text);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: scale(1.05);
+        }
+
+        #back-to-top {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            z-index: 10000;
+            background: var(--bg);
+            color: var(--text);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        #back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #back-to-top:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* ===== LOADER ===== */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loader-content {
+            text-align: center;
+            color: var(--text);
+        }
+
+        .atom-loader {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 16px;
+            position: relative;
+        }
+
+        .atom-circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            border-top-color: var(--accent);
+            animation: spin 1.2s linear infinite;
+        }
+
+        .atom-circle:nth-child(2) {
+            border-top-color: var(--text-lighter);
+            animation: spin 1.8s linear infinite reverse;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .nav-desktop {
+                display: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .hero-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .hero-text h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.1rem;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.8rem;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .process-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .research-areas {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .coming-soon-card {
+                padding: 60px 20px;
+            }
+            
+            .coming-soon-card h3 {
+                font-size: 1.6rem;
+            }
+            
+            .funding-form-card {
+                padding: 32px 24px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .theme-toggle,
+            #back-to-top {
+                width: 40px;
+                height: 40px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-text h2 {
+                font-size: 1.6rem;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+                text-align: center;
+            }
+            
+            .btn + .btn {
+                margin-top: 8px;
+            }
+        }
+
+        @media (min-width: 993px) {
+            .nav-desktop {
+                display: flex;
+            }
+            
+            .hamburger {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Canvas for magical interactive paint effect - Dark Mode Only -->
+    <canvas id="paint-canvas"></canvas>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="atom-loader">
+                <div class="atom-circle"></div>
+                <div class="atom-circle"></div>
+            </div>
+            <p style="font-size: 0.85rem; letter-spacing: 0.5px;">African Emerging Scholars Research Network (AESRN)</p>
+        </div>
+    </div>
+    
+    <!-- Theme toggle & back to top -->
+    <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+    <button id="back-to-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+ <!-- Header - Click to reload and return to home -->
+<header id="page-header" style="cursor: pointer;">
+    <div class="container">
+        <div class="logo-header" id="headerLogoArea">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="logo-container">
+                    <div class="logo-placeholder">
+                        <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Networknewlogo.png
+" alt="AESRN Logo">
+                    </div>
+                </div>
+                <div class="logo-text">
+                    <h1>African Emerging Scholars Research Network (AESRN)</h1>
+                </div>
+            </div>
+            
+            <!-- Desktop social icons - now at the very top -->
+            <div class="desktop-social">
+                <a href="https://facebook.com/AESRN" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/AESRN_" class="social-icon" title="X"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/company/aesrn" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://youtube.com/@AESRN" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-icon" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            </div>
+        </div>
+    </div>
+</header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+<a class="nav-logo" id="homeLogoBtn" href="#">
+    <span>AESRN</span>
+</a>
+            
+            <!-- Desktop navigation -->
+            <div class="nav-desktop">
+<ul class="nav-links">
+    <li><a class="active" data-tab="home">Home</a></li>
+    <li><a data-tab="research">Research Areas</a></li>
+    <li><a data-tab="team">Members</a></li>
+    <li><a data-tab="publications">Key Publications</a></li>
+    <li><a data-tab="activities">Activities</a></li>
+    <li><a data-tab="meetings">Meetings</a></li>
+    <li><a data-tab="funding">Support</a></li>
+    <li><a data-tab="join">Join Us</a></li>
+</ul>
+                
+                <div class="desktop-actions">
+                    <a href="https://signin.aesrn.net/" class="desktop-signin">
+                        <i class="fas fa-sign-in-alt"></i> Sign in
+                    </a>
+                    <span class="desktop-search" id="desktopSearchIcon"><i class="fas fa-search"></i></span>
+                </div>
+            </div>
+            
+            <!-- Hamburger -->
+            <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Search overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-modal">
+            <div class="search-modal-header">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search AESRN..." autocomplete="off">
+                <span class="close-search" id="closeSearch"><i class="fas fa-times"></i></span>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="no-results">Start typing to search</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div class="overlay" id="overlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" id="closeBtn">&times;</button>
+<ul class="nav-links-mobile">
+    <li><a data-tab="home" class="active">Home</a></li>
+    <li><a data-tab="research">Research Areas</a></li>
+    <li><a data-tab="team">Members</a></li>
+    <li><a data-tab="publications">Key Publications</a></li>
+    <li><a data-tab="activities">Activities</a></li>
+    <li><a data-tab="meetings">Meetings</a></li>
+    <li><a data-tab="funding">Support</a></li>
+    <li><a data-tab="join">Join Us</a></li>
+</ul>
+        
+        <div class="mobile-actions">
+            <a href="https://signin.aesrn.net/" class="mobile-signin">
+                <i class="fas fa-sign-in-alt"></i> Sign In
+            </a>
+            <button class="mobile-search-btn" id="mobileSearchBtn">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+    </div>
+    
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        <!-- HOME TAB -->
+        <div id="home" class="tab-content active">
+            <div class="hero-section">
+                <div class="hero-text">
+                    <h2><i class="fas fa-users"></i> From proposal to publication: together.</h2>
+                    <p><strong>AESRN is an informal, peer-led network of young Ghanaian nurse researchers.</strong> We are not an NGO, a training program, or a mentorship platform. Rather, we are colleagues who voluntarily come together to exchange ideas, design studies, conduct research, and publish collaboratively.</p>
+                    <p>Our purpose is simple: to advance nursing and health sciences research in Ghana while strengthening our individual research portfolios through collective effort. There is no hierarchy and no external programming—just researchers working side by side in a spirit of shared inquiry and collaboration.</p>
+                    <a class="btn" data-tab="research">Explore Our Research Areas</a>
+                    <a class="btn btn-outline" data-tab="team">Meet Our Members</a>
+                    <div class="stats">
+                        <div class="stat-item"><div class="stat-number" id="stat-members" data-target="6">0</div><div class="stat-label">Members</div></div>
+                        <div class="stat-item"><div class="stat-number" id="stat-pubs" data-target="0">0</div><div class="stat-label">Publications</div></div>
+                        <div class="stat-item"><div class="stat-number" id="stat-areas" data-target="6">0</div><div class="stat-label">Research Areas</div></div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/
+Homeheropic2.png" alt="Ghanaian nurses collaborating">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+            
+            <div class="mission-section">
+                <h3><i class="fas fa-handshake"></i> Collaborate. Write. Publish. — Not Mentorship</h3>
+                <p>At AESRN, collaboration drives everything. Members combine their research skills, creativity, and experience to turn ideas into published work. The following principles define our network:</p>
+                
+                <div class="principle-grid">
+                    <div class="principle-card">
+                        <h4><i class="fas fa-check-circle"></i> Skill‑Based Teamwork</h4>
+                        <p>Members contribute their expertise in study design, data collection, analysis, and manuscript writing.</p>
+                    </div>
+                    <div class="principle-card">
+                        <h4><i class="fas fa-check-circle"></i> Co‑Authorship, Not Training</h4>
+                        <p>Every member is a competent researcher. We work as equals, sharing responsibilities and credit.</p>
+                    </div>
+                    <div class="principle-card">
+                        <h4><i class="fas fa-check-circle"></i> Impact Through Collaboration</h4>
+                        <p>By working together, we increase research output, strengthen our portfolios, and contribute meaningfully to Ghanaian health sciences literature.</p>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 60px;"><i class="fas fa-road"></i> The Publication Journey</h3>
+                <div class="process-container">
+                    <div class="process-step"><div class="step-number">01</div><h4>Idea Generation & Team Formation</h4><p>Members bring research ideas. Teams form based on complementary skills for project success.</p></div>
+                    <div class="process-step"><div class="step-number">02</div><h4>Collaborative Study Design</h4><p>Research questions, methodology, and plans are co-developed. Responsibilities are shared from the start.</p></div>
+                    <div class="process-step"><div class="step-number">03</div><h4>Data Collection & Analysis</h4><p>Teams work together to collect and analyze data with rigor and relevance to Ghanaian healthcare contexts.</p></div>
+                    <div class="process-step"><div class="step-number">04</div><h4>Manuscript Writing & Review</h4><p>Each member contributes to drafting, reviewing, and refining the manuscript. The process is fully collaborative, with shared responsibility and accountability.</p></div>
+                    <div class="process-step"><div class="step-number">05</div><h4>Publication & Dissemination</h4><p>Final manuscripts are submitted to journals under co-authorship. Work strengthens both the Ghanaian research landscape and individual member portfolios.</p></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- RESEARCH TAB -->
+        <div id="research" class="tab-content">
+            <h2 class="section-title center-title"><i class="fas fa-flask"></i> Research Areas</h2>
+            <p class="team-intro">Our members focus on areas that address pressing health challenges in Ghana.</p>
+            
+            <div class="research-areas">
+                <div class="research-card"><i class="fas fa-baby"></i><h4>Maternal & Child Health</h4><p>Antenatal care, safe motherhood, neonatal care, childhood immunisation, and nutrition within the Ghanaian context. Focus areas include high-risk pregnancy management, maternal and neonatal mortality reduction, adolescent reproductive health, postpartum care, PMTCT, family planning, maternal and perinatal epidemiology, and implementation research to improve outcomes in resource-limited settings—all from Ghanaian perspectives.</p></div>
+                <div class="research-card"><i class="fas fa-heart"></i><h4>Chronic Disease Epidemiology</h4><p>Hypertension, diabetes, liver disease, cancer, kidney disease, and other non-communicable diseases in Ghana. Emphasis on prevention, early detection, lifestyle modification, patient self-management, palliative care, chronic disease epidemiology, risk factor surveillance, and data-driven strategies to strengthen NCD control.</p></div>
+                <div class="research-card"><i class="fas fa-hand-holding-heart"></i><h4>Mental Health & Psychiatry</h4><p>Depression, substance use, anxiety, and community mental health in Ghana. Areas of interest include stigma reduction, adolescent and maternal mental health, crisis intervention, integration of mental health into primary care, psychiatric epidemiology, and population-based approaches to improving access and outcomes.</p></div>
+                <div class="research-card"><i class="fas fa-ambulance"></i><h4>Emergency & Critical Care</h4><p>Triage, trauma care, sepsis management, intensive care, and emergency obstetric care in resource-limited hospitals. Focus on survival outcomes, patient safety, health services research, quality improvement, and data-informed emergency care systems strengthening.</p></div>
+                <div class="research-card"><i class="fas fa-hospital-user"></i><h4>Nursing Education & Workforce</h4><p>Nursing curricula, clinical training, nurse retention, and leadership development—strengthening Ghana's nursing workforce through evidence and collaboration.</p></div>
+                <div class="research-card"><i class="fas fa-leaf"></i><h4>Community & Public Health</h4><p>Health promotion, infectious disease prevention (malaria, TB, HIV), chronic disease screening, and community outreach in Ghana. Focus on disease surveillance, outbreak response, field epidemiology, mobile health initiatives, and reducing health disparities through population-level interventions.</p></div>
+            </div>
+        </div>
+        
+<!-- TEAM TAB -->
+<div id="team" class="tab-content">
+    <h2 class="section-title center-title"><i class="fas fa-user-friends"></i> Meet the researchers</h2>
+    <p class="team-intro">AESRN members are Ghanaian nurses and healthcare professionals united by a shared passion for research. Each member contributes their expertise to collaborative projects.</p>
+    
+    <div class="team-grid three-per-row">
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/mudasir.png" alt="Mudasir Mohammed Ibrahim">
+            </div>
+            <div class="member-info">
+                <h3 class="member-name">Mudasir Mohammed Ibrahim</h3>
+                <p class="member-title">Founder & Network Coordinator</p>
+                <p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital</p>
+            </div>
+        </div>
+        
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Edna.png" alt="Edna Die">
+            </div>
+            <div class="member-info">
+                <h3 class="member-name">Edna Die</h3>
+                <p class="member-title">Member</p>
+                <p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital</p>
+            </div>
+        </div>
+        
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/malik.png" alt="Abdul-Malik Seidu">
+            </div>
+            <div class="member-info">
+                <h3 class="member-name">Abdul-Malik Seidu</h3>
+                <p class="member-title">Member</p>
+                <p class="member-workplace"><i class="fas fa-university"></i> Nurses' & Midwives' Training College, Tamale</p>
+            </div>
+        </div>
+        
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Latif.png" alt="Abdul Latif Abdul Rahaman">
+            </div>
+            <div class="member-info">
+                <h3 class="member-name">Abdul Latif Abdul Rahaman</h3>
+                <p class="member-title">Member</p>
+                <p class="member-workplace"><i class="fas fa-university"></i> Le Mete Ghana, Tamale Urology and Modern Surgical Centre</p>
+            </div>
+        </div>
+        
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/Alhassan.png" alt="Alhassan Issahaq">
+            </div>
+            <div class="member-info">
+                <h3 class="member-name">Alhassan Issahaq</h3>
+                <p class="member-title">Member</p>
+                <p class="member-workplace"><i class="fas fa-university"></i> Nurses' & Midwives' Training College, Tamale</p>
+            </div>
+        </div>
+        
+        <div class="team-member">
+            <div class="member-img">
+                <img src="https://raw.githubusercontent.com/mudassiribrahim12/AESRN-website/main/razak.png" alt="Iddrisu Abdul-Razak">
+            </div>
+            <div class="member-info">
+                <h3 class="member-name">Iddrisu Abdul-Razak</h3>
+                <p class="member-title">Member</p>
+                <p class="member-workplace"><i class="fas fa-university"></i> Tamale Teaching Hospital</p>
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <!-- PUBLICATIONS TAB -->
+        <div id="publications" class="tab-content">
+            <div class="coming-soon-card">
+                <i class="fas fa-file-alt"></i>
+                <h3><i class="fas fa-clock"></i> Key Publications</h3>
+                <p>Our collaborative publications will be listed here. The network is currently working on research projects.</p>
+                <div class="coming-soon-badge">Coming soon</div>
+            </div>
+        </div>
+        
+        <!-- ACTIVITIES TAB -->
+<div id="activities" class="tab-content">
+    <div class="coming-soon-card">
+        <i class="fas fa-calendar-check"></i>
+        <h3><i class="fas fa-clock"></i> Activities</h3>
+        <p>Information about AESRN's collaborative activities, workshops, and research events will be shared here.</p>
+        <div class="coming-soon-badge">Coming soon</div>
+    </div>
+</div>
+
+<!-- MEETINGS TAB -->
+<div id="meetings" class="tab-content">
+    <div class="coming-soon-card">
+        <i class="fas fa-users"></i>
+        <h3><i class="fas fa-clock"></i> Meetings</h3>
+        <p>Schedule and updates from our network meetings, including agendas and summaries, will be posted here.</p>
+        <div class="coming-soon-badge">Coming soon</div>
+    </div>
+</div>
+        
+        <!-- FUNDING TAB -->
+        <div id="funding" class="tab-content">
+            <h2 class="section-title center-title"><i class="fas fa-hand-holding-usd"></i> Funding Opportunities</h2>
+            <div class="funding-intro-sentence">
+                <i class="fas fa-hand-holding-heart"></i> We welcome funding support to grow our network. If you are interested in sponsoring network activities, specific research projects, or grants for young or emerging scholars, we would be glad to explore partnership opportunities. Please use the form below.
+            </div>
+            
+            <div class="funding-form-card">
+                <h3><i class="fas fa-paper-plane"></i> Send us a funding inquiry</h3>
+                <form id="fundingForm" action="https://formspree.io/f/xanrpwae" method="POST">
+                    <input type="hidden" name="_subject" value="New Funding Inquiry from AESRN Website">
+                    <div class="funding-form-group"><label for="funding-name">Full name *</label><input type="text" id="funding-name" name="name" required placeholder="Your name / Organization"></div>
+                    <div class="funding-form-group"><label for="funding-email">Email *</label><input type="email" id="funding-email" name="email" required placeholder="you@example.com"></div>
+                    <div class="funding-form-group"><label for="funding-type">Inquiry type *</label><select id="funding-type" name="inquiry_type" required><option value="" disabled selected>– Select –</option><option value="sponsor_activities">Sponsor network activities</option><option value="research_project">Specific research project</option><option value="grant_scholars">Grant / scholarship</option><option value="other">Other</option></select></div>
+                    <div class="funding-form-group"><label for="funding-message">Message *</label><textarea id="funding-message" name="message" rows="4" required placeholder="Tell us about your interest..."></textarea></div>
+                    <button type="submit" class="funding-submit-btn"><i class="fas fa-paper-plane"></i> Send inquiry</button>
+                    <div id="fundingFormMessage" class="funding-form-message"></div>
+                </form>
+            </div>
+        </div>
+        
+<!-- JOIN US TAB -->
+<div id="join" class="tab-content">
+    <h2 class="section-title center-title"><i class="fas fa-user-plus"></i> Join the Network</h2>
+    
+    <div class="principle-grid" style="margin-bottom: 40px;">
+        <div class="principle-card">
+            <h4><i class="fas fa-check-circle" style="color: var(--accent);"></i> Who Can Join?</h4>
+            <p>Ghanaian nurses and midwives with a strong interest in health research, evidence-based practice, and improving patient outcomes.</p>
+        </div>
+        <div class="principle-card">
+            <h4><i class="fas fa-check-circle" style="color: var(--accent);"></i> What We Expect</h4>
+            <p>Active participation in collaborative projects, responsiveness to team communication, and commitment to shared authorship principles.</p>
+        </div>
+        <div class="principle-card">
+            <h4><i class="fas fa-check-circle" style="color: var(--accent);"></i> What You Gain</h4>
+            <p>Expanded research portfolio, co-authorship on publications, and connections with fellow Ghanaian researchers across institutions.</p>
+        </div>
+    </div>
+    
+    <div class="funding-form-card" style="padding: 48px;">
+        <h3 style="margin-bottom: 32px;"><i class="fas fa-clipboard-list"></i> Membership Requirements</h3>
+        
+        <div style="margin-bottom: 40px;">
+            <p style="margin-bottom: 24px; font-size: 1rem;">To be considered for membership, applicants must meet the following criteria:</p>
+            
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 24px; display: flex; align-items: flex-start; gap: 12px;">
+                    <i class="fas fa-graduation-cap" style="color: var(--accent); font-size: 1.2rem; margin-top: 2px;"></i>
+                    <div>
+                        <strong style="font-size: 1rem;">Professional qualification</strong>
+                        <p style="margin: 4px 0 0; opacity: 0.9;">Hold a nursing/midwifery license from a recognized institution in Ghana.</p>
+                    </div>
+                </li>
+                <li style="margin-bottom: 24px; display: flex; align-items: flex-start; gap: 12px;">
+                    <i class="fas fa-file-pdf" style="color: var(--accent); font-size: 1.2rem; margin-top: 2px;"></i>
+                    <div>
+                        <strong style="font-size: 1rem;">Curriculum Vitae</strong>
+                        <p style="margin: 4px 0 0; opacity: 0.9;">Submit an up-to-date Curriculum Vitae (CV) highlighting your research experience, publications (if any), education, work experience, and current affiliation.</p>
+                    </div>
+                <li style="margin-bottom: 24px; display: flex; align-items: flex-start; gap: 12px;">
+                    <i class="fas fa-clock" style="color: var(--accent); font-size: 1.2rem; margin-top: 2px;"></i>
+                    <div>
+                        <strong style="font-size: 1rem;">Time commitment</strong>
+                        <p style="margin: 4px 0 0; opacity: 0.9;">Ability to dedicate 4–6 hours per week to assigned sections and complete them by the given deadlines.</p>
+                    </div>
+                </li>
+                <li style="margin-bottom: 24px; display: flex; align-items: flex-start; gap: 12px;">
+                    <i class="fas fa-users" style="color: var(--accent); font-size: 1.2rem; margin-top: 2px;"></i>
+                    <div>
+                        <strong style="font-size: 1rem;">Collaborative mindset</strong>
+                        <p style="margin: 4px 0 0; opacity: 0.9;">Commitment to shared credit, constructive feedback, and team-based authorship.</p>
+                    </div>
+                </li>
+                                </li>
+                <li style="margin-bottom: 24px; display: flex; align-items: flex-start; gap: 12px;">
+                    <i class="fas fa-file-alt" style="color: var(--accent); font-size: 1.2rem; margin-top: 2px;"></i>
+                    <div>
+                        <strong style="font-size: 1rem;">Proposal writing assessment</strong>
+                        <p style="margin: 4px 0 0; opacity: 0.9;">After submitting application and meeting basic eligibility criteria, you will be contacted and asked to write one section of a research proposal (introduction, methods, or literature review) on a provided topic. This helps us understand your writing style and research thinking.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; border-top: 1px solid var(--border); padding-top: 40px;">
+            <h4 style="margin-bottom: 16px; font-size: 1.2rem;">Ready to submit?</h4>
+            <p style="margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto;">Complete the online application form. You will be asked to upload your CV. After an initial review, eligible candidates will be contacted for a proposal-writing assessment, followed by an online interview via Zoom.</p>
+            
+            <a href="https://tally.so/r/RG0Adv" target="_blank" rel="noopener noreferrer" class="desktop-signin" style="display: inline-flex; padding: 14px 40px; font-size: 1.1rem; gap: 12px; background: var(--accent); border-color: var(--accent);">
+                <i class="fas fa-file-signature"></i> Apply to Join AESRN
+            </a>
+            
+            <p style="margin-top: 24px; font-size: 0.85rem; opacity: 0.8;">
+                <i class="fas fa-envelope"></i> Questions? <a href="mailto:research.aesrn@yahoo.com" style="color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent);">research.aesrn@yahoo.com</a>
+            </p>
+        </div>
+    </div>
+    
+    <div style="margin-top: 40px; padding: 24px; border: 1px dashed var(--border); border-radius: 4px; text-align: center;">
+        <i class="fas fa-clock" style="color: var(--text-lighter); margin-right: 8px;"></i>
+        <span style="font-size: 0.9rem;">Applications are reviewed monthly. Shortlisted candidates will be contacted within 4 weeks for the proposal writing assessment.</span>
+    </div>
+</div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AESRN</h3>
+                    <p>Informal peer network for Ghanaian nurse researchers. We collaborate, write, and publish.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Network</h3>
+    <ul class="footer-links">
+        <li><a data-tab="home">Home</a></li>
+        <li><a data-tab="research">Research Areas</a></li>
+        <li><a data-tab="team">Members</a></li>
+        <li><a data-tab="publications">Key Publications</a></li>
+        <li><a data-tab="activities">Activities</a></li>
+        <li><a data-tab="meetings">Meetings</a></li>
+        <li><a data-tab="funding">Funding</a></li>
+        <li><a data-tab="join">Join Us</a></li>
+    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Tamale, Ghana</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:research.aesrn@yahoo.com" class="email-link">research.aesrn@yahoo.com</a></p>
+<p style="opacity: 0.3;"><i class="fas fa-user-nurse"></i> Founded 31/01/2026</p>
+                    
+                    <div class="footer-social">
+                        <a href="https://facebook.com/AESRN" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/AESRN_" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/company/aesrn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com/@AESRN" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-icon"><i class="fas fa-graduation-cap"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>Copyright © <span id="currentYear"></span> African Emerging Scholars Research Network (AESRN). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Loader
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('loader').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loader').style.visibility = 'hidden';
+                }, 500);
+            }, 600);
+        });
+        
+    // Simple header reload function - place at the very end
+    setTimeout(function() {
+        // Header click reload
+        const headerArea = document.getElementById('headerLogoArea');
+        const pageHeader = document.getElementById('page-header');
+        
+        if (pageHeader) {
+            pageHeader.onclick = function(e) {
+                e.preventDefault();
+                window.location.href = window.location.pathname + '#home';
+                window.location.reload(true);
+                return false;
+            };
+        }
+        
+        if (headerArea) {
+            headerArea.onclick = function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.href = window.location.pathname + '#home';
+                window.location.reload(true);
+                return false;
+            };
+        }
+        
+        // Nav logo reload
+        const homeLogoBtn = document.getElementById('homeLogoBtn');
+        if (homeLogoBtn) {
+            homeLogoBtn.onclick = function(e) {
+                e.preventDefault();
+                window.location.href = window.location.pathname + '#home';
+                window.location.reload(true);
+                return false;
+            };
+        }
+    }, 100);
+        
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const icon = themeToggle.querySelector('i');
+        
+        // Check for saved theme
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-theme');
+            icon.className = 'fas fa-sun';
+        }
+        
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            if (document.body.classList.contains('dark-theme')) {
+                icon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        // Back to top
+        const backBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            backBtn.classList.toggle('visible', window.pageYOffset > 300);
+        });
+        
+        backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        
+        // Mobile menu
+        const hamburger = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+        const closeBtn = document.getElementById('closeBtn');
+        
+        function openMenu() { mobileMenu.classList.add('active'); overlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeMenu() { mobileMenu.classList.remove('active'); overlay.classList.remove('active'); document.body.style.overflow = ''; }
+        
+        if (hamburger) hamburger.addEventListener('click', openMenu);
+        if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+        if (overlay) overlay.addEventListener('click', closeMenu);
+        
+        // Tab switching
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('[data-tab]').forEach(t => t.classList.remove('active'));
+            
+            const activeContent = document.getElementById(tabId);
+            if (activeContent) activeContent.classList.add('active');
+            
+            document.querySelectorAll(`[data-tab="${tabId}"]`).forEach(el => el.classList.add('active'));
+            
+            history.pushState(null, null, `#${tabId}`);
+            
+            // When tab is switched via click, scroll to the top of the main content, but keep header visible
+            const main = document.querySelector('main');
+            if (main) {
+                // Get the distance from top of main to top of document
+                const mainOffsetTop = main.getBoundingClientRect().top + window.pageYOffset;
+                // Subtract nav height so header stays visible
+                const navHeight = document.querySelector('nav').offsetHeight;
+                window.scrollTo({ top: mainOffsetTop - navHeight - 20, behavior: 'smooth' });
+            }
+            
+            if (tabId === 'home') setTimeout(startCounterAnimation, 300);
+        }
+        
+        document.querySelectorAll('[data-tab]').forEach(el => {
+            el.addEventListener('click', (e) => { e.preventDefault(); switchTab(el.getAttribute('data-tab')); closeMenu(); });
+        });
+        
+        const hash = window.location.hash.substring(1);
+        switchTab(hash && document.getElementById(hash) ? hash : 'home');
+        
+        // Counter animation
+        function startCounterAnimation() {
+            document.querySelectorAll('.stat-number').forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                let current = 0;
+                const increment = target / 30;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        stat.textContent = target;
+                        clearInterval(timer);
+                    } else stat.textContent = Math.floor(current);
+                }, 40);
+            });
+        }
+        setTimeout(startCounterAnimation, 800);
+        
+        // Search functionality
+        const searchOverlay = document.getElementById('searchOverlay');
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+        const closeSearch = document.getElementById('closeSearch');
+        const desktopSearchIcon = document.getElementById('desktopSearchIcon');
+        const mobileSearchBtn = document.getElementById('mobileSearchBtn');
+        
+        function openSearch() { searchOverlay.classList.add('active'); document.body.style.overflow = 'hidden'; setTimeout(() => searchInput.focus(), 100); }
+        function closeSearchOverlay() { searchOverlay.classList.remove('active'); document.body.style.overflow = ''; searchInput.value = ''; searchResults.innerHTML = '<div class="no-results">Start typing to search</div>'; }
+        
+        if (desktopSearchIcon) desktopSearchIcon.addEventListener('click', openSearch);
+        if (mobileSearchBtn) mobileSearchBtn.addEventListener('click', () => { closeMenu(); setTimeout(openSearch, 300); });
+        if (closeSearch) closeSearch.addEventListener('click', closeSearchOverlay);
+        searchOverlay.addEventListener('click', (e) => { if (e.target === searchOverlay) closeSearchOverlay(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && searchOverlay.classList.contains('active')) closeSearchOverlay(); });
+        
+        // Search index
+        // Search index - Updated to cover all tabs including new Activities and Meetings
+        const searchableContent = [];
+        document.querySelectorAll('h2, h3, h4, p, .research-card p, .hero-text p, .principle-card p, .process-step p, .funding-intro-sentence, .coming-soon-card p').forEach(el => {
+            const text = el.textContent.trim();
+            if (text && text.length > 15) {
+                const tab = el.closest('.tab-content');
+                const tabId = tab ? tab.id : 'footer';
+                let context = '';
+                
+                // Map tab IDs to readable context names
+                switch(tabId) {
+                    case 'home':
+                        context = 'Home';
+                        break;
+                    case 'research':
+                        context = 'Research';
+                        break;
+                    case 'team':
+                        context = 'Members';
+                        break;
+                    case 'publications':
+                        context = 'Publications';
+                        break;
+                    case 'activities':
+                        context = 'Activities';
+                        break;
+                    case 'meetings':
+                        context = 'Meetings';
+                        break;
+                    case 'funding':
+                        context = 'Funding';
+                        break;
+                    case 'join':
+                        context = 'Join Us';
+                        break;
+                    default:
+                        context = 'AESRN';
+                }
+                
+                searchableContent.push({ text, context, tabId, element: el });
+            }
+        });
+        
+        searchInput.addEventListener('input', function() {
+            const query = this.value.trim().toLowerCase();
+            if (query.length < 2) { searchResults.innerHTML = '<div class="no-results">Type at least 2 characters</div>'; return; }
+            
+            const results = searchableContent.filter(item => item.text.toLowerCase().includes(query)).slice(0, 15);
+            
+            if (results.length === 0) { searchResults.innerHTML = '<div class="no-results">No results found</div>'; return; }
+            
+            let html = '';
+            results.forEach((result, idx) => {
+                html += `<div class="search-result-item" data-tab="${result.tabId}" data-index="${idx}"><div class="result-title">${result.text.substring(0, 120)}${result.text.length > 120 ? '...' : ''}</div><div class="result-context">in ${result.context}</div></div>`;
+            });
+            searchResults.innerHTML = html;
+            
+            document.querySelectorAll('.search-result-item').forEach((item, idx) => {
+                item.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    if (tabId && tabId !== 'footer') {
+                        switchTab(tabId);
+                        closeSearchOverlay();
+                        setTimeout(() => {
+                            results[idx].element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            results[idx].element.classList.add('search-highlight');
+                            setTimeout(() => results[idx].element.classList.remove('search-highlight'), 3000);
+                        }, 300);
+                    }
+                });
+            });
+        });
+        
+        // Funding form
+        const fundingForm = document.getElementById('fundingForm');
+        if (fundingForm) {
+            fundingForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const messageDiv = document.getElementById('fundingFormMessage');
+                
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+                
+                try {
+                    const response = await fetch(this.action, { method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' } });
+                    if (response.ok) {
+                        messageDiv.className = 'funding-form-message success';
+                        messageDiv.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your inquiry has been sent.';
+                        this.reset();
+                    } else throw new Error('Failed');
+                } catch (error) {
+                    messageDiv.className = 'funding-form-message error';
+                    messageDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Please try again.';
+                } finally {
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send inquiry';
+                    submitBtn.disabled = false;
+                    setTimeout(() => { messageDiv.style.display = 'none'; messageDiv.className = 'funding-form-message'; }, 5000);
+                }
+            });
+        }
+        
+        // Fade-in scroll observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        
+        document.querySelectorAll('.research-card, .team-member, .principle-card, .process-step').forEach(el => observer.observe(el));
+
+// ===== MAGICAL INTERACTIVE PAINT EFFECT - DARK MODE ONLY =====
+// Snake-like minimal color trail – beautiful, smooth, and vibrant
+const canvas = document.getElementById('paint-canvas');
+let ctx = canvas.getContext('2d');
+
+// Vibrant, beautiful colors – like a rainbow snake
+const colors = [
+    '#FF6B6B', // coral red
+    '#FF8E53', // orange
+    '#FFD93D', // golden yellow
+    '#6BCB77', // grass green
+    '#4D96FF', // bright blue
+    '#9D65C9', // purple
+    '#FF6B9D'  // pink
+];
+
+let particles = [];
+let mouseX = -1000, mouseY = -1000;
+let lastMouseX = -1000, lastMouseY = -1000;
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+// Track mouse movement
+document.addEventListener('mousemove', (e) => {
+    lastMouseX = mouseX;
+    lastMouseY = mouseY;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    if (document.body.classList.contains('dark-theme')) {
+        const dx = mouseX - lastMouseX;
+        const dy = mouseY - lastMouseY;
+        const distance = Math.sqrt(dx*dx + dy*dy);
+        
+        // Create snake-like trail - more particles for smoother line
+        if (distance > 1) {
+            const steps = Math.min(5, Math.floor(distance / 4) + 2);
+            for (let i = 0; i < steps; i++) {
+                const t = i / steps;
+                const x = lastMouseX + dx * t + (Math.random() - 0.5) * 6;
+                const y = lastMouseY + dy * t + (Math.random() - 0.5) * 6;
+                createParticle(x, y);
+            }
+        }
+    }
+});
+
+// Click burst
+document.addEventListener('click', (e) => {
+    if (document.body.classList.contains('dark-theme')) {
+        for (let i = 0; i < 20; i++) {
+            createParticle(
+                e.clientX + (Math.random() - 0.5) * 60,
+                e.clientY + (Math.random() - 0.5) * 60
+            );
+        }
+    }
+});
+
+function createParticle(x, y) {
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    const size = 12 + Math.random() * 20;
+    const angle = Math.random() * Math.PI * 2;
+    const speed = 0.5 + Math.random() * 1.5;
+    
+    particles.push({
+        x: x,
+        y: y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        size: size,
+        color: color,
+        life: 1.0,
+        decay: 0.01 + Math.random() * 0.02
+    });
+}
+
+function animatePaint() {
+    if (!document.body.classList.contains('dark-theme')) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        requestAnimationFrame(animatePaint);
+        return;
+    }
+    
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.shadowBlur = 20;
+    ctx.shadowColor = 'rgba(255,255,255,0.3)';
+    
+    for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vx *= 0.98;
+        p.vy *= 0.98;
+        p.life -= p.decay;
+        
+        if (p.life <= 0.01) {
+            particles.splice(i, 1);
+            continue;
+        }
+        
+        ctx.globalAlpha = p.life * 0.6;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size * p.life, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+    }
+    
+    requestAnimationFrame(animatePaint);
+}
+
+animatePaint();
+
+// === FORCE PAGE TO START AT THE VERY TOP ON EVERY LOAD/RELOAD ===
+window.addEventListener('load', function() {
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 100);
+});
+
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        window.scrollTo(0, 0);
+    }
+});
+
+if (!window.location.hash || window.location.hash === '#home') {
+    window.scrollTo(0, 0);
+}
+        
+    </script>
+</body>
+</html>
